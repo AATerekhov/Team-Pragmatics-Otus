@@ -4,12 +4,10 @@
 [C# Developer. Professional](https://otus.ru/lessons/csharp-professional/) <br/>
 OTUS-2024
 
-## Team project:
-***Travel planning service.  Educational project.***
+## Team project: ***Travel planning service.  Educational project.***
 
-<br/>
-### The project was developed by students in the course:<br/>
-<br/>
+### The project was developed by students in the course: <br/>
+
 #### [AATerekhov](https://github.com/AATerekhov) <br/>
 #### [Dark-MonkGI](https://github.com/Dark-MonkGI) <br/>
 #### [skglw ](https://github.com/skglw) <br/>
@@ -18,7 +16,7 @@ OTUS-2024
 
 <br/>
 
-### Средства, используемые для разработки приложения: <br/>
-> [.NET Core C#](https://visualstudio.microsoft.com/ru/) <br/>
-> [Visual Studio 2022](https://learn.microsoft.com/ru-ru/dotnet/core/introduction) <br/>
+### The tools used to develop the application: <br/>
+> [.NET Core C#](https://learn.microsoft.com/ru-ru/dotnet/core/introduction) <br/>
+> [Visual Studio 2022](https://visualstudio.microsoft.com/ru/) <br/>
 > Библиотеки: <br/>
