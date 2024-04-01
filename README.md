@@ -12,6 +12,7 @@ OTUS-2024
 #### [Dark-MonkGI](https://github.com/Dark-MonkGI) <br/>
 #### [skglw ](https://github.com/skglw) <br/>
 #### [Konstantine17](https://github.com/Konstantine17) <br/>
+#### [KennyDeew](https://github.com/KennyDeew) <br/>
 
 
 <br/>
