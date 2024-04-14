@@ -1,17 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\source\\repos\\fracingprogmatica\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\services.repositories.abstractions\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E600763A-2A02-445E-BEE4-7A7C193B8366}|..\\Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\services.implementations\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C748111-55B2-4105-9CFE-381515E0A302}|..\\Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\services.contracts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{797F0197-C6CF-4015-A201-D80D1FD1F6C9}|..\\Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\services.abstractions\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4259AB70-0361-4E08-8F64-D77285D1559A}|..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\infrastructure.repositories.implementations\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\infrastructure.entityframework\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\domain.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracingprogmatica\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\source\\repos\\fracingprogmatica\\fracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracingprogmatica\\fracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:fracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\source\\repos\\fracingprogmatica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracingprogmatica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,10 +48,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Repositories.Abstractions\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Repositories.Abstractions\\Class1.cs",
+              "RelativeToolTip": "..\\Services.Repositories.Abstractions\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:41:19.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Services.Implementations\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Class1.cs",
+              "RelativeToolTip": "..\\Services.Implementations\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:39:16.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Services.Contracts\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\Class1.cs",
+              "RelativeToolTip": "..\\Services.Contracts\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:38:35.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Services.Abstractions\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Class1.cs",
+              "RelativeToolTip": "..\\Services.Abstractions\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:38:03.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.Repositories.Implementations\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure.Repositories.Implementations\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.Repositories.Implementations\\Class1.cs",
+              "RelativeToolTip": "..\\Infrastructure.Repositories.Implementations\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:36:52.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.EntityFramework\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.EntityFramework\\Class1.cs",
+              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:35:18.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Domain.Entities\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Domain.Entities\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Domain.Entities\\Class1.cs",
+              "RelativeToolTip": "..\\Domain.Entities\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T10:32:27.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\WeatherForecast.cs",
               "RelativeToolTip": "WeatherForecast.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,11 +151,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "FracingProgmatica.http",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\FracingProgmatica.http",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\FracingProgmatica.http",
               "RelativeDocumentMoniker": "FracingProgmatica.http",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\FracingProgmatica.http",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\FracingProgmatica.http",
               "RelativeToolTip": "FracingProgmatica.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
@@ -51,11 +163,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

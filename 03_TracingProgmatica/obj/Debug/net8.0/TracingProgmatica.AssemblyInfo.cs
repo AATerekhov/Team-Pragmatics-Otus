@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TracingProgmatica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd6316f5ae7e1816b54f04e2fd003d0d19e54070")]
 [assembly: System.Reflection.AssemblyProductAttribute("TracingProgmatica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TracingProgmatica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

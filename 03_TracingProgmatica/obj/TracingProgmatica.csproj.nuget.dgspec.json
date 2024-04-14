@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\FracingProgmatica\\TracingProgmatica.csproj": {}
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\FracingProgmatica\\TracingProgmatica.csproj": {
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\TracingProgmatica.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj",
         "projectName": "TracingProgmatica",
-        "projectPath": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\TracingProgmatica.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\FracingProgmatica\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
