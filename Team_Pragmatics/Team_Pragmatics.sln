@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_AdventureRialto", "01_AdventureRialto", "{D0D1A999-6E1F-43CB-9AED-D094653B0614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRialto.Domain", "01_AdventureRialto\AdventureRialto.Domain\AdventureRialto.Domain.csproj", "{68FB1C36-AD24-4B23-B477-21C3947E60AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A15A56E0-E569-4895-B2D0-FB679EB68A84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8759F49C-6926-42B6-A35C-6EEDDFEA70A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4536D76D-41CE-4D2E-B63D-A8B3BBA828B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{480B9B83-2EB4-4947-9BED-C762BE7C388C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRialto.Application", "01_AdventureRialto\Application\AdventureRialto.Application\AdventureRialto.Application.csproj", "{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRialto.Infrastructure", "01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\AdventureRialto.Infrastructure.csproj", "{A92D1F94-FEF8-4239-831B-CA6C309396F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureRialto.Web", "01_AdventureRialto\Web\AdventureRialto.Web\AdventureRialto.Web.csproj", "{B6912B0C-BA91-417F-9210-B947DF4FCCDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A15A56E0-E569-4895-B2D0-FB679EB68A84} = {D0D1A999-6E1F-43CB-9AED-D094653B0614}
+		{68FB1C36-AD24-4B23-B477-21C3947E60AA} = {A15A56E0-E569-4895-B2D0-FB679EB68A84}
+		{8759F49C-6926-42B6-A35C-6EEDDFEA70A6} = {D0D1A999-6E1F-43CB-9AED-D094653B0614}
+		{4536D76D-41CE-4D2E-B63D-A8B3BBA828B6} = {D0D1A999-6E1F-43CB-9AED-D094653B0614}
+		{480B9B83-2EB4-4947-9BED-C762BE7C388C} = {D0D1A999-6E1F-43CB-9AED-D094653B0614}
+		{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356} = {8759F49C-6926-42B6-A35C-6EEDDFEA70A6}
+		{A92D1F94-FEF8-4239-831B-CA6C309396F4} = {4536D76D-41CE-4D2E-B63D-A8B3BBA828B6}
+		{B6912B0C-BA91-417F-9210-B947DF4FCCDB} = {480B9B83-2EB4-4947-9BED-C762BE7C388C}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68FB1C36-AD24-4B23-B477-21C3947E60AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FB1C36-AD24-4B23-B477-21C3947E60AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FB1C36-AD24-4B23-B477-21C3947E60AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FB1C36-AD24-4B23-B477-21C3947E60AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EB8BCF-9534-4A5F-BF8B-B3ACB7641356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A92D1F94-FEF8-4239-831B-CA6C309396F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92D1F94-FEF8-4239-831B-CA6C309396F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92D1F94-FEF8-4239-831B-CA6C309396F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92D1F94-FEF8-4239-831B-CA6C309396F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6912B0C-BA91-417F-9210-B947DF4FCCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6912B0C-BA91-417F-9210-B947DF4FCCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6912B0C-BA91-417F-9210-B947DF4FCCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6912B0C-BA91-417F-9210-B947DF4FCCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\bin\Debug\net7.0\AdventureRialto.Infrastructure.deps.json
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\bin\Debug\net7.0\AdventureRialto.Infrastructure.dll
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\bin\Debug\net7.0\AdventureRialto.Infrastructure.pdb
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.AssemblyInfo.cs
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.dll
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\refint\AdventureRialto.Infrastructure.dll
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\AdventureRialto.Infrastructure.pdb
+C:\Users\Константин\Documents\Team-Pragmatics-Otus\Team_Pragmatics\01_AdventureRialto\Infrastructure\AdventureRialto.Infrastructure\obj\Debug\net7.0\ref\AdventureRialto.Infrastructure.dll
