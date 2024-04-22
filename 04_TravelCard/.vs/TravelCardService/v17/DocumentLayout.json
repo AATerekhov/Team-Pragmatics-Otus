@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\\u043C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\team-pragmatics-otus\\04_travelcard\\domain.entities\\travelpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\travelpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\\u043C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\team-pragmatics-otus\\04_travelcard\\domain.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\\u043C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\team-pragmatics-otus\\04_travelcard\\domain.entities\\travel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\travel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\\u043C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\team-pragmatics-otus\\04_travelcard\\domain.entities\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90E4A674-9460-43E7-A11E-852CFCA9BB61}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\User.cs",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\User.cs",
+              "RelativeToolTip": "Domain.Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:39:20.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TravelPoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\TravelPoint.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\TravelPoint.cs",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\TravelPoint.cs*",
+              "RelativeToolTip": "Domain.Entities\\TravelPoint.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:39:19.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Travel.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Travel.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\Travel.cs",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Travel.cs",
+              "RelativeToolTip": "Domain.Entities\\Travel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:39:15.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Manager.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Manager.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\Manager.cs",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u0448\u0438\u043D\u0430\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Manager.cs",
+              "RelativeToolTip": "Domain.Entities\\Manager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:39:14.544Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
