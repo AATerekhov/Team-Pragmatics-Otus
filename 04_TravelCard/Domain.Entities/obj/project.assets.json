@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Машина\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Машина\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Domain.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Domain.Entities.csproj",
       "projectName": "Domain.Entities",
-      "projectPath": "C:\\Users\\Машина\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Domain.Entities.csproj",
-      "packagesPath": "C:\\Users\\Машина\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Машина\\source\\repos\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\Domain.Entities.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\04_TravelCard\\Domain.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Машина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

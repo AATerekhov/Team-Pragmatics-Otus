@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\Services.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
       "projectName": "Services.Contracts",
-      "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\Services.Contracts.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

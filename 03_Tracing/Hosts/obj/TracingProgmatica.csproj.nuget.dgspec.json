@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj": {}
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj": {
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
         "projectName": "TracingProgmatica",
-        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\TracingProgmatica.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_TracingProgmatica\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.6, )"

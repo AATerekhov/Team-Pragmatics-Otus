@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hujfnazrSIK2Y7Z3oHkbl/JkOTeOzs1Svovp25+3MOfXj1nzSKUq0JELTgSffOFY5K2zQ6cXxr/wb388hs61Qw==",
+  "dgSpecHash": "p39/8y/yyGht8vwzpSYxKK/7JU+EA9PqWc93lh1Gg2SdUKESJzu54iVFTbNl9FpHqZsrK094R5BRcO6VR+RZLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Repositories.Implementations
 {
-    public class Class1
+    public abstract class Repository
     {
 
     }

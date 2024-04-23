@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Services.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Services.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.Abstractions.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Services.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../Services.Abstractions/Services.Abstractions.csproj",
+      "msbuildProject": "../Services.Abstractions/Services.Abstractions.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Services.Abstractions >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Services.Implementations.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
       "projectName": "Services.Implementations",
-      "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Services.Implementations.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

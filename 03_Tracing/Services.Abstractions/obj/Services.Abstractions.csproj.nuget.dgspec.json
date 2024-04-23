@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Services.Abstractions.csproj": {}
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Services.Abstractions.csproj": {
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Services.Abstractions.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
         "projectName": "Services.Abstractions",
-        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Services.Abstractions.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

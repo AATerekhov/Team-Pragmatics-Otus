@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nyhti2nVcAMcoO8FmS3PswBtuJfjoniYoVjtQlcypTPC8bxNlSqrIHaOpAPzqNLpHga70+bvJ2U9y37wqAeRMA==",
+  "dgSpecHash": "eo5OQzk4oLH9g3+7kLFZ2CItHazYHHsanDRA/MIQS/1tTeBqFihb6JSTLL8OsxJF6G3gnuwBXJ9FJuigjCNZKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
