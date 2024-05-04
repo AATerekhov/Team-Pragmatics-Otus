@@ -1,21 +1,36 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Domain.Entities
 {
-    internal class TravelPoint
+    [Table("Travel_point")]
+    public class TravelPoint
     {
+        [Key, Column("tp_ID")]
+        public int Id { get; set; }
+
         /// <summary>
         /// Точка остановки
         /// </summary>
-        public object? PointMap { get; set; }
+        [Column("point_map"), MaxLength(90)]
+        public string PointMap { get; set; }
 
         /// <summary>
         /// Описание остановки
         /// </summary>
+        [Column("point_desc"), MaxLength(80)]
         public string PointDesc { get; set; }
 
         /// <summary>
         /// Время остановки
         /// </summary>
-        public DateTime? WaitingTime { get; set; }
+        [Column("waiting_time")]
+        public DateTime WaitingTime { get; set; }
+
+        [Column("travel_ID")]
+        public int TravelId { get; set; }
+
+        public Travel Travel { get; set; }
     }
 }
