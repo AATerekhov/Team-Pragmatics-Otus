@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Services.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8751f5fff777ba8d2b457ef4d9f01d9b85d6e2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66be920c497ab235c3e3a0d6218bae8f56986c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("Services.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Services.Repositories.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

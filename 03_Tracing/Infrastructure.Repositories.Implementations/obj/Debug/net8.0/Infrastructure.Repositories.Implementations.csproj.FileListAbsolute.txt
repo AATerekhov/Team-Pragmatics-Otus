@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\bin\Debug\net8.0\Infrastructure.Repositories.Implementations.deps.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\bin\Debug\net8.0\Infrastructure.Repositories.Implementations.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\bin\Debug\net8.0\Infrastructure.Repositories.Implementations.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.AssemblyInfo.cs
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.sourcelink.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\refint\Infrastructure.Repositories.Implementations.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\Infrastructure.Repositories.Implementations.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.Repositories.Implementations\obj\Debug\net8.0\ref\Infrastructure.Repositories.Implementations.dll

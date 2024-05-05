@@ -11,15 +11,29 @@ namespace Infrastructure.EntityFramework
         {
             Database.EnsureCreated();
         }
-
+        /// <summary>
+        /// Пользователи.
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+        /// <summary>
+        /// Гографисечкие точки.
+        /// </summary>
         public DbSet<MapPoint> Points { get; set; }
+        /// <summary>
+        /// Места посещения.
+        /// </summary>
         public DbSet<Place> Places { get; set; }
+        /// <summary>
+        /// Типы мест.
+        /// </summary>
         public DbSet<PlaceType> PleceTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             //TODO: настроить FluentAPI для связей.
+            //Для User внешние ключи, пока, не определены.
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

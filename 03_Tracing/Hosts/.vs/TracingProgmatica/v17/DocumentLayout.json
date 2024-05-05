@@ -3,42 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E600763A-2A02-445E-BEE4-7A7C193B8366}|..\\Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.implementations\\mappointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{797F0197-C6CF-4015-A201-D80D1FD1F6C9}|..\\Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.abstractions\\imappointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.entityframework\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\tracingprogmatica.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:tracingprogmatica.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.entityframework\\entetyframeworkinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\settings\\applicationsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:settings\\applicationsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\settings\\rmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:settings\\rmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\tracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:tracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.repositories.abstractions\\imappointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E600763A-2A02-445E-BEE4-7A7C193B8366}|..\\Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.implementations\\services.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.repositories.abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.repositories.abstractions\\iuserrepositopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.repositories.abstractions\\services.repositories.abstractions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{797F0197-C6CF-4015-A201-D80D1FD1F6C9}|..\\Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.abstractions\\services.abstractions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\placetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\place.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C748111-55B2-4105-9CFE-381515E0A302}|..\\Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.contracts\\mappoint\\mappointdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\mappoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{797F0197-C6CF-4015-A201-D80D1FD1F6C9}|..\\Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.abstractions\\imappointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C748111-55B2-4105-9CFE-381515E0A302}|..\\Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.contracts\\services.contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E600763A-2A02-445E-BEE4-7A7C193B8366}|..\\Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.implementations\\mappointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A8E964-0672-4DA8-A734-DF7C71F64FE9}|..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.repositories.abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4259AB70-0361-4E08-8F64-D77285D1559A}|..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.repositories.implementations\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4259AB70-0361-4E08-8F64-D77285D1559A}|..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.repositories.implementations\\infrastructure.repositories.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\mapping\\mappointmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:mapping\\mappointmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\controllers\\mappointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:controllers\\mappointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\mapping\\mappointmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:mapping\\mappointmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\mappoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E600763A-2A02-445E-BEE4-7A7C193B8366}|..\\Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.implementations\\services.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{797F0197-C6CF-4015-A201-D80D1FD1F6C9}|..\\Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.abstractions\\services.abstractions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C748111-55B2-4105-9CFE-381515E0A302}|..\\Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\services.contracts\\services.contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\models\\mappoint\\creatingmappointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,53 +115,7 @@
       "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:models\\placetype\\placetypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\placetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\place.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4259AB70-0361-4E08-8F64-D77285D1559A}|..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.repositories.implementations\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4259AB70-0361-4E08-8F64-D77285D1559A}|..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.repositories.implementations\\infrastructure.repositories.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.entityframework\\infrastructure.entityframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\tracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:tracingprogmatica.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.entityframework\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD6C4328-C30C-4460-958C-3FD252EA0085}|..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\infrastructure.entityframework\\entetyframeworkinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D13C6E1F-3207-4FFC-B1C1-83C5B3712DB1}|..\\Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\domain.entities\\domain.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Repositories.Abstractions\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|c:\\users\\user\\documents\\team-pragmatics-otus\\03_tracing\\hosts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCDA32C8-1C57-4CD6-9F03-998A5267E379}|TracingProgmatica.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -135,54 +143,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMapPointService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\IMapPointService.cs",
-              "RelativeDocumentMoniker": "..\\Services.Abstractions\\IMapPointService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\IMapPointService.cs",
-              "RelativeToolTip": "..\\Services.Abstractions\\IMapPointService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "DocumentIndex": 5,
+              "Title": "EntetyFrameworkInstaller.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
+              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:39:34.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MapPointService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\MapPointService.cs",
-              "RelativeDocumentMoniker": "..\\Services.Implementations\\MapPointService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\MapPointService.cs",
-              "RelativeToolTip": "..\\Services.Implementations\\MapPointService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:28:08.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2024-04-21T14:17:29.969Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Services.Implementations",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
-              "RelativeDocumentMoniker": "..\\Services.Implementations\\Services.Implementations.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
-              "RelativeToolTip": "..\\Services.Implementations\\Services.Implementations.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-23T13:33:59.377Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T18:57:35.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCMAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T11:48:33.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Settings\\ApplicationSettings.cs",
+              "RelativeDocumentMoniker": "Settings\\ApplicationSettings.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Settings\\ApplicationSettings.cs",
+              "RelativeToolTip": "Settings\\ApplicationSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:48:36.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RmqSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Settings\\RmqSettings.cs",
+              "RelativeDocumentMoniker": "Settings\\RmqSettings.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Settings\\RmqSettings.cs",
+              "RelativeToolTip": "Settings\\RmqSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:47:38.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\Domain.Entities\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\User.cs",
+              "RelativeToolTip": "..\\Domain.Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T13:00:29.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registrar.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Registrar.cs",
+              "RelativeDocumentMoniker": "Registrar.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Registrar.cs",
+              "RelativeToolTip": "Registrar.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:43:46.241Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TracingProgmatica",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
+              "RelativeDocumentMoniker": "TracingProgmatica.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
+              "RelativeToolTip": "TracingProgmatica.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-25T11:29:15.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TracingProgmatica.http",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.http",
+              "RelativeDocumentMoniker": "TracingProgmatica.http",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.http",
+              "RelativeToolTip": "TracingProgmatica.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-04-13T18:57:43.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IMapPointRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IMapPointRepository.cs",
               "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\IMapPointRepository.cs",
@@ -190,13 +264,60 @@
               "RelativeToolTip": "..\\Services.Repositories.Abstractions\\IMapPointRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:29:09.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T13:29:09.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Services.Repositories.Abstractions",
+              "DocumentIndex": 10,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IRepository.cs",
+              "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\IRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IRepository.cs",
+              "RelativeToolTip": "..\\Services.Repositories.Abstractions\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:26:35.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUserRepositopy.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IUserRepositopy.cs",
+              "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\IUserRepositopy.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IUserRepositopy.cs",
+              "RelativeToolTip": "..\\Services.Repositories.Abstractions\\IUserRepositopy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T15:06:27.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlaceType.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\PlaceType.cs",
+              "RelativeDocumentMoniker": "..\\Domain.Entities\\PlaceType.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\PlaceType.cs",
+              "RelativeToolTip": "..\\Domain.Entities\\PlaceType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T18:53:22.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Place.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Place.cs",
+              "RelativeDocumentMoniker": "..\\Domain.Entities\\Place.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Place.cs",
+              "RelativeToolTip": "..\\Domain.Entities\\Place.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T15:55:21.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Services.Repositories.Abstractions.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj",
               "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj",
               "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj",
@@ -208,216 +329,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Services.Abstractions",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
-              "RelativeDocumentMoniker": "..\\Services.Abstractions\\Services.Abstractions.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
-              "RelativeToolTip": "..\\Services.Abstractions\\Services.Abstractions.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-23T13:26:03.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "MapPointDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\MapPoint\\MapPointDto.cs",
               "RelativeDocumentMoniker": "..\\Services.Contracts\\MapPoint\\MapPointDto.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\MapPoint\\MapPointDto.cs",
               "RelativeToolTip": "..\\Services.Contracts\\MapPoint\\MapPointDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:31:27.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MapPoint.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\MapPoint.cs",
-              "RelativeDocumentMoniker": "..\\Domain.Entities\\MapPoint.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\MapPoint.cs",
-              "RelativeToolTip": "..\\Domain.Entities\\MapPoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:42:24.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Services.Contracts",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
-              "RelativeDocumentMoniker": "..\\Services.Contracts\\Services.Contracts.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
-              "RelativeToolTip": "..\\Services.Contracts\\Services.Contracts.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-23T13:31:18.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IRepository.cs",
-              "RelativeDocumentMoniker": "..\\Services.Repositories.Abstractions\\IRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Repositories.Abstractions\\IRepository.cs",
-              "RelativeToolTip": "..\\Services.Repositories.Abstractions\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:26:35.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MapPointMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Mapping\\MapPointMappingProfile.cs",
-              "RelativeDocumentMoniker": "Mapping\\MapPointMappingProfile.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Mapping\\MapPointMappingProfile.cs",
-              "RelativeToolTip": "Mapping\\MapPointMappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:27:32.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MapPointController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Controllers\\MapPointController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MapPointController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Controllers\\MapPointController.cs",
-              "RelativeToolTip": "Controllers\\MapPointController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T15:25:07.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreatingMapPointModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\CreatingMapPointModel.cs",
-              "RelativeDocumentMoniker": "Models\\MapPoint\\CreatingMapPointModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\CreatingMapPointModel.cs",
-              "RelativeToolTip": "Models\\MapPoint\\CreatingMapPointModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:25:13.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OptionModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Option\\OptionModel.cs",
-              "RelativeDocumentMoniker": "Models\\Option\\OptionModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Option\\OptionModel.cs",
-              "RelativeToolTip": "Models\\Option\\OptionModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:22:02.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MapPointMadel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\MapPointMadel.cs",
-              "RelativeDocumentMoniker": "Models\\MapPoint\\MapPointMadel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\MapPointMadel.cs",
-              "RelativeToolTip": "Models\\MapPoint\\MapPointMadel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:09:28.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PlaceTypeModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\PlaceType\\PlaceTypeModel.cs",
-              "RelativeDocumentMoniker": "Models\\PlaceType\\PlaceTypeModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\PlaceType\\PlaceTypeModel.cs",
-              "RelativeToolTip": "Models\\PlaceType\\PlaceTypeModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:20:40.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PlaceModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Place\\PlaceModel.cs",
-              "RelativeDocumentMoniker": "Models\\Place\\PlaceModel.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Place\\PlaceModel.cs",
-              "RelativeToolTip": "Models\\Place\\PlaceModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:16:38.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PlaceType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\PlaceType.cs",
-              "RelativeDocumentMoniker": "..\\Domain.Entities\\PlaceType.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\PlaceType.cs",
-              "RelativeToolTip": "..\\Domain.Entities\\PlaceType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:53:22.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Place.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Place.cs",
-              "RelativeDocumentMoniker": "..\\Domain.Entities\\Place.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Place.cs",
-              "RelativeToolTip": "..\\Domain.Entities\\Place.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T15:55:21.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T13:31:27.093Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Repository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure.Repositories.Implementations\\Repository.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Repository.cs",
-              "RelativeToolTip": "..\\Infrastructure.Repositories.Implementations\\Repository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T15:34:16.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-21T15:25:25.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Infrastructure.Repositories.Implementations",
+              "Title": "Infrastructure.Repositories.Implementations.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
               "RelativeDocumentMoniker": "..\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
               "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
@@ -429,46 +354,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\DatabaseContext.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\DatabaseContext.cs",
-              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\DatabaseContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "DocumentIndex": 18,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "RelativeToolTip": "..\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T11:48:33.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T15:34:16.579Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "EntetyFrameworkInstaller.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
-              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\EntetyFrameworkInstaller.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "DocumentIndex": 17,
+              "Title": "MapPointService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\MapPointService.cs",
+              "RelativeDocumentMoniker": "..\\Services.Implementations\\MapPointService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\MapPointService.cs",
+              "RelativeToolTip": "..\\Services.Implementations\\MapPointService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T14:17:29.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T13:28:08.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMapPointService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\IMapPointService.cs",
+              "RelativeDocumentMoniker": "..\\Services.Abstractions\\IMapPointService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\IMapPointService.cs",
+              "RelativeToolTip": "..\\Services.Abstractions\\IMapPointService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:39:34.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MapPointMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Mapping\\MapPointMappingProfile.cs",
+              "RelativeDocumentMoniker": "Mapping\\MapPointMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Mapping\\MapPointMappingProfile.cs",
+              "RelativeToolTip": "Mapping\\MapPointMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:27:32.239Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "Infrastructure.EntityFramework",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
-              "RelativeDocumentMoniker": "..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
-              "RelativeToolTip": "..\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-18T19:05:27.375Z",
-              "EditorCaption": ""
+              "Title": "MapPointController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Controllers\\MapPointController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MapPointController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Controllers\\MapPointController.cs",
+              "RelativeToolTip": "Controllers\\MapPointController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T15:25:07.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 22,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\IEntity.cs",
               "RelativeDocumentMoniker": "..\\Domain.Entities\\IEntity.cs",
@@ -476,51 +422,134 @@
               "RelativeToolTip": "..\\Domain.Entities\\IEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:33:13.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T18:33:13.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
+              "Title": "MapPoint.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\MapPoint.cs",
+              "RelativeDocumentMoniker": "..\\Domain.Entities\\MapPoint.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\MapPoint.cs",
+              "RelativeToolTip": "..\\Domain.Entities\\MapPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T18:42:24.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Layer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Layer.cs",
               "RelativeDocumentMoniker": "..\\Domain.Entities\\Layer.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Layer.cs",
               "RelativeToolTip": "..\\Domain.Entities\\Layer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T19:00:37.341Z",
+              "WhenOpened": "2024-04-14T19:00:37.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Services.Abstractions.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
+              "RelativeDocumentMoniker": "..\\Services.Abstractions\\Services.Abstractions.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Abstractions\\Services.Abstractions.csproj",
+              "RelativeToolTip": "..\\Services.Abstractions\\Services.Abstractions.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T13:26:03.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TracingProgmatica.http",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.http",
-              "RelativeDocumentMoniker": "TracingProgmatica.http",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.http",
-              "RelativeToolTip": "TracingProgmatica.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-04-13T18:57:43.054Z",
+              "DocumentIndex": 25,
+              "Title": "Services.Implementations.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
+              "RelativeDocumentMoniker": "..\\Services.Implementations\\Services.Implementations.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Implementations\\Services.Implementations.csproj",
+              "RelativeToolTip": "..\\Services.Implementations\\Services.Implementations.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T13:33:59.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Services.Contracts.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
+              "RelativeDocumentMoniker": "..\\Services.Contracts\\Services.Contracts.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Services.Contracts\\Services.Contracts.csproj",
+              "RelativeToolTip": "..\\Services.Contracts\\Services.Contracts.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T13:31:18.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "Domain.Entities.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj",
-              "RelativeDocumentMoniker": "..\\Domain.Entities\\Domain.Entities.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj",
-              "RelativeToolTip": "..\\Domain.Entities\\Domain.Entities.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-14T10:51:11.624Z",
-              "EditorCaption": ""
+              "Title": "CreatingMapPointModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\CreatingMapPointModel.cs",
+              "RelativeDocumentMoniker": "Models\\MapPoint\\CreatingMapPointModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\CreatingMapPointModel.cs",
+              "RelativeToolTip": "Models\\MapPoint\\CreatingMapPointModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:25:13.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OptionModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Option\\OptionModel.cs",
+              "RelativeDocumentMoniker": "Models\\Option\\OptionModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Option\\OptionModel.cs",
+              "RelativeToolTip": "Models\\Option\\OptionModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:22:02.112Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "MapPointMadel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\MapPointMadel.cs",
+              "RelativeDocumentMoniker": "Models\\MapPoint\\MapPointMadel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\MapPoint\\MapPointMadel.cs",
+              "RelativeToolTip": "Models\\MapPoint\\MapPointMadel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:09:28.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PlaceTypeModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\PlaceType\\PlaceTypeModel.cs",
+              "RelativeDocumentMoniker": "Models\\PlaceType\\PlaceTypeModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\PlaceType\\PlaceTypeModel.cs",
+              "RelativeToolTip": "Models\\PlaceType\\PlaceTypeModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:20:40.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PlaceModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Place\\PlaceModel.cs",
+              "RelativeDocumentMoniker": "Models\\Place\\PlaceModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Models\\Place\\PlaceModel.cs",
+              "RelativeToolTip": "Models\\Place\\PlaceModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:16:38.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Repositories.Abstractions\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Services.Repositories.Abstractions\\Class1.cs",
@@ -531,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Implementations\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Services.Implementations\\Class1.cs",
@@ -542,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Contracts\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Services.Contracts\\Class1.cs",
@@ -553,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Services.Abstractions\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Services.Abstractions\\Class1.cs",
@@ -564,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.Repositories.Implementations\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Infrastructure.Repositories.Implementations\\Class1.cs",
@@ -575,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Infrastructure.EntityFramework\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Infrastructure.EntityFramework\\Class1.cs",
@@ -586,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\Domain.Entities\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\Domain.Entities\\Class1.cs",
@@ -594,32 +623,6 @@
               "RelativeToolTip": "..\\..\\Domain.Entities\\Class1.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T10:32:27.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T18:59:02.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T18:57:35.984Z",
-              "EditorCaption": ""
             }
           ]
         }

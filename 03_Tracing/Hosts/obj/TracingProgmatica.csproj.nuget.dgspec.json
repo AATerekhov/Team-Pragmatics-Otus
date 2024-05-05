@@ -4,14 +4,14 @@
     "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj": {
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
-        "projectName": "TracingProgmatica",
-        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj",
+        "projectName": "Domain.Entities",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,24 +44,140 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
+        "projectName": "TracingProgmatica",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\TracingProgmatica.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Hosts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj"
+              },
+              "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
+        "projectName": "Infrastructure.EntityFramework",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.EntityFramework\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Domain.Entities\\Domain.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "AutoMapper": {
+            "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[8.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.4, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.19.6, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -76,9 +192,66 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+        "projectName": "Infrastructure.Repositories.Implementations",
+        "projectPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Team-Pragmatics-Otus\\03_Tracing\\Infrastructure.Repositories.Implementations\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

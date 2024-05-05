@@ -1,0 +1,16 @@
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\bin\Debug\net8.0\Infrastructure.EntityFramework.deps.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\bin\Debug\net8.0\Infrastructure.EntityFramework.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\bin\Debug\net8.0\Infrastructure.EntityFramework.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\bin\Debug\net8.0\Domain.Entities.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\bin\Debug\net8.0\Domain.Entities.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.AssemblyInfo.cs
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.sourcelink.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastr.59ECBA85.Up2Date
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\refint\Infrastructure.EntityFramework.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\Infrastructure.EntityFramework.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Infrastructure.EntityFramework\obj\Debug\net8.0\ref\Infrastructure.EntityFramework.dll

@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\bin\Debug\net8.0\Domain.Entities.deps.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\bin\Debug\net8.0\Domain.Entities.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\bin\Debug\net8.0\Domain.Entities.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.AssemblyInfo.cs
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.sourcelink.json
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\refint\Domain.Entities.dll
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\Domain.Entities.pdb
+C:\Users\User\Documents\Team-Pragmatics-Otus\03_Tracing\Domain.Entities\obj\Debug\net8.0\ref\Domain.Entities.dll
