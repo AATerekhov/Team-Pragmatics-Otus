@@ -1,0 +1,659 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\GeoMap\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|c:\\users\\user\\source\\repos\\geomap\\geomap\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|solutionrelative:geomap\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.entityframework\\migrations\\databasecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|solutionrelative:infrastructure.entityframework\\migrations\\databasecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|c:\\users\\user\\source\\repos\\geomap\\geomap\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|solutionrelative:geomap\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.entityframework\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|solutionrelative:infrastructure.entityframework\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|c:\\users\\user\\source\\repos\\geomap\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.entityframework\\entityframeworkinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|solutionrelative:infrastructure.entityframework\\entityframeworkinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.repositories.implementations\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|solutionrelative:infrastructure.repositories.implementations\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.entityframework\\migrations\\20240505211501_addeddatetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FC7B5F-BD50-4D53-A75F-C76CE84A6987}|Infrastructure.EntityFramework\\Infrastructure.EntityFramework.csproj|solutionrelative:infrastructure.entityframework\\migrations\\20240505211501_addeddatetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|c:\\users\\user\\source\\repos\\geomap\\geomap\\registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|solutionrelative:geomap\\registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|c:\\users\\user\\source\\repos\\geomap\\geomap\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|solutionrelative:geomap\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{312CC037-F1AD-4087-9B15-5A5B41246753}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\source\\repos\\geomap\\domain.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{312CC037-F1AD-4087-9B15-5A5B41246753}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|c:\\users\\user\\source\\repos\\geomap\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|c:\\users\\user\\source\\repos\\geomap\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|solutionrelative:launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|c:\\users\\user\\source\\repos\\geomap\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{6F6D235E-9462-4438-8091-C47B7511AB9E}|docker-compose.dcproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|c:\\users\\user\\source\\repos\\geomap\\geomap\\geomap.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C24DE07E-9609-46C1-A894-BD4923BE5E99}|GeoMap\\GeoMap.csproj|solutionrelative:geomap\\geomap.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1571ECCE-1801-43A8-99DE-8F7A742F2EB6}|Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\source\\repos\\geomap\\services.contracts\\user\\creatinguserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1571ECCE-1801-43A8-99DE-8F7A742F2EB6}|Services.Contracts\\Services.Contracts.csproj|solutionrelative:services.contracts\\user\\creatinguserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.repositories.implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|solutionrelative:infrastructure.repositories.implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D345A30-B878-4AE7-9D6E-202CDF487284}|Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\source\\repos\\geomap\\services.repositories.abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D345A30-B878-4AE7-9D6E-202CDF487284}|Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|solutionrelative:services.repositories.abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D345A30-B878-4AE7-9D6E-202CDF487284}|Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|c:\\users\\user\\source\\repos\\geomap\\services.repositories.abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D345A30-B878-4AE7-9D6E-202CDF487284}|Services.Repositories.Abstractions\\Services.Repositories.Abstractions.csproj|solutionrelative:services.repositories.abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|c:\\users\\user\\source\\repos\\geomap\\infrastructure.repositories.implementations\\infrastructure.repositories.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9BDA17A5-E8C2-48CB-9714-E372EADB87E0}|Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj|solutionrelative:infrastructure.repositories.implementations\\infrastructure.repositories.implementations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B7AC76-BADB-4DCA-B1AA-2F7DE895A499}|Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\source\\repos\\geomap\\services.implementations\\mapping\\usermappingsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B7AC76-BADB-4DCA-B1AA-2F7DE895A499}|Services.Implementations\\Services.Implementations.csproj|solutionrelative:services.implementations\\mapping\\usermappingsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1571ECCE-1801-43A8-99DE-8F7A742F2EB6}|Services.Contracts\\Services.Contracts.csproj|c:\\users\\user\\source\\repos\\geomap\\services.contracts\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1571ECCE-1801-43A8-99DE-8F7A742F2EB6}|Services.Contracts\\Services.Contracts.csproj|solutionrelative:services.contracts\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BCFAD00-8C57-4877-BADC-3BDE7ED61890}|Services.Abstractions\\Services.Abstractions.csproj|c:\\users\\user\\source\\repos\\geomap\\services.abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BCFAD00-8C57-4877-BADC-3BDE7ED61890}|Services.Abstractions\\Services.Abstractions.csproj|solutionrelative:services.abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58B7AC76-BADB-4DCA-B1AA-2F7DE895A499}|Services.Implementations\\Services.Implementations.csproj|c:\\users\\user\\source\\repos\\geomap\\services.implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58B7AC76-BADB-4DCA-B1AA-2F7DE895A499}|Services.Implementations\\Services.Implementations.csproj|solutionrelative:services.implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{312CC037-F1AD-4087-9B15-5A5B41246753}|Domain.Entities\\Domain.Entities.csproj|c:\\users\\user\\source\\repos\\geomap\\domain.entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{312CC037-F1AD-4087-9B15-5A5B41246753}|Domain.Entities\\Domain.Entities.csproj|solutionrelative:domain.entities\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Settings\\ApplicationSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\CreatingUserModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\UserModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Mapping\\UserMappingsProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Program.cs",
+              "RelativeDocumentMoniker": "GeoMap\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Program.cs",
+              "RelativeToolTip": "GeoMap\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:30:04.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.json",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-30T10:37:10.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "GeoMap.http",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.http",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\GeoMap.http",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.http",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\GeoMap.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-04-30T13:06:35.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Domain.Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\User.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Domain.Entities\\User.cs",
+              "RelativeToolTip": "Domain.Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:13:34.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "RelativeDocumentMoniker": "Infrastructure.Repositories.Implementations\\Repository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\Repository.cs",
+              "RelativeToolTip": "Infrastructure.Repositories.Implementations\\Repository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwMAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:31:02.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "RelativeToolTip": "Infrastructure.EntityFramework\\DatabaseContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:29:25.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EntityFrameworkInstaller.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\EntityFrameworkInstaller.cs",
+              "RelativeDocumentMoniker": "Infrastructure.EntityFramework\\EntityFrameworkInstaller.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\EntityFrameworkInstaller.cs",
+              "RelativeToolTip": "Infrastructure.EntityFramework\\EntityFrameworkInstaller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T17:06:03.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-05-05T17:39:13.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\appsettings.json",
+              "RelativeDocumentMoniker": "GeoMap\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\appsettings.json",
+              "RelativeToolTip": "GeoMap\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-05T20:01:33.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\Migrations\\DatabaseContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Infrastructure.EntityFramework\\Migrations\\DatabaseContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\Migrations\\DatabaseContextModelSnapshot.cs",
+              "RelativeToolTip": "Infrastructure.EntityFramework\\Migrations\\DatabaseContextModelSnapshot.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:15:25.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\UserController.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T08:04:19.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240505211501_AddedDateTime.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\Migrations\\20240505211501_AddedDateTime.cs",
+              "RelativeDocumentMoniker": "Infrastructure.EntityFramework\\Migrations\\20240505211501_AddedDateTime.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.EntityFramework\\Migrations\\20240505211501_AddedDateTime.cs",
+              "RelativeToolTip": "Infrastructure.EntityFramework\\Migrations\\20240505211501_AddedDateTime.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:16:00.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "GeoMap\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Controllers\\UserController.cs",
+              "RelativeToolTip": "GeoMap\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:17:06.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Registrar.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Registrar.cs",
+              "RelativeDocumentMoniker": "GeoMap\\Registrar.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\Registrar.cs",
+              "RelativeToolTip": "GeoMap\\Registrar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:17:11.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\WeatherForecast.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T18:31:59.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-30T15:16:11.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Registrar.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Registrar.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Registrar.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Registrar.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Registrar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T17:41:23.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "docker-compose.dcproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-05T17:39:03.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-05T17:40:49.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\launchSettings.json",
+              "RelativeDocumentMoniker": "launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\launchSettings.json",
+              "RelativeToolTip": "launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-05T17:54:11.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GeoMap.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\GeoMap.csproj",
+              "RelativeDocumentMoniker": "GeoMap\\GeoMap.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\GeoMap\\GeoMap.csproj",
+              "RelativeToolTip": "GeoMap\\GeoMap.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-05T17:54:24.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ApplicationSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Settings\\ApplicationSettings.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Settings\\ApplicationSettings.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Settings\\ApplicationSettings.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Settings\\ApplicationSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T18:07:15.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreatingUserModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\CreatingUserModel.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Model\\User\\CreatingUserModel.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\CreatingUserModel.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Model\\User\\CreatingUserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:40:54.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Dockerfile",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Dockerfile",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Dockerfile",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-27T19:25:34.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GeoMap.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.csproj",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\GeoMap.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\GeoMap.csproj",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\GeoMap.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-01T17:41:13.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Program.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T18:36:18.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\UserModel.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Model\\User\\UserModel.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Model\\User\\UserModel.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Model\\User\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:41:39.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserMappingsProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Mapping\\UserMappingsProfile.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Mapping\\UserMappingsProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Mapping\\UserMappingsProfile.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Mapping\\UserMappingsProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:27:53.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T18:32:23.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreatingUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Contracts\\User\\CreatingUserDto.cs",
+              "RelativeDocumentMoniker": "Services.Contracts\\User\\CreatingUserDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Contracts\\User\\CreatingUserDto.cs",
+              "RelativeToolTip": "Services.Contracts\\User\\CreatingUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:02:20.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure.Repositories.Implementations\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure.Repositories.Implementations\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T16:55:07.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Repositories.Abstractions\\IRepository.cs",
+              "RelativeDocumentMoniker": "Services.Repositories.Abstractions\\IRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Repositories.Abstractions\\IRepository.cs",
+              "RelativeToolTip": "Services.Repositories.Abstractions\\IRepository.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:19:35.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Repositories.Abstractions\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Services.Repositories.Abstractions\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Repositories.Abstractions\\IUserRepository.cs",
+              "RelativeToolTip": "Services.Repositories.Abstractions\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:04:30.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Infrastructure.Repositories.Implementations.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+              "RelativeDocumentMoniker": "Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+              "RelativeToolTip": "Infrastructure.Repositories.Implementations\\Infrastructure.Repositories.Implementations.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-01T16:54:53.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Contracts\\User\\UserDto.cs",
+              "RelativeDocumentMoniker": "Services.Contracts\\User\\UserDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Contracts\\User\\UserDto.cs",
+              "RelativeToolTip": "Services.Contracts\\User\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:00:06.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserMappingsProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Implementations\\Mapping\\UserMappingsProfile.cs",
+              "RelativeDocumentMoniker": "Services.Implementations\\Mapping\\UserMappingsProfile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Implementations\\Mapping\\UserMappingsProfile.cs",
+              "RelativeToolTip": "Services.Implementations\\Mapping\\UserMappingsProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:45:25.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Abstractions\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services.Abstractions\\IUserService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Abstractions\\IUserService.cs",
+              "RelativeToolTip": "Services.Abstractions\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T12:52:00.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Services.Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Services.Implementations\\UserService.cs",
+              "RelativeToolTip": "Services.Implementations\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:18:48.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeoMap\\Domain.Entities\\IEntity.cs",
+              "RelativeDocumentMoniker": "Domain.Entities\\IEntity.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GeoMap\\Domain.Entities\\IEntity.cs",
+              "RelativeToolTip": "Domain.Entities\\IEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:14:06.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "..\\Host\\WebApplication_test_1\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Host\\WebApplication_test_1\\appsettings.Development.json",
+              "RelativeToolTip": "..\\Host\\WebApplication_test_1\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-30T15:17:03.868Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

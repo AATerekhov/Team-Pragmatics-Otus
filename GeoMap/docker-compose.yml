@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  geomap:
+    image: ${DOCKER_REGISTRY-}geomap
+    build:
+      context: .
+      dockerfile: GeoMap/Dockerfile
+  app-db:
+    image: postgres
+    container_name: GeoMapDB
+    restart: unless-stopped
+    environment:
+      - 'POSTGRES_PASSWORD=geomap17'
+      - 'POSTGRES_DB=geomap' 
+    ports:
+      - '5432:5432'
+

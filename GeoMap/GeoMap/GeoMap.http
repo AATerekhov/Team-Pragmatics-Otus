@@ -1,0 +1,6 @@
+@GeoMap_HostAddress = http://localhost:5051
+
+GET {{GeoMap_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
