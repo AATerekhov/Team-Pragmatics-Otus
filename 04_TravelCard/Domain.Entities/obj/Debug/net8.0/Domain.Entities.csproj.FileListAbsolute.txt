@@ -22,3 +22,6 @@ C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Ent
 C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\obj\Debug\net8.0\refint\Domain.Entities.dll
 C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\obj\Debug\net8.0\Domain.Entities.pdb
 C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\obj\Debug\net8.0\ref\Domain.Entities.dll
+C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\bin\Debug\net8.0\Domain.Entities.runtimeconfig.json
+C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\obj\Debug\net8.0\Domain.Entities.csproj.AssemblyReference.cache
+C:\Users\Машина\source\repos\Team-Pragmatics-Otus\04_TravelCard\Domain.Entities\obj\Debug\net8.0\Domain.Entities.genruntimeconfig.cache
