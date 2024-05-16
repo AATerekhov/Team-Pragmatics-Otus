@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
-    [Table("User_testing")]
-    public class User:IEntity<int>
+    [Table("User")]
+    public class User:IEntity<Guid>
     {
         [Key, Column("UserID")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [MaxLength(25)]
         [Required()]
         public string? Logo { get; set; }
