@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services.Repositories.Abstractions
 {
-    public interface IUserRepository: IRepository<User, int>
+    public interface IUserRepository: IRepository<User, Guid>
     {
 
     }

@@ -13,6 +13,8 @@ services:
     environment:
       - 'POSTGRES_PASSWORD=geomap17'
       - 'POSTGRES_DB=geomap' 
+    volumes:
+      - 'C:/Share/postgresql/GeoMap:/var/lib/postgresql/data'
     ports:
       - '5432:5432'
 
