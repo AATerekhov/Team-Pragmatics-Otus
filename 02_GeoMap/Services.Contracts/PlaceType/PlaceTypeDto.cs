@@ -5,31 +5,23 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.Contracts.Place;
 
-namespace Domain.Entities
+namespace Services.Contracts.PlaceType
 {
-    [Table("PlaceType")]
-    public class PlaceType : IEntity<int>
+    public class PlaceTypeDto
     {
         /// <summary>
         /// Идентификатор.
         /// </summary>
-        [Key, Column("PlaceTypeID")]
         public int Id { get; set; }
         /// <summary>
         /// Название типа.
         /// </summary>
-        [MaxLength(25)]
-        public required string Name { get; set; }
+        public string? Name { get; set; }
         /// <summary>
         /// Описание.
         /// </summary>
-        [MaxLength(40)]
         public string? Description { get; set; }
-        /// <summary>
-        /// Список мест реализующий данный тип.
-        /// </summary>
-        public ICollection<Place> Places { get; set; }
-
     }
 }
