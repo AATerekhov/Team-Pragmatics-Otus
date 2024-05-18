@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using System.Security.Cryptography;
 
 namespace Services.Repositories.Abstractions
 { 
@@ -60,6 +61,10 @@ namespace Services.Repositories.Abstractions
         /// <param name="entities"> Коллекция сущностей для удаления. </param>
         /// <returns> Была ли операция удаления успешна. </returns>
         bool DeleteRange(ICollection<T> entities);
+
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(TPrimaryKey id);
+        Task DeleteAsync(T entity);
 
         /// <summary>
         /// Для сущности проставить состояние - что она изменена.

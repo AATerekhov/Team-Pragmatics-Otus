@@ -22,8 +22,6 @@ namespace Services.Implementations
             
             var createdUser = _userRepository.AddAsync(user);
             _userRepository.SaveChanges();
-
-            //TODO: Тут идет логика работы с createdUser, который сохранен в БД.
         }
     }
 }

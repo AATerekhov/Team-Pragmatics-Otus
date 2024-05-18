@@ -19,5 +19,10 @@ namespace Domain.Entities
         [Required()]
         public string? Email { get; set; }
 
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        public bool Deleted { get; set; }
+
     }
 }

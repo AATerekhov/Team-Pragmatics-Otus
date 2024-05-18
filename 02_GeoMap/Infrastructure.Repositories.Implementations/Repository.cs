@@ -64,7 +64,7 @@ namespace Infrastructure.Repositories.Implementations
         /// <param name="cancellationToken"> Токен отмены </param>
         /// <param name="asNoTracking"> Вызвать с AsNoTracking. </param>
         /// <returns> Список сущностей. </returns>
-        public async Task<List<T>> GetAllAsync(CancellationToken cancellationToken, bool asNoTracking = false)
+        public virtual async Task<List<T>> GetAllAsync(CancellationToken cancellationToken, bool asNoTracking = false)
         {
             return await GetAll().ToListAsync(cancellationToken);
         }
@@ -130,10 +130,26 @@ namespace Infrastructure.Repositories.Implementations
         {
             Context.Entry(entity).State = EntityState.Modified;
         }
+        public async Task UpdateAsync(T entity)
+        {
+            Context.Update(entity);
+            await Context.SaveChangesAsync();
+        }
 
         #endregion
 
         #region Delete
+
+        public async Task DeleteAsync(TPrimaryKey id)
+        {
+            var entity = await GetAsync(id, CancellationToken.None);
+            if (entity == null)
+                return;
+            Context.Remove(entity);
+            await Context.SaveChangesAsync();
+        }
+
+        public Task DeleteAsync(T entity) => DeleteAsync(entity.Id);
 
         /// <summary>
         /// Удалить сущность.

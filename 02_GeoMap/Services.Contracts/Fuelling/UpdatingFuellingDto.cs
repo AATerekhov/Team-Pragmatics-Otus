@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Services.Contracts.Fuelling
 {
-    [Table("Fuelling")]
-    public class Fuelling:Location
+    public class UpdatingFuellingDto
     {
+        /// <summary>
+        /// Название локации
+        /// </summary>
+        public string? Name { get; set; }
         /// <summary>
         /// На заправке есть кафе.
         /// </summary>
