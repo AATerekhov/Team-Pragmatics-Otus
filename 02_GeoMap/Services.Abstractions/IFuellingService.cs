@@ -17,7 +17,8 @@ namespace Services.Abstractions
         /// <param name="creatingPlaceDto"> ДТО заправочная станция.</param>
         /// <returns> Идентификатор. </returns>
         Task<Guid> CreateAsync(CreatingFuellingDto creatingFuellingDto);
-        
+
+        Task<FuellingDto> CreateFuellingAsync(CreatingFuellingDto creatingFuellingDto);
         /// <summary>
         ///  Получить заправочную станцию.
         /// </summary>
@@ -43,5 +44,7 @@ namespace Services.Abstractions
         /// </summary>
         /// <returns></returns>
         Task<ICollection<FuellingDto>> GetAllFuellingsAsync();
+
+        
     }
 }

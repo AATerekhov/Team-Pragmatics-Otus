@@ -15,10 +15,13 @@ namespace Services.Implementations.Mapping
         {
             CreateMap<User, UserDto>();
 
-            CreateMap<CreatingUserDto, User>()
-                .ForMember(d=>d.Id, map => map.Ignore())
-                .ForMember(d => d.Name, map => map.Ignore())
-                .ForMember(d => d.Surname, map => map.Ignore());
+            CreateMap<CreatingUserDto, User>();
+            //.ForMember(d=>d.Id, map => map.Ignore())
+            //.ForMember(d => d.Deleted, map => map.Ignore())
+            //.ForMember(d => d.Name, map => map.Ignore())
+            //.ForMember(d => d.Surname, map => map.Ignore());
+
+            CreateMap<UserDto, User> ();
         }
     }
 }

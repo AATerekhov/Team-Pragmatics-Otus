@@ -15,8 +15,8 @@ namespace Services.Implementations
 {
     public class PlaceService:IPlaceService
     {
-        public readonly IMapper _mapper;
-        public readonly IPlaceRepository _placeRepository;
+        private readonly IMapper _mapper;
+        private readonly IPlaceRepository _placeRepository;
         public PlaceService(IMapper mapper, IPlaceRepository placeRepository)
         {
             _mapper = mapper;
@@ -31,6 +31,15 @@ namespace Services.Implementations
             await _placeRepository.SaveChangesAsync();
 
             return createdLesson.Id;
+        }
+
+        public async Task<PlaceDto> CreatePlaceAsync(CreatingPlaceDto creatingPlaceDto)
+        {
+            var place = _mapper.Map<Place>(creatingPlaceDto);
+            var createdPlace = await _placeRepository.AddAsync(place);
+            await _placeRepository.SaveChangesAsync();
+
+            return _mapper.Map<PlaceDto>(createdPlace);
         }
 
         public async Task DeleteAsync(Guid id)
@@ -51,6 +60,11 @@ namespace Services.Implementations
         {
             ICollection<Place> entities = await _placeRepository.GetForTypeAsync(placeTypeId);
             return _mapper.Map<ICollection<Place>, ICollection<PlaceDto>>(entities);
+        }
+
+        public Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateAsync(Guid id, UpdatingPlaceDto updatingPlaceDto)

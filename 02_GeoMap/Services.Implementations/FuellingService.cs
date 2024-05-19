@@ -16,8 +16,8 @@ namespace Services.Implementations
 {
     public class FuellingService : IFuellingService
     {
-        public readonly IMapper _mapper;
-        public readonly IFuellingRepository _fuellingRepository;
+        private readonly IMapper _mapper;
+        private readonly IFuellingRepository _fuellingRepository;
 
         public FuellingService(IMapper mapper, IFuellingRepository fuellingRepository)
         {
@@ -62,6 +62,15 @@ namespace Services.Implementations
             fuelling.IsCafe = updatingFuellingDto.IsCafe;
             fuelling.IsFoodShop = updatingFuellingDto.IsFoodShop;
             await _fuellingRepository.UpdateAsync(fuelling);
+        }
+
+        public async Task<FuellingDto> CreateFuellingAsync(CreatingFuellingDto creatingFuellingDto)
+        {
+            var fuelling = _mapper.Map<Fuelling>(creatingFuellingDto);
+            var createdFuelling = await _fuellingRepository.AddAsync(fuelling);
+            await _fuellingRepository.SaveChangesAsync();
+
+            return _mapper.Map<FuellingDto>(createdFuelling);
         }
     }
 }

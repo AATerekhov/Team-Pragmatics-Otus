@@ -1,14 +1,14 @@
-﻿using System;
-namespace Services.Contracts.PlaceType
+﻿namespace GeoMap.Model.Place
 {
-    public class CreatingPlaceTypeDto
+    public class UpdatingPlaceModel
     {
         /// <summary>
-        /// Название типа.
+        /// Название локации
         /// </summary>
         public string? Name { get; set; }
+
         /// <summary>
-        /// Описание.
+        /// Описание места.
         /// </summary>
         public string? Description { get; set; }
     }

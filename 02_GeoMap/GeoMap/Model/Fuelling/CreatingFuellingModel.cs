@@ -1,6 +1,6 @@
-﻿namespace Services.Contracts.Fuelling
+﻿namespace GeoMap.Model.Fuelling
 {
-    public class CreatingFuellingDto
+    public class CreatingFuellingModel
     {
         /// <summary>
         /// Идентификатор

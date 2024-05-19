@@ -1,11 +1,9 @@
-﻿namespace Services.Contracts.Fuelling
+﻿using GeoMap.Model.Place;
+
+namespace GeoMap.Model.Fuelling
 {
-    public class UpdatingFuellingDto
+    public class FuellingModel:LocationModel
     {
-        /// <summary>
-        /// Название локации
-        /// </summary>
-        public string? Name { get; set; }
         /// <summary>
         /// На заправке есть кафе.
         /// </summary>

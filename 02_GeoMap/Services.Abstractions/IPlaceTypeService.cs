@@ -20,6 +20,8 @@ namespace Services.Abstractions
         /// <returns> Идентификатор. </returns>
         Task<int> CreateAsync(CreatingPlaceTypeDto creatingPlaceTypeDto);
 
+        Task<PlaceTypeDto> CreatePlaceTypeAsync(CreatingPlaceTypeDto placeType);
+
         /// <summary>
         /// Получить тип мест посещения.
         /// </summary>

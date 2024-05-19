@@ -1,7 +1,6 @@
-﻿using System;
-namespace Services.Contracts.PlaceType
+﻿namespace GeoMap.Model.PlaceType
 {
-    public class CreatingPlaceTypeDto
+    public class CreatingPlaceTypeModel
     {
         /// <summary>
         /// Название типа.
