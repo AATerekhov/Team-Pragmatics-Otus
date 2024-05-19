@@ -19,6 +19,7 @@ namespace Services.Abstractions
         /// <param name="creatingPlaceDto"> ДТО места посещения.</param>
         /// <returns> Идентификатор. </returns>
         Task<Guid> CreateAsync(CreatingPlaceDto creatingPlaceDto);
+        Task<PlaceDto> CreatePlaceAsync(CreatingPlaceDto place);
 
         /// <summary>
         /// Получить тип мест посещения.
@@ -45,7 +46,7 @@ namespace Services.Abstractions
         /// </summary>
         /// <param name="placeTypeDto">Тип мест посещения.</param>
         /// <returns>Коллекция мест посещения.</returns>
-        Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId,PlaceTypeDto placeTypeDto);
+        Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId);
 
     }
 }

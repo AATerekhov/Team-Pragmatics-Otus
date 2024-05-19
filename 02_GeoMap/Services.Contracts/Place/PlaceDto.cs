@@ -16,10 +16,5 @@ namespace Services.Contracts.Place
         /// </summary>
         public string? Description { get; set; }
 
-        /// <summary>
-        /// Тип места посещения.
-        /// </summary>
-        public PlaceTypeDto? PlaceType { get; set; }
-
     }
 }

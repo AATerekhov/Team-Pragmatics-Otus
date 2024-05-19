@@ -1,11 +1,12 @@
-﻿namespace Services.Contracts.Fuelling
+﻿namespace GeoMap.Model.Place
 {
-    public class CreatingFuellingDto
+    public class CreatingPlaceModel
     {
+        public int PlaceTypeId { get; set; }
         /// <summary>
-        /// Идентификатор
+        /// Название локации
         /// </summary>
-        public Guid Id { get; set; }
+        public string? Name { get; set; }
         /// <summary>
         /// Широта
         /// </summary>

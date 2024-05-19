@@ -14,19 +14,22 @@ namespace Services.Implementations.Mapping
     {
         public FuellingMappingsProfile()
         {
-            CreateMap<FuellingDto, Fuelling>();
+            CreateMap<Fuelling , FuellingDto>();
 
+            CreateMap<CreatingFuellingDto, Fuelling>();
+            //.ForMember(d => d.Id, map => map.Ignore())
+            //.ForMember(d => d.Name, map => map.Ignore())
+            //.ForMember(d => d.IsCafe, map => map.Ignore())
+            //.ForMember(d => d.IsFoodShop, map => map.Ignore())
+            //.ForMember(d => d.Deleted, map => map.Ignore());
 
-            CreateMap<CreatingFuellingDto, Fuelling>()
-                .ForMember(d => d.Id, map => map.Ignore())
-                .ForMember(d => d.Name, map => map.Ignore())
-                .ForMember(d => d.IsCafe, map => map.Ignore())
-                .ForMember(d => d.IsFoodShop, map => map.Ignore());
+            CreateMap<UpdatingFuellingDto, Fuelling>();
+            //.ForMember(d => d.Id, map => map.Ignore())
+            //.ForMember(d => d.Latitude, map => map.Ignore())
+            //.ForMember(d => d.Longitude, map => map.Ignore())
+            //.ForMember(d => d.Deleted, map => map.Ignore());
 
-            CreateMap<UpdatingFuellingDto, Fuelling>()
-                .ForMember(d => d.Id, map => map.Ignore())
-                .ForMember(d => d.Latitude, map => map.Ignore())
-                .ForMember(d => d.Longitude, map => map.Ignore());
+            CreateMap<FuellingDto,  Fuelling> ();
         }
     }
 }

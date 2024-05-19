@@ -1,6 +1,6 @@
-﻿namespace Services.Contracts.Fuelling
+﻿namespace GeoMap.Model.Fuelling
 {
-    public class UpdatingFuellingDto
+    public class UpdatingFuellingModel
     {
         /// <summary>
         /// Название локации

@@ -15,8 +15,8 @@ namespace Services.Implementations
 {
     public class PlaceTypeService : IPlaceTypeService
     {
-        public readonly IMapper _mapper;
-        public readonly IPlaceTypeRepository _placeTypeRepository;
+        private readonly IMapper _mapper;
+        private readonly IPlaceTypeRepository _placeTypeRepository;
         public PlaceTypeService(IPlaceTypeRepository placeTypeRepository, IMapper mapper)
         {
             _placeTypeRepository = placeTypeRepository;
@@ -57,6 +57,15 @@ namespace Services.Implementations
             if (placeType == null)
                 throw new PlaceTypeNotExistException(id);
             await _placeTypeRepository.DeleteAsync(placeType);
+        }
+
+        public async Task<PlaceTypeDto> CreatePlaceTypeAsync(CreatingPlaceTypeDto creatingPlaceTypeDto)
+        {
+            var placeType = _mapper.Map<PlaceType>(creatingPlaceTypeDto);
+            var createdPlaceType = await _placeTypeRepository.AddAsync(placeType);
+            await _placeTypeRepository.SaveChangesAsync();
+
+            return _mapper.Map <PlaceTypeDto>(createdPlaceType);
         }
     }
 }
