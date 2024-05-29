@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     [Table("Travel_point")]
-    public class TravelPoint
+    public class TravelPoint : IEntity<int>
     {
         [Key, Column("tp_ID")]
         public int Id { get; set; }
