@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Services.Contracts.Travel;
-using Services.Contracts.User;
 
 namespace WebApi.Mapping
 {
