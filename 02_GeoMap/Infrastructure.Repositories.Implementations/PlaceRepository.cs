@@ -22,7 +22,7 @@ namespace Infrastructure.Repositories.Implementations
             return await query.SingleOrDefaultAsync();
         }
 
-        public async Task<List<Place>> GetForTypeAsync(int placeTypeId)
+        public async Task<List<Place>> GetForTypeAsync(int placeTypeId, CancellationToken cancellationToken)
         {
             var query = GetAll().Where(l => !l.Deleted && l.PlaceTypeID == placeTypeId);
             return await query.ToListAsync();
