@@ -5,9 +5,9 @@ using Services.Repositories.Abstractions;
 
 namespace Infrastructure.Repositories.Implementations
 {
-    public class UserRepository : Repository<User, int>, IUserRepository
+    public class TravelRepository : Repository<Travel, int>, ITravelRepository
     {
-        public UserRepository(DataContext context) : base(context) 
+        public TravelRepository(DataContext context) : base(context) 
         {
 
         }
@@ -16,26 +16,25 @@ namespace Infrastructure.Repositories.Implementations
         /// Получить сущность по Id.
         /// </summary>
         /// <param name="id"> Id сущности. </param>
-        /// <returns> Юзер. </returns>
-        public override async Task<User> GetAsync(int id, CancellationToken cancellationToken)
+        /// <returns> Путешествие. </returns>
+        public override async Task<Travel> GetAsync(int id, CancellationToken cancellationToken)
         {
-            //return await Context.Set<User>().AsNoTracking().ToListAsync().AsEnumerable();
-            var query = Context.Set<User>().AsQueryable();
+            var query = Context.Set<Travel>().AsQueryable();
             return await query.SingleOrDefaultAsync(c => c.Id == id);
             //return await query.SingleOrDefaultAsync(cancellationToken);
         }
 
-        //public Task<User?> GetUserByIdAsync(int id) => Context.Set<User>().FindAsync(id).AsTask();
+        //public Task<Travel?> GetTravelByIdAsync(int id) => Context.Set<Travel>().FindAsync(id).AsTask();
 
         /// <summary>
         /// Получить список всех объектов.
         /// </summary>
         /// <param name="page"> Номер страницы. </param>
         /// <param name="itemsPerPage"> Количество элементов на странице. </param>
-        /// <returns> Список пользователей. </returns>
-        public async Task<List<User>> GetPagedAsync(int page, int itemsPerPage)
+        /// <returns> Список путешествий. </returns>
+        public async Task<List<Travel>> GetPagedAsync(int page, int itemsPerPage)
         {
-            var query = GetAll().Where(l => !l.Deleted);
+            var query = GetAll();
             return await query
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)

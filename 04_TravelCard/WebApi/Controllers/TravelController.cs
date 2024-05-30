@@ -3,20 +3,20 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstractions;
 using Services.Implementations.Mapping;
-using Services.Contracts.User;
+using Services.Contracts.Travel;
 
 namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserController : ControllerBase
+    public class TravelController : ControllerBase
     {
 
-        private readonly IUserService _service;
+        private readonly ITravelService _service;
         private readonly IMapper _mapper;
         private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserService service, ILogger<UserController> logger, IMapper mapper)
+        public TravelController(ITravelService service, ILogger<UserController> logger, IMapper mapper)
         {
             _service = service;
             _mapper = mapper;
@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(int id)
         {
-            return Ok(_mapper.Map<UserDto, UserModel>(await _service.GetByIdAsync(id)));
+            return Ok(_mapper.Map<TravelDto,TravelModel>(await _service.GetByIdAsync(id)));
         }
 
         //[HttpGet("{id:guid}")]
@@ -42,15 +42,15 @@ namespace WebApi.Controllers
         //}
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync(CreatingUserModel userModel)
+        public async Task<IActionResult> CreateAsync(CreatingTravelModel travelModel)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreatingUserDto>(userModel)));
+            return Ok(await _service.CreateAsync(_mapper.Map<CreatingTravelDto>(travelModel)));
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditAsync(int id, UpdatingUserModel userModel)
+        public async Task<IActionResult> EditAsync(int id, UpdatingTravelModel travelModel)
         {
-            await _service.UpdateAsync(id, _mapper.Map<UpdatingUserModel, UpdatingUserDto>(userModel));
+            await _service.UpdateAsync(id, _mapper.Map<UpdatingTravelModel, UpdatingTravelDto>(travelModel));
             return Ok();
         }
 

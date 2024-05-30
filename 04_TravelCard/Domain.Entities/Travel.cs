@@ -17,17 +17,23 @@ namespace Domain.Entities
         /// <summary>
         /// Менеджер путешествия
         /// </summary>
-        public Manager Manager { get; set; }
+        //public Manager Manager { get; set; }
 
         /// <summary>
         /// Список компаньонов
         /// </summary>
-        public ICollection<User> Users { get; set; }
+        //public ICollection<User> Users { get; set; }
 
         /// <summary>
         /// Список остановок
         /// </summary>
-        public ICollection<TravelPoint> TravelPoints { get; set; }
+        //public ICollection<TravelPoint> TravelPoints { get; set; }
+
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        [Column("deleted")]
+        public bool Deleted { get; set; }
 
     }
 }

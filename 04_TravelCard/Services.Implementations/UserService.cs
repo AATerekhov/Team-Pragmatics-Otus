@@ -27,16 +27,10 @@ namespace Services.Implementations
         /// <returns> Идентификатор. </returns>
         public async Task<int> CreateAsync(CreatingUserDto creatingUserDto)
         {
-            var UserEntity = _mapper.Map<User>(creatingUserDto);
+            var UserEntity = _mapper.Map<CreatingUserDto, User>(creatingUserDto);
             var createdUser = await _UserRepository.AddAsync(UserEntity);
             await _UserRepository.SaveChangesAsync();
             return createdUser.Id;
-            //var User = _mapper.Map<CreatingUserDto, User>(creatingUserDto);
-            //User.Id = creatingUserDto.Id;
-            //User.Login = creatingUserDto.Login;
-            //User.Deleted = creatingUserDto.Deleted;
-            //var createdUser = await _UserRepository.AddAsync(User);
-            //await _UserRepository.SaveChangesAsync();
 
             //Брокер
             //await _busControl.Publish(new MessageDto
