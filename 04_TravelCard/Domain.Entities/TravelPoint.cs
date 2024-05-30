@@ -32,5 +32,11 @@ namespace Domain.Entities
         //public int TravelId { get; set; }
 
         //public Travel Travel { get; set; }
+
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        [Column("deleted")]
+        public bool Deleted { get; set; }
     }
 }

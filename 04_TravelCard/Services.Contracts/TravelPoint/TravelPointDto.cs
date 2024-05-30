@@ -29,5 +29,9 @@ namespace Services.Contracts.TravelPoint
         /// </summary>
         public DateTime WaitingTime { get; set; }
 
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        public bool Deleted { get; set; }
     }
 }
