@@ -3,14 +3,14 @@ using Domain.Entities;
 
 namespace Services.Repositories.Abstractions
 {
-    public interface ITravelRepository : IRepository<User, int>
+    public interface ITravelRepository : IRepository<Travel, int>
     {
         /// <summary>
-        /// Получить список юзеров.
+        /// Получить список путешествий.
         /// </summary>
         /// <param name="page"> Номер страницы. </param>
         /// <param name="itemsPerPage"> Количество элементов на странице. </param>
-        /// <returns> Список юзеров. </returns>
-        Task<List<User>> GetPagedAsync(int page, int itemsPerPage);
+        /// <returns> Список путешествий. </returns>
+        Task<List<Travel>> GetPagedAsync(int page, int itemsPerPage);
     }
 }

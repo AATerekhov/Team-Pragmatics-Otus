@@ -8,8 +8,8 @@ namespace WebApi.Mapping
         public UserMappingProfile()
         {
             CreateMap<UserDto, UserModel>();
-            CreateMap<CreatingUserDto, CreatingUserModel>();
-            CreateMap<UpdatingUserDto, UpdatingUserModel>();
+            CreateMap<CreatingUserModel, CreatingUserDto>();
+            CreateMap<UpdatingUserModel, UpdatingUserDto>();
         }
     }
 }

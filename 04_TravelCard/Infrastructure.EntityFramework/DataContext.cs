@@ -10,7 +10,7 @@ namespace Infrastructure.EntityFramework
     {
         //public DbSet<Manager> Managers { get; set; }
 
-        //public DbSet<Travel> Travels { get; set; }
+        public DbSet<Travel> Travels { get; set; }
 
         //public DbSet<TravelPoint> TravelPoints { get; set; }
 

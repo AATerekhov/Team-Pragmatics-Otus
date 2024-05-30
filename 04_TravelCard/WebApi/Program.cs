@@ -25,11 +25,22 @@ builder.Services.AddDbContext<DataContext>(options =>
         optionsBuilder => optionsBuilder.MigrationsAssembly("Infrastructure.EntityFramework"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddAutoMapper(typeof(IUserService));
+
+//builder.Services.AddAutoMapper(typeof(IUserService));???
+//builder.Services.AddAutoMapper(typeof(IUserRepository));???
+
+//Mapping
 builder.Services.AddAutoMapper(typeof(UserMappingProfile));
 builder.Services.AddAutoMapper(typeof(UserMappingProfileDto));
+builder.Services.AddAutoMapper(typeof(TravelMappingProfile));
+builder.Services.AddAutoMapper(typeof(TravelMappingProfileDto));
+
+//IOC
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITravelService, TravelService>();
+builder.Services.AddScoped<ITravelRepository, TravelRepository>();
+
 var app = builder.Build();
 
 try

@@ -22,14 +22,14 @@ namespace Services.Abstractions
         /// </summary>
         /// <param name="CreatingUserDto"> ДТО создания юзера. </param>
         /// <returns> Идентификатор. </returns>
-        Task<int> CreateAsync(CreatingUserDto creatingLessonDto);
+        Task<int> CreateAsync(CreatingUserDto creatingUserDto);
 
         /// <summary>
         /// Изменить юзера.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
         /// <param name="UpdatingUserDto"> ДТО редактирования юзера. </param>
-        Task UpdateAsync(int id, UpdatingUserDto updatingLessonDto);
+        Task UpdateAsync(int id, UpdatingUserDto creatingUserDto);
 
         /// <summary>
         /// Удалить юзера.
