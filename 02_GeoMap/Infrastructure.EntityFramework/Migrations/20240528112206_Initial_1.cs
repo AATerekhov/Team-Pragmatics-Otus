@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.EntityFramework.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedDateTime : Migration
+    public partial class Initial_1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,8 @@ namespace Infrastructure.EntityFramework.Migrations
                     IsFoodShop = table.Column<bool>(type: "boolean", nullable: false),
                     Name = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
                     Longitude = table.Column<double>(type: "double precision", nullable: false),
-                    Latitude = table.Column<double>(type: "double precision", nullable: false)
+                    Latitude = table.Column<double>(type: "double precision", nullable: false),
+                    Deleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,7 +35,7 @@ namespace Infrastructure.EntityFramework.Migrations
                 {
                     PlaceTypeID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "character varying(25)", maxLength: 25, nullable: true),
+                    Name = table.Column<string>(type: "character varying(25)", maxLength: 25, nullable: false),
                     Description = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true)
                 },
                 constraints: table =>
@@ -50,7 +51,8 @@ namespace Infrastructure.EntityFramework.Migrations
                     Logo = table.Column<string>(type: "character varying(25)", maxLength: 25, nullable: false),
                     Name = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
                     Surname = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
-                    Email = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: false)
+                    Email = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: false),
+                    Deleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,7 +68,8 @@ namespace Infrastructure.EntityFramework.Migrations
                     PlaceTypeID = table.Column<int>(type: "integer", nullable: false),
                     Name = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
                     Longitude = table.Column<double>(type: "double precision", nullable: false),
-                    Latitude = table.Column<double>(type: "double precision", nullable: false)
+                    Latitude = table.Column<double>(type: "double precision", nullable: false),
+                    Deleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

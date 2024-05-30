@@ -59,13 +59,11 @@ namespace Services.Implementations
             await _placeTypeRepository.DeleteAsync(placeType);
         }
 
-        public async Task<PlaceTypeDto> CreatePlaceTypeAsync(CreatingPlaceTypeDto creatingPlaceTypeDto)
+        public async Task<PlaceTypeDto> CreatePlaceTypeAsync(CreatingPlaceTypeDto placeTypeDto)
         {
-            var placeType = _mapper.Map<PlaceType>(creatingPlaceTypeDto);
-            var createdPlaceType = await _placeTypeRepository.AddAsync(placeType);
-            await _placeTypeRepository.SaveChangesAsync();
-
-            return _mapper.Map <PlaceTypeDto>(createdPlaceType);
+            var placeType = await _placeTypeRepository.AddAsync(_mapper.Map<PlaceType>(placeTypeDto));
+            
+            return _mapper.Map<PlaceTypeDto>(placeType);
         }
     }
 }

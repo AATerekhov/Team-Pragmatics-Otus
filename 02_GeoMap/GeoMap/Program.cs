@@ -5,6 +5,7 @@ using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations;
 using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
+using Services.Implementations;
 using Services.Repositories.Abstractions;
 
 namespace GeoMap
@@ -18,7 +19,7 @@ namespace GeoMap
             //Добавили настройки Mapping.
             //InstallAutomapper(builder.Services);
             builder.Services.AddServices(builder.Configuration);
-
+            builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,9 +27,7 @@ namespace GeoMap
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddAutoMapper(typeof(Program));
-            builder.Services.AddAutoMapper(typeof(IFuellingService));
-            builder.Services.AddAutoMapper(typeof(IPlaceTypeService));
-            builder.Services.AddAutoMapper(typeof(IPlaceService));
+            builder.Services.AddAutoMapper(typeof(FuellingService));
 
             var app = builder.Build();
 
@@ -39,6 +38,7 @@ namespace GeoMap
                 app.UseSwaggerUI();
             }
 
+            app.UseCors();
             app.UseAuthorization();
             app.MapControllers();
 
