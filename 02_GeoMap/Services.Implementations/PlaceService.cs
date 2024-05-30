@@ -56,15 +56,10 @@ namespace Services.Implementations
             return _mapper.Map<Place, PlaceDto>(place);
         }
 
-        public async Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId,PlaceTypeDto placeTypeDto)
+        public async Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId)
         {
-            ICollection<Place> entities = await _placeRepository.GetForTypeAsync(placeTypeId);
+            ICollection<Place> entities = await _placeRepository.GetForTypeAsync(placeTypeId, CancellationToken.None);
             return _mapper.Map<ICollection<Place>, ICollection<PlaceDto>>(entities);
-        }
-
-        public Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task UpdateAsync(Guid id, UpdatingPlaceDto updatingPlaceDto)
