@@ -15,14 +15,8 @@ namespace Services.Implementations.Mapping
         public PlaceTypeMappingsProfile()
         {
             CreateMap<PlaceType, PlaceTypeDto>();
-
             CreateMap<CreatingPlaceTypeDto, PlaceType>();
-                //.ForMember(d => d.Id, map => map.Ignore());
-
             CreateMap<UpdatingPlaceTypeDto, PlaceType>();
-            //.ForMember(d => d.Id, map => map.Ignore())
-            //.ForMember(d => d.Name, map => map.Ignore());
-
             CreateMap<PlaceTypeDto , PlaceType>();
         }
     }

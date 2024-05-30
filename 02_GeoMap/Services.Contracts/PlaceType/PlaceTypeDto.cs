@@ -9,7 +9,7 @@
         /// <summary>
         /// Название типа.
         /// </summary>
-        public string? Name { get; set; }
+        public required string Name { get; set; }
         /// <summary>
         /// Описание.
         /// </summary>

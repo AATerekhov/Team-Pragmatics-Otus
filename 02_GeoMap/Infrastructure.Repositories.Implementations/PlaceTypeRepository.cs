@@ -14,5 +14,12 @@ namespace Infrastructure.Repositories.Implementations
         public PlaceTypeRepository(DatabaseContext context):base(context)
         {                
         }
+
+        public override async Task<PlaceType> AddAsync(PlaceType entity)
+        {
+            await base.AddAsync(entity);
+            await base.SaveChangesAsync();
+            return entity;
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Domain.Entities
         /// <summary>
         /// Список мест реализующий данный тип.
         /// </summary>
-        public ICollection<Place> Places { get; set; }
+        public ICollection<Place>? Places { get; set; }
 
     }
 }
