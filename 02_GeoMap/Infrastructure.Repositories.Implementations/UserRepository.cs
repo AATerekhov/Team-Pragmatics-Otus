@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories.Implementations
 {
-    public class UserRepository:Repository<User, int>, IUserRepository
+    public class UserRepository:Repository<User, Guid>, IUserRepository
     {
         public UserRepository(DatabaseContext context): base(context)
         {               

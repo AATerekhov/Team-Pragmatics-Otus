@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using Infrastructure.EntityFramework;
+﻿using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Services.Abstractions;
 using Services.Implementations;
 using Services.Repositories.Abstractions;
@@ -27,14 +25,20 @@ namespace GeoMap
         private static IServiceCollection InstallServices(this IServiceCollection serviceCollection)
         {
             serviceCollection
-                .AddTransient<IUserService, UserService>();
+                .AddScoped<IUserService, UserService>()
+                .AddScoped<IPlaceTypeService, PlaceTypeService>()
+                .AddScoped<IPlaceService, PlaceService> ()
+                .AddScoped<IFuellingService, FuellingService>();
             return serviceCollection;
         }
 
         private static IServiceCollection InstallRepositories(this IServiceCollection serviceCollection)
         {
             serviceCollection
-                .AddTransient<IUserRepository, UserRepository>();
+                .AddScoped<IUserRepository, UserRepository>()
+                .AddScoped<IPlaceTypeRepository, PlaceTypeRepository>()
+                .AddScoped<IPlaceRepository, PlaceRepository>()
+                .AddScoped<IFuellingRepository, FuellingRepository>();
             return serviceCollection;
         }
     }

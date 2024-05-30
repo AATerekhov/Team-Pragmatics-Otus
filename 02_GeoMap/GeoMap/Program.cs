@@ -2,8 +2,11 @@
 using AutoMapper;
 using GeoMap.Mapping;
 using Infrastructure.EntityFramework;
+using Infrastructure.Repositories.Implementations;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
+using Services.Abstractions;
+using Services.Implementations;
+using Services.Repositories.Abstractions;
 
 namespace GeoMap
 {
@@ -14,15 +17,17 @@ namespace GeoMap
             var builder = WebApplication.CreateBuilder(args);
 
             //Добавили настройки Mapping.
-            InstallAutomapper(builder.Services);
+            //InstallAutomapper(builder.Services);
             builder.Services.AddServices(builder.Configuration);
-
+            builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddAutoMapper(typeof(Program));
+            builder.Services.AddAutoMapper(typeof(FuellingService));
 
             var app = builder.Build();
 
@@ -33,6 +38,7 @@ namespace GeoMap
                 app.UseSwaggerUI();
             }
 
+            app.UseCors();
             app.UseAuthorization();
             app.MapControllers();
 
@@ -56,7 +62,13 @@ namespace GeoMap
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<UserMappingsProfile>();
+                cfg.AddProfile<PlaceTypeMappingsProfile>();
+                cfg.AddProfile<PlaceMappingsProfile>();
+                cfg.AddProfile<FuellingMappingsProfile>();
                 cfg.AddProfile<Services.Implementations.Mapping.UserMappingsProfile>();
+                cfg.AddProfile<Services.Implementations.Mapping.PlaceTypeMappingsProfile>();
+                cfg.AddProfile<Services.Implementations.Mapping.PlaceMappingsProfile>();
+                cfg.AddProfile<Services.Implementations.Mapping.FuellingMappingsProfile>();
             });
             configuration.AssertConfigurationIsValid();
             return configuration;

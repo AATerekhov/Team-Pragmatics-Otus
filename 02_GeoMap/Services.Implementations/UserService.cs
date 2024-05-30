@@ -8,8 +8,8 @@ namespace Services.Implementations
 {
     public class UserService : IUserService
     {
-        public readonly IMapper _mapper;
-        public readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
+        private readonly IUserRepository _userRepository;
         public UserService(IMapper mapper, IUserRepository userRepository)
         {
             _mapper = mapper;
@@ -22,8 +22,6 @@ namespace Services.Implementations
             
             var createdUser = _userRepository.AddAsync(user);
             _userRepository.SaveChanges();
-
-            //TODO: Тут идет логика работы с createdUser, который сохранен в БД.
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Services.Contracts.User
         /// <summary>
         /// Id.
         /// </summary>
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         /// <summary>
         /// Имя учетной записи.
         /// </summary>
