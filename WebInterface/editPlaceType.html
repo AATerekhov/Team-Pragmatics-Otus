@@ -5,7 +5,7 @@
         <script src = "api-work.js" lang="JavaScript"></script>
         <link href="style.css" rel="stylesheet"/>
     </head>
-    <body>
+    <body onload = "updatePlaceTypeLoad()">
        <from>
         <h3>Редактировать тип места</h3>
         <p>
@@ -16,7 +16,7 @@
             <label for ="description">Описание</label>
             <input  type="text" id="description" placeholder="Описание"/>            
         </p>
-        <P><input type="button" value="Создать" onclick="createPlaceType()"/></P>
+        <P><input type="button" value="Изменить" onclick="updatePlaceType()"/></P>
        </from>
     </body>
 </html>
