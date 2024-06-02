@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Creating Place element</title>
-        <script src = "api-work.js" lang="JavaScript"></script>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <link href="style.css" rel="stylesheet"/>
-    </head>
-    <body>
-       <from>
+  <head>
+    <title>Создание Места посещения</title> 
+    <script src = "api-work.js" lang="JavaScript"></script>
+    <link href="style.css" rel="stylesheet"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script>    
+  </head>
+
+  <body onload="initMap()">
+    <form>
         <p>
-            <!--<label for ="longitude"></label> -->
-            <input type="number" id="longitude" placeholder="Долгота"/>            
+            <label for ="longitude">долгота</label>
+            <input type="number" id="longitude" placeholder="59.938784"/>            
         </p>
         <p>
-            <!--<label for ="latitude"></label> -->
-            <input type="number" id="description" placeholder="Широта"/>            
+            <label for ="latitude">широта</label>
+            <input type="number" id="latitude" placeholder="30.314997"/>            
         </p>
-        <!-- КОНТЕЙНЕР ДЛЯ КАРТЫ -->
-        <div id="myMap" style="width: 700px; height: 700px;"></div>
-            
-        <!-- СКРИПТ КАРТЫ -->
-        <script>
-        ymaps.ready(init);
-        function init(){     
-            var myMap = new ymaps.Map ('myMap', {
-                center: [59.938678, 30.314474], //координаты центра
-                zoom: 10 //уровень приближения
-            });
-        }
-        </script>
-        <!--  <P><input type="button" value="Создать" onclick="createPlaceType()"/></P>  -->
-       </from>
-    </body>
+    </form>
+    <div id="map" style="width: 600px; height: 400px"></div>
+  </body>
 </html>
