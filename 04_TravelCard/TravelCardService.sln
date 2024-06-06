@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{68F85530-E0AE-4DFC-ADC7-19B67811D933}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D2609F1F-9700-49C0-8D1C-47A6CFA70701}"
+	ProjectSection(SolutionItems) = preProject
+		Services.Abstractions\ITravelPointService.cs = Services.Abstractions\ITravelPointService.cs
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{0B9E49CE-B2C0-4BAD-8A5D-45D6AE5BC8E4}"
 EndProject

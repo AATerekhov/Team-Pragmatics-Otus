@@ -5,7 +5,7 @@ using Services.Contracts.Travel;
 namespace Services.Implementations.Mapping
 {
     /// <summary>
-    /// Профиль автомаппера для сущности юзера.
+    /// Профиль автомаппера для сущности путешествия.
     /// </summary>
     public class TravelMappingProfileDto : Profile
     {
