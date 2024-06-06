@@ -12,7 +12,7 @@ namespace Infrastructure.EntityFramework
 
         public DbSet<Travel> Travels { get; set; }
 
-        //public DbSet<TravelPoint> TravelPoints { get; set; }
+        public DbSet<TravelPoint> TravelPoints { get; set; }
 
         public DbSet<User> Users { get; set; }
 
