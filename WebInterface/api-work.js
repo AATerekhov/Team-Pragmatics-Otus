@@ -25,8 +25,9 @@ async function loadPlaceType(){
     }
     console.log(result);
 }
-async function loadPlace(idPlaceType)
+async function loadPlace()
 {
+    let idPlaceType = new URLSearchParams(window.location.search).get('id');
     let result =await fetch(`http://localhost:52199/api/Place/${idPlaceType}`);
     let table = document.getElementById('places');
     if(result.ok){
@@ -91,15 +92,20 @@ async function updatePlaceType(){
     if(result.ok)
         window.location.href = "index.html";
 }
-
+//Yandex Map function
 async function initMap() {
     await ymaps3.ready;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;   
+    let centerPoint = new URLSearchParams(window.location.search).get('LatLng').split(","); 
+    let scale = new URLSearchParams(window.location.search).get('Scale');
 
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
-        
+    let lng = document.getElementById('longitude');
+    let lat = document.getElementById('latitude');
         function onDragMoveHandler(coordinates) {
             const latitude = `Latitude: ${coordinates[0].toFixed(6)}`;
-            const longitude = `Longitude: ${coordinates[1].toFixed(6)}`;
+            const longitude = `Longitude: ${coordinates[1].toFixed(6)}`;           
+            lng.value = coordinates[1].toFixed(6);            
+            lat.value = coordinates[0].toFixed(6);
             draggableMarker.update({coordinates, title: `${latitude} <br> ${longitude} `});
         }
 
@@ -107,8 +113,8 @@ async function initMap() {
         document.getElementById('map'),
         {
             location: {
-                center: [30.314997, 59.938784 ],
-                zoom: 10
+                center: centerPoint,
+                zoom: scale
             },
         behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick']
         }
@@ -127,29 +133,29 @@ async function initMap() {
     // Важно это сделать до инициализации маркера!
     // Элемент можно создавать пустым. Добавить HTML-разметку внутрь можно после инициализации маркера.
     const content = document.createElement('section');
-
-    // Инициализируйте маркер
-    // const marker = new YMapMarker(
-    //   {
-    //     coordinates: [30.314997, 59.938784 ],
-    //     draggable: true
-    //   },
-    //   content
-    // );
-    // Добавьте маркер на карту
-    // map.addChild(marker); 
+  
       // Create default markers and add them to the map
       const draggableMarker  = new YMapDefaultMarker({
-        coordinates: [30.314997, 59.938784 ],
-        title: `Longitude: 30.314997 <br>
-            Latitude 59.938784`,
+        coordinates: centerPoint,
+        title: `Longitude: ${centerPoint[0]} <br>
+            Latitude ${centerPoint[1]}`,
         subtitle: 'Укажите новое место. <br> Перетащите метку.',
         color: '#00CC00',
         draggable: true,
         onDragMove: onDragMoveHandler
       });
-      map.addChild(draggableMarker );
-  
-    // Добавьте произвольную HTML-разметку внутрь содержимого маркера
-    // content.innerHTML = '<h3>Новое место.</h3>';      
+      map.addChild(draggableMarker );   
+      
+      
+}
+async function searchPointPlace()
+{   
+    let coordinates = document.getElementById('LatLng').value;
+    window.location.href = `createPlace.html?LatLng=${coordinates}&Scale=17`;
+}
+
+async function createPlace()
+{
+    let idPlaceType = new URLSearchParams(window.location.search).get('id');
+    window.location.href = `createPlace.html?LatLng=30.31499,59.938784&Scale=10&id=${idPlaceType}`;
 }
