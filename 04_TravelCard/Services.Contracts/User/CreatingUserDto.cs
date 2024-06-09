@@ -16,10 +16,5 @@
         /// Логин
         /// </summary>
         public string Login { get; set; }
-
-        /// <summary>
-        /// Удалено.
-        /// </summary>
-        public bool Deleted { get; set; }
     }
 }

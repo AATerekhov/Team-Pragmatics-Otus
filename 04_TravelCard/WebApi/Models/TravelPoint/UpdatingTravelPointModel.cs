@@ -18,6 +18,6 @@
         /// <summary>
         /// Время остановки
         /// </summary>
-        public DateTime WaitingTime { get; set; }
+        public double WaitingTimeCountMinutes { get; set; }
     }
 }

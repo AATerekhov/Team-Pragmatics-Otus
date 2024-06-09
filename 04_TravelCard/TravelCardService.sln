@@ -12,9 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{68F85530-E0AE-4DFC-ADC7-19B67811D933}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D2609F1F-9700-49C0-8D1C-47A6CFA70701}"
-	ProjectSection(SolutionItems) = preProject
-		Services.Abstractions\ITravelPointService.cs = Services.Abstractions\ITravelPointService.cs
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{0B9E49CE-B2C0-4BAD-8A5D-45D6AE5BC8E4}"
 EndProject
@@ -28,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Implementations", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Repositories.Abstractions", "Services.Repositories.Abstractions\Services.Repositories.Abstractions.csproj", "{66E51CA8-8848-4C2F-9D3E-D42CD975FB72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{01072CC2-2152-440A-BCF0-AB7990BD69C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{01072CC2-2152-440A-BCF0-AB7990BD69C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

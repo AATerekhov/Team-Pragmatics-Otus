@@ -8,6 +8,6 @@
         /// <summary>
         /// Описание путешествия
         /// </summary>
-        public string TravelDesc { get; set; }
+        public string Description { get; set; }
     }
 }

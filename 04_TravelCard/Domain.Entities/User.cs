@@ -14,10 +14,10 @@ namespace Domain.Entities
         [Key, Column("user_ID")]
         public int Id { get; set; }
         
-        //[Column("travel_ID")]
-        //public int TravelId { get; set; }
+        [Column("travel_ID")]
+        public int? TravelId { get; set; }
         
-        //public Travel Travel { get; set; }
+        public ICollection<Travel>? Travels { get; set; }
 
         [Column("login")]
         public string Login {  get; set; }

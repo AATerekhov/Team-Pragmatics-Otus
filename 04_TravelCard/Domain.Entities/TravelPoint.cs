@@ -23,15 +23,16 @@ namespace Domain.Entities
         public string PointDesc { get; set; }
 
         /// <summary>
-        /// Время остановки
+        /// Время остановки (количество минут)
         /// </summary>
         [Column("waiting_time")]
-        public DateTime WaitingTime { get; set; }
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        public double WaitingTimeCountMinutes { get; set; }
 
-        //[Column("travel_ID")]
-        //public int TravelId { get; set; }
+        [Column("travel_ID")]
+        public int TravelId { get; set; }
 
-        //public Travel Travel { get; set; }
+        public Travel Travel { get; set; }
 
         /// <summary>
         /// Удалено.

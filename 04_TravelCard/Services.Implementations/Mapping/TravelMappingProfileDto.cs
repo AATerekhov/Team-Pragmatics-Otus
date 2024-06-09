@@ -16,7 +16,7 @@ namespace Services.Implementations.Mapping
             CreateMap<CreatingTravelDto, Travel>();
 
             CreateMap<UpdatingTravelDto, Travel>()
-                .ForMember(d => d.TravelDesc, map => map.Ignore());
+                .ForMember(d => d.Description, map => map.Ignore());
 
         }
     }

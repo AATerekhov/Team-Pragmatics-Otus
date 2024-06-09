@@ -27,7 +27,9 @@ namespace Services.Contracts.TravelPoint
         /// <summary>
         /// Время остановки
         /// </summary>
-        public DateTime WaitingTime { get; set; }
+        public double WaitingTimeCountMinutes { get; set; }
+
+        public int TravelId { get; set; }
 
         /// <summary>
         /// Удалено.

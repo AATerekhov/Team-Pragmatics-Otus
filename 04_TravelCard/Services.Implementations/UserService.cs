@@ -3,6 +3,8 @@ using Services.Abstractions;
 using Services.Repositories.Abstractions;
 using Services.Contracts.User;
 using Domain.Entities;
+using Infrastructure.Repositories.Implementations;
+using System.Diagnostics;
 
 namespace Services.Implementations
 {
@@ -28,6 +30,7 @@ namespace Services.Implementations
         public async Task<int> CreateAsync(CreatingUserDto creatingUserDto)
         {
             var UserEntity = _mapper.Map<CreatingUserDto, User>(creatingUserDto);
+            UserEntity.Deleted = false;
             var createdUser = await _UserRepository.AddAsync(UserEntity);
             await _UserRepository.SaveChangesAsync();
             return createdUser.Id;
@@ -49,6 +52,7 @@ namespace Services.Implementations
         {
             var user = await _UserRepository.GetAsync(id, CancellationToken.None);
             user.Deleted = true;
+            _UserRepository.Update(user);
             await _UserRepository.SaveChangesAsync();
         }
 
