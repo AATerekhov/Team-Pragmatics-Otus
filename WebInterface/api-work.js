@@ -96,13 +96,11 @@ async function initMap() {
     await ymaps3.ready;
 
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
-
-    const markersGeoJsonSource = 
-        {
-          coordinates: [30.314997, 59.938784 ],
-          title: 'Санкт-Петербург',
-          subtitle: 'Город на берегу Невы. <br> Культурная сталица России.',
-          color: '#00CC00'
+        
+        function onDragMoveHandler(coordinates) {
+            const latitude = `Latitude: ${coordinates[0].toFixed(6)}`;
+            const longitude = `Longitude: ${coordinates[1].toFixed(6)}`;
+            draggableMarker.update({coordinates, title: `${latitude} <br> ${longitude} `});
         }
 
     const map = new YMap(
@@ -141,8 +139,16 @@ async function initMap() {
     // Добавьте маркер на карту
     // map.addChild(marker); 
       // Create default markers and add them to the map
-      const marker = new YMapDefaultMarker(markersGeoJsonSource);
-      map.addChild(marker);
+      const draggableMarker  = new YMapDefaultMarker({
+        coordinates: [30.314997, 59.938784 ],
+        title: `Longitude: 30.314997 <br>
+            Latitude 59.938784`,
+        subtitle: 'Укажите новое место. <br> Перетащите метку.',
+        color: '#00CC00',
+        draggable: true,
+        onDragMove: onDragMoveHandler
+      });
+      map.addChild(draggableMarker );
   
     // Добавьте произвольную HTML-разметку внутрь содержимого маркера
     // content.innerHTML = '<h3>Новое место.</h3>';      
