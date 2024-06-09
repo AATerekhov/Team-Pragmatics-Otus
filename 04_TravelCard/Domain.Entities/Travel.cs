@@ -11,29 +11,41 @@ namespace Domain.Entities
         /// <summary>
         /// Описание путешествия
         /// </summary>
-        [Column("travel_desc"), MaxLength(100)]
-        public string TravelDesc { get; set; }
+        [Column("description"), MaxLength(100)]
+        public string Description { get; set; }
 
         /// <summary>
         /// Менеджер путешествия
         /// </summary>
-        //public Manager Manager { get; set; }
+        //public string ManagerID { get; set; }
 
         /// <summary>
         /// Список компаньонов
         /// </summary>
-        //public ICollection<User> Users { get; set; }
+        public ICollection<User>? Users { get; set; }
 
         /// <summary>
         /// Список остановок
         /// </summary>
-        //public ICollection<TravelPoint> TravelPoints { get; set; }
+        public ICollection<TravelPoint>? TravelPoints { get; set; }
 
         /// <summary>
         /// Удалено.
         /// </summary>
         [Column("deleted")]
         public bool Deleted { get; set; }
+
+        /// <summary>
+        /// Координата начала путешествия
+        /// </summary>
+        [Column("start_point")]
+        public string StartPoint { get; set; }
+
+        /// <summary>
+        /// Координата конца путешествия
+        /// </summary>
+        [Column("finish_point")]
+        public string FinishPoint { get; set; }
 
     }
 }

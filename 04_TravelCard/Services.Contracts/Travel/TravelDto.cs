@@ -16,12 +16,21 @@ namespace Services.Contracts.Travel
         /// <summary>
         /// Описание путешествия
         /// </summary>
-        public string TravelDesc { get; set; }
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Координата начала путешествия
+        /// </summary>
+        public string StartPoint { get; set; }
+
+        /// <summary>
+        /// Координата конца путешествия
+        /// </summary>
+        public string FinishPoint { get; set; }
 
         /// <summary>
         /// Удалено.
         /// </summary>
         public bool Deleted { get; set; }
-
     }
 }

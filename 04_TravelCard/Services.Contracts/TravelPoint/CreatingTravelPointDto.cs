@@ -1,4 +1,6 @@
-﻿namespace Services.Contracts.TravelPoint
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Services.Contracts.TravelPoint
 {
     /// <summary>
     /// ДТО создания остановки
@@ -20,10 +22,12 @@
         /// </summary>
         public string PointDesc { get; set; }
 
+        public int TravelId { get; set; }
+
         /// <summary>
         /// Время остановки
         /// </summary>
-        public DateTime WaitingTime { get; set; }
+        public double WaitingTimeCountMinutes { get; set; }
 
     }
 }

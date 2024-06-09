@@ -1,4 +1,6 @@
-﻿namespace Services.Contracts.TravelPoint
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Services.Contracts.TravelPoint
 {
     /// <summary>
     /// Модель точки остановки.
@@ -11,9 +13,21 @@
         public int Id { get; set; }
 
         /// <summary>
-        /// Описание путешествия
+        /// Точка остановки
         /// </summary>
-        public string TravelDesc { get; set; }
+        public string PointMap { get; set; }
+
+        /// <summary>
+        /// Описание остановки
+        /// </summary>
+        public string PointDesc { get; set; }
+
+        public int TravelId { get; set; }
+
+        /// <summary>
+        /// Время остановки
+        /// </summary>
+        public double WaitingTimeCountMinutes { get; set; }
 
         /// <summary>
         /// Удалено.

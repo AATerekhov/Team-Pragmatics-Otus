@@ -3,6 +3,7 @@ using Services.Abstractions;
 using Services.Repositories.Abstractions;
 using Services.Contracts.Travel;
 using Domain.Entities;
+using Infrastructure.Repositories.Implementations;
 
 namespace Services.Implementations
 {
@@ -28,6 +29,7 @@ namespace Services.Implementations
         public async Task<int> CreateAsync(CreatingTravelDto creatingtravelDto)
         {
             var TravelEntity = _mapper.Map<CreatingTravelDto, Travel>(creatingtravelDto);
+            TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
             return createdTravel.Id;
@@ -35,28 +37,29 @@ namespace Services.Implementations
             //Брокер
             //await _busControl.Publish(new MessageDto
             //{
-            //    Content = $"Travel {createdTravel.Id} with subject {createdTravel.Subject} is added"
+            //    Content = $"Travel {createdTravel.Id} with desc {createdTravel.TravelDesc} is added"
             //});
 
             return createdTravel.Id;
         }
 
         /// <summary>
-        /// Удалить юзера.
+        /// Удалить путешествие.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
         public async Task DeleteAsync(int id)
         {
             var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
             travel.Deleted = true;
+            _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
         }
 
         /// <summary>
-        /// Получить юзера.
+        /// Получить путешествие.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
-        /// <returns> ДТО юзера. </returns>
+        /// <returns> ДТО путешествия. </returns>
         public async Task<TravelDto> GetByIdAsync(int id)
         {
             //return _mapper.Map<TravelDto>(await _TravelRepository.GetAsync(id, CancellationToken.None));
@@ -67,19 +70,19 @@ namespace Services.Implementations
         //public async Task<TravelDto?> GetTravelAsync(int id) => _mapper.Map<TravelDto>(await _TravelRepository.GetTravelByIdAsync(id));
 
         /// <summary>
-        /// Изменить юзера.
+        /// Изменить путешествие.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
-        /// <param name="updatingTravelDto"> ДТО юзера. </param>
+        /// <param name="updatingTravelDto"> ДТО путешествия. </param>
         public async Task UpdateAsync(int id, UpdatingTravelDto updatingTravelDto)
         {
             var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
             if (travel == null)
             {
-                throw new Exception($"Юзер с id = {id} не найден");
+                throw new Exception($"Путешествие с id = {id} не найдено");
             }
 
-            travel.TravelDesc = updatingTravelDto.TravelDesc;
+            travel.Description = updatingTravelDto.Description;
             _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
         }
