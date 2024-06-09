@@ -11,13 +11,25 @@
   <body onload="initMap()">
     <form>
         <p>
-            <label for ="longitude">долгота</label>
-            <input type="number" id="longitude" placeholder="59.938784"/>            
+            <label for ="latitude">Широта</label>
+            <input type="text" id="latitude" placeholder="30.314997" readonly/>    
+            <label for ="longitude"> Долгота</label>
+            <input type="text" id="longitude" placeholder="59.938784" readonly/>            
+        </p>  
+        <p>
+          <label for ="name">Имя</label>
+          <input type="text" id="name" placeholder="Имя" size="24"/>            
         </p>
         <p>
-            <label for ="latitude">широта</label>
-            <input type="number" id="latitude" placeholder="30.314997"/>            
+          <label for ="description">Описание</label>
+          <input  type="text" id="description" placeholder="Описание" size="30"/>            
         </p>
+        <h2>Получить точку по json координатам Lat,Lng</h2>
+        <p>
+          <label for ="LatLng">Коордитаны</label>
+          <input type="text" id="LatLng" placeholder="Coordinats" size="30"/>      
+          <input type="button" value="Поиск" onclick="searchPointPlace()"/>      
+      </p>
     </form>
     <div id="map" style="width: 600px; height: 400px"></div>
   </body>

@@ -5,7 +5,7 @@
         <script src = "api-work.js" lang="JavaScript"></script>
         <link href="style.css" rel="stylesheet"/>
     </head>
-    <body onload = "updatePlaceTypeLoad()">
+    <body onload = "updatePlaceTypeLoad(), loadPlace()">
        <from>
         <h3>Редактировать тип места</h3>
         <p>
@@ -18,5 +18,18 @@
         </p>
         <P><input type="button" value="Изменить" onclick="updatePlaceType()"/></P>
        </from>
+       <h3 >Настройка мест посещения</h3>        
+        <a href="createPlace.html?LatLng=30.31499,59.938784&Scale=10">
+            Создать место посещения        
+        </a>
+            <table id = "places" >
+                <tr> 
+                    <th>PlaceTypeId</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Longitude</th>    
+                    <th>Latitude</th>                
+                </tr>
+            </table> 
     </body>
 </html>
