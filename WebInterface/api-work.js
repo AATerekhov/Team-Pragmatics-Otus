@@ -95,7 +95,15 @@ async function updatePlaceType(){
 async function initMap() {
     await ymaps3.ready;
 
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
+
+    const markersGeoJsonSource = 
+        {
+          coordinates: [30.314997, 59.938784 ],
+          title: 'Санкт-Петербург',
+          subtitle: 'Город на берегу Невы. <br> Культурная сталица России.',
+          color: '#00CC00'
+        }
 
     const map = new YMap(
         document.getElementById('map'),
@@ -112,7 +120,10 @@ async function initMap() {
     map.addChild(new YMapDefaultSchemeLayer());
 
     // Добавьте слой для маркеров
-    map.addChild(new YMapDefaultFeaturesLayer());
+    map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));
+
+    // Import the package to add a default marker
+    const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
 
     // Создайте DOM-элемент для содержимого маркера.
     // Важно это сделать до инициализации маркера!
@@ -120,16 +131,19 @@ async function initMap() {
     const content = document.createElement('section');
 
     // Инициализируйте маркер
-    const marker = new YMapMarker(
-      {
-        coordinates: [30.314997, 59.938784 ],
-        draggable: true
-      },
-      content
-    );
+    // const marker = new YMapMarker(
+    //   {
+    //     coordinates: [30.314997, 59.938784 ],
+    //     draggable: true
+    //   },
+    //   content
+    // );
     // Добавьте маркер на карту
-    map.addChild(marker);
+    // map.addChild(marker); 
+      // Create default markers and add them to the map
+      const marker = new YMapDefaultMarker(markersGeoJsonSource);
+      map.addChild(marker);
   
     // Добавьте произвольную HTML-разметку внутрь содержимого маркера
-    content.innerHTML = '<h3>Новое место.</h3>';
+    // content.innerHTML = '<h3>Новое место.</h3>';      
 }
