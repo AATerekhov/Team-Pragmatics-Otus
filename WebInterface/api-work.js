@@ -99,8 +99,11 @@ async function initMap() {
     let centerPoint = new URLSearchParams(window.location.search).get('LatLng').split(","); 
     let scale = new URLSearchParams(window.location.search).get('Scale');
 
-    let lng = document.getElementById('longitude');
     let lat = document.getElementById('latitude');
+    lat.value = centerPoint[0];
+    let lng = document.getElementById('longitude');
+    lng.value = centerPoint[1];
+
         function onDragMoveHandler(coordinates) {
             const latitude = `Latitude: ${coordinates[0].toFixed(6)}`;
             const longitude = `Longitude: ${coordinates[1].toFixed(6)}`;           
@@ -150,12 +153,32 @@ async function initMap() {
 }
 async function searchPointPlace()
 {   
-    let coordinates = document.getElementById('LatLng').value;
-    window.location.href = `createPlace.html?LatLng=${coordinates}&Scale=17`;
+    let coordinates = document.getElementById('LatLng').value;    
+    let idPlaceType = new URLSearchParams(window.location.search).get('id');
+    window.location.href = `createPlace.html?LatLng=${coordinates}&Scale=17&id=${idPlaceType}`;
 }
 
-async function createPlace()
+async function createPlaceForma()
 {
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
     window.location.href = `createPlace.html?LatLng=30.31499,59.938784&Scale=10&id=${idPlaceType}`;
+}
+async function createPlace()
+{
+    let placeTypeId = Number(new URLSearchParams(window.location.search).get('id'));
+    let name = document.getElementById('name').value;
+    //let description = document.getElementById('description').value;
+
+    alert(document.getElementById('longitude').value);
+    let longitude = Number(document.getElementById('longitude').value);
+    let latitude = Number(document.getElementById('latitude').value);
+    let place = {placeTypeId, name, longitude, latitude};
+    let result = await fetch('http://localhost:52199/api/Place',{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(place)
+    });
+    if(result.ok)
+        window.location.href = `editPlaceType.html?id=${placeTypeId}`;    
+    
 }
