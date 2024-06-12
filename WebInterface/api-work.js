@@ -73,7 +73,7 @@ async function loadPlace()
            placetypeString.appendChild(latitudeField);
            table.appendChild(placetypeString);
 
-           let insertPoint = {[element.latitude,element.longitude]};
+           let insertPoint = [element.latitude,element.longitude];
            const draggableMarker  = new YMapDefaultMarker({
             coordinates: insertPoint,
             title: `${element.name}`,
