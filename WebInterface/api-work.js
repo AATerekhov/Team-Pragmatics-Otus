@@ -13,7 +13,7 @@ async function loadPlaceType(){
            descriptionField.innerText = element.description;
            let link = document.createElement('a');
            link.innerText = "Редактировать";
-           link.href = `editPlaceType.html?id=${element.id}`;
+           link.href = `editPlaceType.html?LatLng=30.31499,59.938784&Scale=10&id=${element.id}`;
            let editField = document.createElement('td');
            editField.appendChild(link);
            placetypeString.appendChild(idField);
@@ -27,6 +27,28 @@ async function loadPlaceType(){
 }
 async function loadPlace()
 {
+    await ymaps3.ready;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;    
+    const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+    let centerPoint = new URLSearchParams(window.location.search).get('LatLng').split(","); 
+    let scale = new URLSearchParams(window.location.search).get('Scale');
+    let lat = document.getElementById('latitude');
+    lat.value = centerPoint[0];
+    let lng = document.getElementById('longitude');
+    lng.value = centerPoint[1];
+    const map = new YMap(
+        document.getElementById('map'),
+        {
+            location: {
+                center: centerPoint,
+                zoom: scale
+            },
+        behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick']
+        }
+    );
+    map.addChild(new YMapDefaultSchemeLayer());
+    map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));        
+
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
     let result =await fetch(`http://localhost:52199/api/Place/${idPlaceType}`);
     let table = document.getElementById('places');
@@ -50,6 +72,15 @@ async function loadPlace()
            placetypeString.appendChild(longitudeField);
            placetypeString.appendChild(latitudeField);
            table.appendChild(placetypeString);
+
+           let insertPoint = {[element.latitude,element.longitude]};
+           const draggableMarker  = new YMapDefaultMarker({
+            coordinates: insertPoint,
+            title: `${element.name}`,
+            subtitle: 'Place',
+            color: '#00CC00',
+          });
+          map.addChild(draggableMarker ); 
         });
     }
     console.log(result);
@@ -66,7 +97,6 @@ async function createPlaceType(){
     if(result.ok)
         window.location.href = "index.html";
 }
-
 async function getPlaceTypeByIdAsync(id){
     let rezult = await fetch(`http://localhost:52199/api/PlaceType/${id}`)
     if(rezult.ok)
@@ -131,17 +161,12 @@ async function initMap() {
 
     // Import the package to add a default marker
     const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
-
-    // Создайте DOM-элемент для содержимого маркера.
-    // Важно это сделать до инициализации маркера!
-    // Элемент можно создавать пустым. Добавить HTML-разметку внутрь можно после инициализации маркера.
-    const content = document.createElement('section');
   
       // Create default markers and add them to the map
       const draggableMarker  = new YMapDefaultMarker({
         coordinates: centerPoint,
-        title: `Longitude: ${centerPoint[0]} <br>
-            Latitude ${centerPoint[1]}`,
+        title: `Latitude: ${centerPoint[0]} <br>
+                Longitude: ${centerPoint[1]}`,
         subtitle: 'Укажите новое место. <br> Перетащите метку.',
         color: '#00CC00',
         draggable: true,
@@ -167,12 +192,10 @@ async function createPlace()
 {
     let placeTypeId = Number(new URLSearchParams(window.location.search).get('id'));
     let name = document.getElementById('name').value;
-    //let description = document.getElementById('description').value;
-
-    alert(document.getElementById('longitude').value);
+    let description = document.getElementById('description').value;
     let longitude = Number(document.getElementById('longitude').value);
     let latitude = Number(document.getElementById('latitude').value);
-    let place = {placeTypeId, name, longitude, latitude};
+    let place = {placeTypeId, name, description,longitude, latitude};
     let result = await fetch('http://localhost:52199/api/Place',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
