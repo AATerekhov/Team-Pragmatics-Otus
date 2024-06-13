@@ -22,27 +22,6 @@ namespace Infrastructure.EntityFramework.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.Manager", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("user_ID");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("TravelId")
-                        .HasColumnType("integer")
-                        .HasColumnName("travel_ID");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TravelId")
-                        .IsUnique();
-
-                    b.ToTable("Managers");
-                });
-
             modelBuilder.Entity("Domain.Entities.Travel", b =>
                 {
                     b.Property<int>("Id")
@@ -52,11 +31,25 @@ namespace Infrastructure.EntityFramework.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("TravelDesc")
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("boolean")
+                        .HasColumnName("deleted");
+
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
-                        .HasColumnName("travel_desc");
+                        .HasColumnName("description");
+
+                    b.Property<string>("FinishPoint")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("finish_point");
+
+                    b.Property<string>("StartPoint")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("start_point");
 
                     b.HasKey("Id");
 
@@ -71,6 +64,10 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnName("tp_ID");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("boolean")
+                        .HasColumnName("deleted");
 
                     b.Property<string>("PointDesc")
                         .IsRequired()
@@ -88,8 +85,8 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("travel_ID");
 
-                    b.Property<DateTime>("WaitingTime")
-                        .HasColumnType("timestamp with time zone")
+                    b.Property<double>("WaitingTimeCountMinutes")
+                        .HasColumnType("double precision")
                         .HasColumnName("waiting_time");
 
                     b.HasKey("Id");
@@ -108,26 +105,37 @@ namespace Infrastructure.EntityFramework.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("TravelId")
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("boolean")
+                        .HasColumnName("deleted");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("login");
+
+                    b.Property<int?>("TravelId")
                         .HasColumnType("integer")
                         .HasColumnName("travel_ID");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TravelId");
-
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Manager", b =>
+            modelBuilder.Entity("TravelUser", b =>
                 {
-                    b.HasOne("Domain.Entities.Travel", "Travel")
-                        .WithOne("Manager")
-                        .HasForeignKey("Domain.Entities.Manager", "TravelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("TravelsId")
+                        .HasColumnType("integer");
 
-                    b.Navigation("Travel");
+                    b.Property<int>("UsersId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("TravelsId", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("TravelUser");
                 });
 
             modelBuilder.Entity("Domain.Entities.TravelPoint", b =>
@@ -141,25 +149,24 @@ namespace Infrastructure.EntityFramework.Migrations
                     b.Navigation("Travel");
                 });
 
-            modelBuilder.Entity("Domain.Entities.User", b =>
+            modelBuilder.Entity("TravelUser", b =>
                 {
-                    b.HasOne("Domain.Entities.Travel", "Travel")
-                        .WithMany("Users")
-                        .HasForeignKey("TravelId")
+                    b.HasOne("Domain.Entities.Travel", null)
+                        .WithMany()
+                        .HasForeignKey("TravelsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Travel");
+                    b.HasOne("Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Entities.Travel", b =>
                 {
-                    b.Navigation("Manager")
-                        .IsRequired();
-
                     b.Navigation("TravelPoints");
-
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

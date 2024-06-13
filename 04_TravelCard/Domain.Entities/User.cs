@@ -6,7 +6,7 @@ namespace Domain.Entities
     /// <summary>
     /// Пользователь
     /// </summary>
-    public class User : IUser
+    public class User : IEntity<int>
     {
         /// <summary>
         /// Идентификатор.
@@ -15,8 +15,17 @@ namespace Domain.Entities
         public int Id { get; set; }
         
         [Column("travel_ID")]
-        public int TravelId { get; set; }
+        public int? TravelId { get; set; }
         
-        public Travel Travel { get; set; }
+        public ICollection<Travel>? Travels { get; set; }
+
+        [Column("login")]
+        public string Login {  get; set; }
+
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        [Column("deleted")]
+        public bool Deleted { get; set; }
     }
 }

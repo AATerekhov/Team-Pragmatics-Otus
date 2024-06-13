@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -7,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.EntityFramework.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class AddedDateTime : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +17,10 @@ namespace Infrastructure.EntityFramework.Migrations
                 {
                     travel_ID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    travel_desc = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
+                    description = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    deleted = table.Column<bool>(type: "boolean", nullable: false),
+                    start_point = table.Column<string>(type: "text", nullable: false),
+                    finish_point = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,22 +28,18 @@ namespace Infrastructure.EntityFramework.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Managers",
+                name: "Users",
                 columns: table => new
                 {
                     user_ID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    travel_ID = table.Column<int>(type: "integer", nullable: false)
+                    travel_ID = table.Column<int>(type: "integer", nullable: true),
+                    login = table.Column<string>(type: "text", nullable: false),
+                    deleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Managers", x => x.user_ID);
-                    table.ForeignKey(
-                        name: "FK_Managers_Travels_travel_ID",
-                        column: x => x.travel_ID,
-                        principalTable: "Travels",
-                        principalColumn: "travel_ID",
-                        onDelete: ReferentialAction.Cascade);
+                    table.PrimaryKey("PK_Users", x => x.user_ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -52,8 +50,9 @@ namespace Infrastructure.EntityFramework.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     point_map = table.Column<string>(type: "character varying(90)", maxLength: 90, nullable: false),
                     point_desc = table.Column<string>(type: "character varying(80)", maxLength: 80, nullable: false),
-                    waiting_time = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    travel_ID = table.Column<int>(type: "integer", nullable: false)
+                    waiting_time = table.Column<double>(type: "double precision", nullable: false),
+                    travel_ID = table.Column<int>(type: "integer", nullable: false),
+                    deleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,29 +66,28 @@ namespace Infrastructure.EntityFramework.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "TravelUser",
                 columns: table => new
                 {
-                    user_ID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    travel_ID = table.Column<int>(type: "integer", nullable: false)
+                    TravelsId = table.Column<int>(type: "integer", nullable: false),
+                    UsersId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.user_ID);
+                    table.PrimaryKey("PK_TravelUser", x => new { x.TravelsId, x.UsersId });
                     table.ForeignKey(
-                        name: "FK_Users_Travels_travel_ID",
-                        column: x => x.travel_ID,
+                        name: "FK_TravelUser_Travels_TravelsId",
+                        column: x => x.TravelsId,
                         principalTable: "Travels",
                         principalColumn: "travel_ID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TravelUser_Users_UsersId",
+                        column: x => x.UsersId,
+                        principalTable: "Users",
+                        principalColumn: "user_ID",
+                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Managers_travel_ID",
-                table: "Managers",
-                column: "travel_ID",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Travel_point_travel_ID",
@@ -97,25 +95,25 @@ namespace Infrastructure.EntityFramework.Migrations
                 column: "travel_ID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_travel_ID",
-                table: "Users",
-                column: "travel_ID");
+                name: "IX_TravelUser_UsersId",
+                table: "TravelUser",
+                column: "UsersId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Managers");
-
-            migrationBuilder.DropTable(
                 name: "Travel_point");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "TravelUser");
 
             migrationBuilder.DropTable(
                 name: "Travels");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

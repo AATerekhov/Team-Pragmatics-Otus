@@ -7,7 +7,7 @@ namespace Domain.Entities
     /// <summary>
     /// Создатель карточки
     /// </summary>
-    public class Manager : IUser
+    public class Manager : IUser, IEntity<int>
     {
         /// <summary>
         /// Идентификатор.
