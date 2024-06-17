@@ -15,6 +15,7 @@ namespace Services.Contracts.Place
         /// Описание места.
         /// </summary>
         public string? Description { get; set; }
+        public int PlaceTypeId { get; set; }
 
         /// <summary>
         /// Тип места посещения.
