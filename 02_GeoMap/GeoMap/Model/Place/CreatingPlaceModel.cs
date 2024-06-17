@@ -14,11 +14,11 @@
         public string? Description { get; set; }
 
         /// <summary>
-        /// Широта
+        /// Долгота  
         /// </summary>
         public double Longitude { get; set; }
         /// <summary>
-        /// Долгота
+        /// Широта
         /// </summary>
         public double Latitude { get; set; }
     }

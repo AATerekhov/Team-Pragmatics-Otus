@@ -13,7 +13,7 @@ async function loadPlaceType(){
            descriptionField.innerText = element.description;
            let link = document.createElement('a');
            link.innerText = "Редактировать";
-           link.href = `editPlaceType.html?LatLng=30.31499,59.938784&Scale=10&id=${element.id}`;
+           link.href = `editPlaceType.html?LngLat=30.31499,59.938784&Scale=10&id=${element.id}`;
            let editField = document.createElement('td');
            editField.appendChild(link);
            placetypeString.appendChild(idField);
@@ -29,13 +29,10 @@ async function loadPlace()
 {
     await ymaps3.ready;
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;    
-    const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
-    let centerPoint = new URLSearchParams(window.location.search).get('LatLng').split(","); 
+    const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1'); 
+    
+    let centerPoint = new URLSearchParams(window.location.search).get('LngLat').split(","); 
     let scale = new URLSearchParams(window.location.search).get('Scale');
-    let lat = document.getElementById('latitude');
-    lat.value = centerPoint[0];
-    let lng = document.getElementById('longitude');
-    lng.value = centerPoint[1];
     const map = new YMap(
         document.getElementById('map'),
         {
@@ -43,42 +40,54 @@ async function loadPlace()
                 center: centerPoint,
                 zoom: scale
             },
-        behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick']
+            behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick'],
+            showScaleInCopyrights: true
         }
     );
     map.addChild(new YMapDefaultSchemeLayer());
-    map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));        
+    map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));      
 
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
     let result =await fetch(`http://localhost:52199/api/Place/${idPlaceType}`);
-    let table = document.getElementById('places');
+    //let table = document.getElementById('places');
     if(result.ok){
         let places = await result.json();
         places.forEach(element => {
-           let placetypeString = document.createElement('tr');
-           let idField = document.createElement('td');
-           idField.innerText = element.id;
-           let nameField = document.createElement('td');
-           nameField.innerText = element.name;
-           let descriptionField = document.createElement('td');
-           descriptionField.innerText = element.description;
-           let longitudeField = document.createElement('td');
-           longitudeField.innerText = element.longitude;
-           let latitudeField = document.createElement('td');
-           latitudeField.innerText = element.latitude;
-           placetypeString.appendChild(idField);
-           placetypeString.appendChild(nameField);
-           placetypeString.appendChild(descriptionField);
-           placetypeString.appendChild(longitudeField);
-           placetypeString.appendChild(latitudeField);
-           table.appendChild(placetypeString);
+           //let placetypeString = document.createElement('tr');
+           //let idField = document.createElement('td');
+           //idField.innerText = element.id;
+           //let nameField = document.createElement('td');
+           //nameField.innerText = element.name;
+           //let descriptionField = document.createElement('td');
+           //descriptionField.innerText = element.description;
+           //let longitudeField = document.createElement('td');
+           //longitudeField.innerText = element.longitude;
+           //let latitudeField = document.createElement('td');
+           //latitudeField.innerText = element.latitude;           
+           //let link = document.createElement('a');
+           //link.innerText = "Редактировать";
+           //link.href = `updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}`;
+           //let editField = document.createElement('td');
+           //editField.appendChild(link);
+           //placetypeString.appendChild(idField);
+           //placetypeString.appendChild(nameField);
+           //placetypeString.appendChild(descriptionField);
+           //placetypeString.appendChild(longitudeField);
+           //placetypeString.appendChild(latitudeField);
+           //placetypeString.appendChild(editField);
+           //table.appendChild(placetypeString);
 
-           let insertPoint = [element.latitude,element.longitude];
+           let insertPoint = [element.longitude,element.latitude];
            const draggableMarker  = new YMapDefaultMarker({
             coordinates: insertPoint,
-            title: `${element.name}`,
-            subtitle: 'Place',
+            //title: `${element.name}`,
+            //subtitle: 'Place',
             color: '#00CC00',
+            popup: {content: `${element.name}<br> 
+                ${element.description}<br> 
+                ${element.longitude}, ${element.latitude}<br>
+                <a href=updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}>Редактировать</a>
+                `, position: 'left'}
           });
           map.addChild(draggableMarker ); 
         });
@@ -126,20 +135,20 @@ async function updatePlaceType(){
 async function initMap() {
     await ymaps3.ready;
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;   
-    let centerPoint = new URLSearchParams(window.location.search).get('LatLng').split(","); 
+    let centerPoint = new URLSearchParams(window.location.search).get('LngLat').split(","); 
     let scale = new URLSearchParams(window.location.search).get('Scale');
 
-    let lat = document.getElementById('latitude');
-    lat.value = centerPoint[0];
     let lng = document.getElementById('longitude');
-    lng.value = centerPoint[1];
+    lng.value = centerPoint[0];
+    let lat = document.getElementById('latitude');
+    lat.value = centerPoint[1];
 
-        function onDragMoveHandler(coordinates) {
-            const latitude = `Latitude: ${coordinates[0].toFixed(6)}`;
-            const longitude = `Longitude: ${coordinates[1].toFixed(6)}`;           
-            lng.value = coordinates[1].toFixed(6);            
-            lat.value = coordinates[0].toFixed(6);
-            draggableMarker.update({coordinates, title: `${latitude} <br> ${longitude} `});
+        function onDragMoveHandler(coordinates) { 
+            const longitude = `Longitude: ${coordinates[0].toFixed(6)}`; 
+            const latitude = `Latitude: ${coordinates[1].toFixed(6)}`;                     
+            lng.value = coordinates[0].toFixed(6);            
+            lat.value = coordinates[1].toFixed(6);
+            draggableMarker.update({coordinates, title: `${longitude} <br> ${latitude} `});
         }
 
     const map = new YMap(
@@ -149,7 +158,8 @@ async function initMap() {
                 center: centerPoint,
                 zoom: scale
             },
-        behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick']
+            behaviors: ['drag', 'scrollZoom', 'pinchZoom', 'dblClick'],
+            showScaleInCopyrights: true
         }
     );
 
@@ -165,28 +175,26 @@ async function initMap() {
       // Create default markers and add them to the map
       const draggableMarker  = new YMapDefaultMarker({
         coordinates: centerPoint,
-        title: `Latitude: ${centerPoint[0]} <br>
-                Longitude: ${centerPoint[1]}`,
+        title: `Longitude: ${centerPoint[0]} <br>
+                Latitude: ${centerPoint[1]}`,
         subtitle: 'Укажите новое место. <br> Перетащите метку.',
         color: '#00CC00',
         draggable: true,
         onDragMove: onDragMoveHandler
       });
-      map.addChild(draggableMarker );   
-      
-      
+      map.addChild(draggableMarker );    
 }
 async function searchPointPlace()
 {   
-    let coordinates = document.getElementById('LatLng').value;    
+    let coordinates = document.getElementById('LngLat').value;    
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
-    window.location.href = `createPlace.html?LatLng=${coordinates}&Scale=17&id=${idPlaceType}`;
+    window.location.href = `createPlace.html?LngLat=${coordinates}&Scale=17&id=${idPlaceType}`;
 }
 
 async function createPlaceForma()
 {
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
-    window.location.href = `createPlace.html?LatLng=30.31499,59.938784&Scale=10&id=${idPlaceType}`;
+    window.location.href = `createPlace.html?LngLat=30.31499,59.938784&Scale=10&id=${idPlaceType}`;
 }
 async function createPlace()
 {
@@ -202,6 +210,79 @@ async function createPlace()
         body: JSON.stringify(place)
     });
     if(result.ok)
-        window.location.href = `editPlaceType.html?id=${placeTypeId}`;    
-    
+        window.location.href = `editPlaceType.html?LngLat=30.31499,59.938784&Scale=10&id=${placeTypeId}`;        
+}
+class CustomMarkerWithPopup extends YMapComplexEntity {
+      _marker;
+     _popup;
+    // Обработчик для прикрепления элемента управления к карте
+    _onAttach() {
+        this._createMarker();
+    }
+    // Обработчик для отсоединения элемента управления от карты
+    _onDetach() {
+        this._marker = null;
+    }
+    // Обработчик для обновления свойств маркера
+    _onUpdate(props) {
+        if (props.zIndex !== undefined) {
+            this._marker?.update({zIndex: props.zIndex});
+        }
+        if (props.coordinates !== undefined) {
+            this._marker?.update({coordinates: props.coordinates});
+        }
+    }
+    // Способ создания маркерного элемента
+    _createMarker() {
+        const element = document.createElement('div');
+        element.className = 'marker';
+        element.onclick = () => {
+            this._openPopup();
+        };
+
+        this._marker = new YMapMarker({coordinates: this._props.coordinates}, element);
+        this.addChild(this._marker);
+    }
+
+    // Способ создания элемента всплывающего окна
+    _openPopup() {
+        if (this._popup) {
+            return;
+        }
+
+        const element = document.createElement('div');
+        element.className = 'popup';
+
+        const textElement = document.createElement('div');
+        textElement.className = 'popup__text';
+        textElement.textContent = this._props.popupContent;
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'popup__close';
+        closeBtn.textContent = 'Close Popup';
+        closeBtn.onclick = () => this._closePopup();
+
+        element.append(textElement, closeBtn);
+
+        const zIndex = (this._props.zIndex ?? YMapMarker.defaultProps.zIndex) + 1_000;
+        this._popup = new YMapMarker({
+            coordinates: this._props.coordinates,
+            zIndex,
+            // Это позволяет вам прокручивать всплывающее окно
+            blockBehaviors: this._props.blockBehaviors
+        }, element);
+        this.addChild(this._popup);
+    }
+
+    _closePopup() {
+        if (!this._popup) {
+            return;
+        }
+
+        this.removeChild(this._popup);
+        this._popup = null;
+    }
+}
+async function returnPlaceTypes(){
+    window.location.href = "index.html";
 }

@@ -4,30 +4,37 @@
         <title>Редактировать тип места</title>
         <script src = "api-work.js" lang="JavaScript"></script>
         <link href="style.css" rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script>            
     </head>
     <body onload = "updatePlaceTypeLoad(), loadPlace()">
        <from>
         <h3>Редактировать тип места</h3>
         <p>
             <label for ="name">Имя</label>
-            <input type="text" id="name" placeholder="Название" readonly/>            
+            <input type="text" id="name" placeholder="Название" readonly/>    
+            <label for ="description"> Описание</label>
+            <input  type="text" id="description" placeholder="Описание"/>         
         </p>
-        <p>
-            <label for ="description">Описание</label>
-            <input  type="text" id="description" placeholder="Описание"/>            
-        </p>
-        <P><input type="button" value="Изменить" onclick="updatePlaceType()"/></P>
+        <P>
+            <input type="button" value="Изменить" onclick="updatePlaceType()"/>
+            <input type="button" value="Назад" onclick="returnPlaceTypes()"/>
+        </P>
        </from>
        <h3 >Настройка мест посещения</h3>  
        <P><input type="button" value="Создать место посещения" onclick="createPlaceForma()"/></P>
-            <table id = "places" >
+           <!--  <table id = "places" > 
                 <tr> 
                     <th>PlaceTypeId</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Longitude</th>    
-                    <th>Latitude</th>                
+                    <th>Latitude</th>    
+                    <th>Action</th>             
                 </tr>
-            </table> 
+            </table> -->
+            <p>
+                <div id="map" style="text-align: center; width: 85%; height: 500px; margin: 0 auto; "></div> 
+            </p>            
     </body>
 </html>
