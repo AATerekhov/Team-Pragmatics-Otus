@@ -70,6 +70,8 @@ namespace Services.Implementations
 
             place.Name = updatingPlaceDto.Name;
             place.Description = updatingPlaceDto.Description;
+            place.Longitude = updatingPlaceDto.Longitude;
+            place.Latitude = updatingPlaceDto.Latitude;
             await _placeRepository.UpdateAsync(place);
         }
     }

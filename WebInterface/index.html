@@ -5,7 +5,7 @@
         <script src = "api-work.js" lang="JavaScript"></script>
         <link href="style.css" rel="stylesheet"/>
     </head>
-    <body onload = "loadPlaceType(),loadPlace(1)">
+    <body onload = "loadPlaceType()">
         <h1 >GeoMap Настройка</h1>
         <a href="createPlaceType.html">
             Добавить тип места        
@@ -15,20 +15,8 @@
                 <th>id</th>
                 <th>Name</th>
                 <th>Description</th> 
+                <th>Action</th> 
             </tr>
-        </table>        
-        <h3 >Настройка мест посещения</h3>        
-        <a href="createPlace.html">
-            Создать место посещения        
-        </a>
-            <table id = "places" >
-                <tr> 
-                    <th>PlaceTypeId</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Longitude</th>    
-                    <th>Latitude</th>                
-                </tr>
-            </table> 
+        </table>   
     </body>
 </html>

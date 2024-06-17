@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: GeoMap/Dockerfile
+    ports:
+      - '52199:8080'
   app-db:
     image: postgres
     container_name: GeoMapDB

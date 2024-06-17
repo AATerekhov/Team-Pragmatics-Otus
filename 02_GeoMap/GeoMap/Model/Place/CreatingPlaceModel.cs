@@ -7,12 +7,18 @@
         /// Название локации
         /// </summary>
         public string? Name { get; set; }
+
         /// <summary>
-        /// Широта
+        /// Описание места.
+        /// </summary>
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// Долгота  
         /// </summary>
         public double Longitude { get; set; }
         /// <summary>
-        /// Долгота
+        /// Широта
         /// </summary>
         public double Latitude { get; set; }
     }

@@ -3,18 +3,19 @@
   <head>
     <title>Создание Места посещения</title> 
     <script src = "api-work.js" lang="JavaScript"></script>
+    <script src = "PlaceFunction/Place.js" lang="JavaScript"></script>
     <link href="style.css" rel="stylesheet"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script>       
+    <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script>    
   </head>
 
-  <body onload="initMap()">
+  <body onload="initMap(), updatePlaceLoad()">
     <form>
         <p>
-          <label for ="longitude"> Долгота</label>
-          <input type="text" id="longitude" placeholder="30.314997" readonly/>  
-          <label for ="latitude">Широта</label>
-          <input type="text" id="latitude" placeholder="59.938784" readonly/>              
+            <label for ="longitude"> Долгота</label>
+            <input type="text" id="longitude" placeholder="30.314997" readonly/>    
+            <label for ="latitude">Широта</label>
+            <input type="text" id="latitude" placeholder="59.938784" readonly/>            
         </p>  
         <p>
           <label for ="name">Имя</label>
@@ -24,14 +25,14 @@
           <label for ="description">Описание</label>
           <input  type="text" id="description" placeholder="Описание" size="30"/>            
         </p>
-        <h2>Получить точку по json координатам Lng, Lat</h2>
+        <h2>Получить точку по json координатам Lat,Lng</h2>
         <p>
           <label for ="LngLat">Коордитаны</label>
           <input type="text" id="LngLat" placeholder="Coordinats" size="30"/>      
-          <input type="button" value="Поиск" onclick="searchPointPlace()"/>      
+          <input type="button" value="Перейти" onclick="updatePointPlace()"/>      
       </p>
     </form>
     <div id="map" style="width: 800px; height: 600px"></div>    
-    <P><input type="button" value="Создать" onclick="createPlace()"/></P>
+    <P><input type="button" value="Изменить" onclick="updatePlace()"/></P>
   </body>
 </html>
