@@ -37,7 +37,7 @@ builder.Services.AddDbContext<DataContext>(options =>
         optionsBuilder => optionsBuilder.MigrationsAssembly("Infrastructure.EntityFramework"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
-
+builder.Services.AddCors(option => option.AddDefaultPolicy(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 //builder.Services.AddAutoMapper(typeof(IUserService));???
 //builder.Services.AddAutoMapper(typeof(IUserRepository));???
 
@@ -86,6 +86,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors();
 
 app.MigrateDatabase<DataContext>();
 
