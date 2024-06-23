@@ -23,6 +23,10 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<TravelModel>), 200)]
+        public async Task<IEnumerable<TravelModel>> GetAll() => (await _service.GetTravelsAsync()).Select(_mapper.Map<TravelModel>);
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(int id)
         {

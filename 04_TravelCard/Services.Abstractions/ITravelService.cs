@@ -9,6 +9,12 @@ namespace Services.Abstractions
     public interface ITravelService
     {
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        Task<IEnumerable<TravelDto>> GetTravelsAsync();
+
+        /// <summary>
         /// Получить путешествие. 
         /// </summary>
         /// <param name="id"> Идентификатор. </param>

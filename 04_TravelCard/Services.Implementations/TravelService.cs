@@ -86,5 +86,11 @@ namespace Services.Implementations
             _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Получить все путешествия.
+        /// </summary>
+        /// <returns> IEnumerable путешествий. </returns>
+        public async Task<IEnumerable<TravelDto>> GetTravelsAsync() => (await _TravelRepository.GetAllAsync()).Select(_mapper.Map<TravelDto>);
     }
 }
