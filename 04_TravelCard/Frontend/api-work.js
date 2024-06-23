@@ -6,7 +6,7 @@ async function loadTravels(){
     if(result.ok){
         let travelss = await result.json();
         travelss.forEach(travel => {
-            alert(JSON.stringify(travel));
+            //alert(JSON.stringify(travel));
             let TravelRow  = document.createElement('tr');
             let TrDescField = document.createElement('td');
             TrDescField.innerText = travel.description;
@@ -21,3 +21,22 @@ async function loadTravels(){
         });
     }
 }
+async function travelCreating(){
+
+    let id = document.getElementById('id').value;;
+    let description = document.getElementById('description').value;
+    let startPoint = document.getElementById('startPoint').value;
+    let finishPoint = document.getElementById('finishPoint').value;
+    let travel = {id, description, startPoint, finishPoint};
+    //alert(JSON.stringify(travel))
+    let result = await fetch('http://localhost:5100/Travel', {
+     method: 'POST',
+     headers: {
+         'Content-Type': 'application/json'
+     },
+     body: JSON.stringify(travel)
+    });
+    if(result.ok)
+     window.location.href = "index.html";
+    
+ }
