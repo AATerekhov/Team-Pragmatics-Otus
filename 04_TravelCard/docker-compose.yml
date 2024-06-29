@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    ports:
+      - '52200:8080'
+    depends_on:
+      - travelCarddb
+  travelCarddb:
+    image: postgres
+    container_name: travelCarddb
+    restart: always
+    environment:
+      - 'POSTGRES_PASSWORD=travel17'
+      - 'POSTGRES_DB=travelcard' 
+    volumes:
+      - 'C:/Share/postgresql/TravelCard:/var/lib/postgresql/data'
+    ports:
+      - '5435:5432'

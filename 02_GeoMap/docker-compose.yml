@@ -8,15 +8,49 @@ services:
       dockerfile: GeoMap/Dockerfile
     ports:
       - '52199:8080'
+    depends_on:
+      - app-db
+    networks:
+      - devnet
   app-db:
     image: postgres
     container_name: GeoMapDB
-    restart: unless-stopped
+    restart: always
     environment:
       - 'POSTGRES_PASSWORD=geomap17'
       - 'POSTGRES_DB=geomap' 
     volumes:
       - 'C:/Share/postgresql/GeoMap:/var/lib/postgresql/data'
     ports:
-      - '5432:5432'
+      - '5432:5432' 
+    networks:
+      - devnet
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: ..\04_TravelCard
+      dockerfile: WebApi/Dockerfile
+    ports:
+      - '52200:8080'
+    depends_on:
+      - travelCarddb
+    networks:
+      - devnet
+  travelCarddb:
+    image: postgres
+    container_name: travelCarddb
+    restart: always
+    environment:
+      - 'POSTGRES_PASSWORD=travel17'
+      - 'POSTGRES_DB=travelcard' 
+    volumes:
+      - 'C:/Share/postgresql/TravelCard:/var/lib/postgresql/data'
+    ports:
+      - '5435:5432'
+    networks:
+      - devnet
+networks:
+  devnet:
+    name: devnet
+    driver: bridge
 
