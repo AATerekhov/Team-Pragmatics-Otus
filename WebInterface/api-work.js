@@ -52,30 +52,7 @@ async function loadPlace()
     //let table = document.getElementById('places');
     if(result.ok){
         let places = await result.json();
-        places.forEach(element => {
-           //let placetypeString = document.createElement('tr');
-           //let idField = document.createElement('td');
-           //idField.innerText = element.id;
-           //let nameField = document.createElement('td');
-           //nameField.innerText = element.name;
-           //let descriptionField = document.createElement('td');
-           //descriptionField.innerText = element.description;
-           //let longitudeField = document.createElement('td');
-           //longitudeField.innerText = element.longitude;
-           //let latitudeField = document.createElement('td');
-           //latitudeField.innerText = element.latitude;           
-           //let link = document.createElement('a');
-           //link.innerText = "Редактировать";
-           //link.href = `updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}`;
-           //let editField = document.createElement('td');
-           //editField.appendChild(link);
-           //placetypeString.appendChild(idField);
-           //placetypeString.appendChild(nameField);
-           //placetypeString.appendChild(descriptionField);
-           //placetypeString.appendChild(longitudeField);
-           //placetypeString.appendChild(latitudeField);
-           //placetypeString.appendChild(editField);
-           //table.appendChild(placetypeString);
+        places.forEach(element => {Ч           
 
            let insertPoint = [element.longitude,element.latitude];
            const draggableMarker  = new YMapDefaultMarker({
