@@ -6,15 +6,14 @@ services:
     build:
       context: .
       dockerfile: GeoMap/Dockerfile
-    ports:
-      - '52199:8080'
+    container_name: geomap-service
     depends_on:
-      - app-db
+      - geomap_db
     networks:
       - devnet
-  app-db:
+  geomap_db:
     image: postgres
-    container_name: GeoMapDB
+    container_name: geomap-db
     restart: always
     environment:
       - 'POSTGRES_PASSWORD=geomap17'
@@ -30,15 +29,14 @@ services:
     build:
       context: ..\04_TravelCard
       dockerfile: WebApi/Dockerfile
-    ports:
-      - '52200:8080'
+    container_name: travel-card-service
     depends_on:
-      - travelCarddb
+      - travelCard_db
     networks:
-      - devnet
-  travelCarddb:
+      - travelnet
+  travelCard_db:
     image: postgres
-    container_name: travelCarddb
+    container_name: travelCard-db
     restart: always
     environment:
       - 'POSTGRES_PASSWORD=travel17'
@@ -48,9 +46,27 @@ services:
     ports:
       - '5435:5432'
     networks:
-      - devnet
+      - travelnet
+  rabbit:
+    image: rabbitmq:3-management
+    restart: always
+    hostname: rabbitmqhost    
+    environment:
+      RABBITMQ_DEFAULT_USER: progmatica
+      RABBITMQ_DEFAULT_PASS: rabbit17
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+volumes:
+  rabbitmq_data:
+
 networks:
   devnet:
     name: devnet
+    driver: bridge
+  travelnet:
+    name: travelnet
     driver: bridge
 

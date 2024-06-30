@@ -6,13 +6,12 @@ services:
     build:
       context: .
       dockerfile: WebApi/Dockerfile
-    ports:
-      - '52200:8080'
+    container_name: travel-card-service
     depends_on:
-      - travelCarddb
-  travelCarddb:
+      - travelCard_db
+  travelCard_db:
     image: postgres
-    container_name: travelCarddb
+    container_name: travelCard-db
     restart: always
     environment:
       - 'POSTGRES_PASSWORD=travel17'
@@ -20,4 +19,4 @@ services:
     volumes:
       - 'C:/Share/postgresql/TravelCard:/var/lib/postgresql/data'
     ports:
-      - '5435:5432'
+      - '5432:5432'
