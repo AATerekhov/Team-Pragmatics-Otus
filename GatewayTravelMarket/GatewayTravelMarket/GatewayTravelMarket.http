@@ -1,0 +1,6 @@
+@GatewayTravelMarket_HostAddress = http://localhost:5114
+
+GET {{GatewayTravelMarket_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
