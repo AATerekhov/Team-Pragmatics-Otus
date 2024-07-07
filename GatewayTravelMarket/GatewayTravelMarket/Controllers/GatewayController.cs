@@ -47,7 +47,7 @@ namespace GatewayTravelMarket.Controllers
             }
 
             var productServiceClient = _httpClientFactory.CreateClient("PlaseTypesServiceClient");
-            var response = await productServiceClient.GetAsync($"{_gatewaySettings.GeoMapServiceBaseUrl}/api/PlaceType");
+            var response = await productServiceClient.GetAsync($"{productServiceClient.BaseAddress}api/PlaceType");
 
             if (response.IsSuccessStatusCode)
             {
