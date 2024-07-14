@@ -3,6 +3,7 @@ using AutoMapper;
 using GeoMap.Mapping;
 using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using Services.Implementations;
@@ -19,6 +20,12 @@ namespace GeoMap
             //Добавили настройки Mapping.
             //InstallAutomapper(builder.Services);
             builder.Services.AddServices(builder.Configuration);
+            builder.Services.AddMassTransit(x => {
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    Registrar.ConfigureRmq(cfg, builder.Configuration);
+                });
+            });
             builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             // Add services to the container.
             builder.Services.AddControllers();
@@ -38,6 +45,7 @@ namespace GeoMap
                 app.UseSwaggerUI();
             }
 
+            app.UseRouting();
             app.UseCors();
             app.UseAuthorization();
             app.MapControllers();

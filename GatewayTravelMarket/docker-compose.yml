@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  gatewaytravelmarket:
+    image: ${DOCKER_REGISTRY-}gatewaytravelmarket
+    build:
+      context: .
+      dockerfile: GatewayTravelMarket/Dockerfile

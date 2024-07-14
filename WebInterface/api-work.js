@@ -1,5 +1,8 @@
 async function loadPlaceType(){
-    let result =await fetch("http://localhost:52199/api/PlaceType");
+    let result =await fetch("http://localhost:5200/api/placetypes",{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     let table = document.getElementById('placeTypes');
     if(result.ok){
         let placetypes = await result.json();
@@ -52,8 +55,7 @@ async function loadPlace()
     //let table = document.getElementById('places');
     if(result.ok){
         let places = await result.json();
-        places.forEach(element => {Ч           
-
+        places.forEach(element => {   
            let insertPoint = [element.longitude,element.latitude];
            const draggableMarker  = new YMapDefaultMarker({
             coordinates: insertPoint,
@@ -84,7 +86,10 @@ async function createPlaceType(){
         window.location.href = "index.html";
 }
 async function getPlaceTypeByIdAsync(id){
-    let rezult = await fetch(`http://localhost:52199/api/PlaceType/${id}`)
+    let rezult = await fetch(`http://localhost:5200/api/placetype/${id}`,{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     if(rezult.ok)
         return await rezult.json();
 }
@@ -100,9 +105,12 @@ async function updatePlaceType(){
     let id = new URLSearchParams(window.location.search).get('id');
     let description = document.getElementById('description').value;
     let placeType = {description};
-    let result = await fetch(`http://localhost:52199/api/PlaceType/${id}`,{
+    let result = await fetch(`http://localhost:5200/api/placetype/${id}`,{
         method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'
+        },
         body: JSON.stringify(placeType)
     });
     if(result.ok)

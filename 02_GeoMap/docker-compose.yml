@@ -1,6 +1,17 @@
 version: '3.4'
 
 services:
+  gatewaytravelmarket:
+    image: ${DOCKER_REGISTRY-}gatewaytravelmarket
+    build:
+      context: ..\GatewayTravelMarket
+      dockerfile: GatewayTravelMarket/Dockerfile
+    depends_on:
+      - geomap
+      - webapi
+    networks:
+      - travelnet
+      - devnet
   geomap:
     image: ${DOCKER_REGISTRY-}geomap
     build:
