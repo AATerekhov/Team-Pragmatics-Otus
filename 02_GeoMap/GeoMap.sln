@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoMap", "GeoMap\GeoMap.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "..\04_TravelCard\WebApi\WebApi.csproj", "{DDA238BA-B2D9-438A-9DD8-F5D06ECF03BB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayTravelMarket", "..\GatewayTravelMarket\GatewayTravelMarket\GatewayTravelMarket.csproj", "{CC5B957E-0FA1-49D6-9409-9BFA68A0B102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{DDA238BA-B2D9-438A-9DD8-F5D06ECF03BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA238BA-B2D9-438A-9DD8-F5D06ECF03BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA238BA-B2D9-438A-9DD8-F5D06ECF03BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5B957E-0FA1-49D6-9409-9BFA68A0B102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5B957E-0FA1-49D6-9409-9BFA68A0B102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5B957E-0FA1-49D6-9409-9BFA68A0B102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5B957E-0FA1-49D6-9409-9BFA68A0B102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
