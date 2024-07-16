@@ -51,7 +51,10 @@ async function loadPlace()
     map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));      
 
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
-    let result =await fetch(`http://localhost:52199/api/Place/${idPlaceType}`);
+    let result =await fetch(`http://localhost:5200/api/places/${idPlaceType}`,{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     //let table = document.getElementById('places');
     if(result.ok){
         let places = await result.json();
@@ -77,9 +80,11 @@ async function createPlaceType(){
     let name = document.getElementById('name').value;
     let description = document.getElementById('description').value;
     let placeType = {name, description};
-    let result = await fetch('http://localhost:52199/api/PlaceType',{
+    let result = await fetch('http://localhost:5200/api/placetype',{
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'},
         body: JSON.stringify(placeType)
     });
     if(result.ok)
@@ -189,9 +194,11 @@ async function createPlace()
     let longitude = Number(document.getElementById('longitude').value);
     let latitude = Number(document.getElementById('latitude').value);
     let place = {placeTypeId, name, description,longitude, latitude};
-    let result = await fetch('http://localhost:52199/api/Place',{
+    let result = await fetch('http://localhost:5200/api/place',{
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'},
         body: JSON.stringify(place)
     });
     if(result.ok)

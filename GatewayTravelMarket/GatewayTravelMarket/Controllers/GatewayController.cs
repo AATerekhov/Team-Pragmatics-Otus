@@ -64,12 +64,57 @@ namespace GatewayTravelMarket.Controllers
             var response = await productServiceClient.PutAsync($"/api/PlaceType/{id}", JsonContent.Create(json));
             return await CheckResponse(response);
         }
+
         [HttpDelete("placetype/{id:int}")]
         public async Task<IActionResult> DeletePlaceType(int id)
         {
             if (!CheckKey(out IActionResult actionResult)) return actionResult;
             var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
             var response = await productServiceClient.DeleteAsync($"/api/PlaceType/{id}");
+            return await CheckResponse(response);
+        }
+
+        [HttpGet("places/{typeid:int}")]
+        public async Task<IActionResult> GetPlaces(int typeid) 
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
+            var response = await productServiceClient.GetAsync($"/api/Place/{typeid}");
+            return await CheckResponse(response);
+        }
+        [HttpGet("place/{id:Guid}")]
+        public async Task<IActionResult> GetPlace(Guid id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
+            var response = await productServiceClient.GetAsync($"/api/Place/{id}");
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("place")]
+        public async Task<IActionResult> CreatePlace([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
+            var response = await productServiceClient.PostAsync($"/api/Place", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpPut("place/{id:Guid}")]
+        public async Task<IActionResult> UpdatePlace(Guid id, [FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
+            var response = await productServiceClient.PutAsync($"/api/Place/{id}", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpDelete("place/{id:Guid}")]
+        public async Task<IActionResult> DeletePlace(Guid id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
+            var response = await productServiceClient.DeleteAsync($"/api/Place/{id}");
             return await CheckResponse(response);
         }
 
@@ -96,6 +141,5 @@ namespace GatewayTravelMarket.Controllers
             }
             else return StatusCode((int)response.StatusCode, response.ReasonPhrase);
         }
-
     }
 }
