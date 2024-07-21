@@ -4,8 +4,10 @@
         <title>Создание путешествия</title>
         <script src="api-work.js" lang="JavaScript"></script>
         <link href="style.css"  rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script> 
     </head>
-    <body>
+    <body onload="initMap()">
         <form>
             <p>
                 <label for="id">Описание</label>
@@ -29,6 +31,6 @@
             </p>
             <p><input type="button" value="Создать" onclick="travelCreating()"/></p>
         </form>
-
+        <div id="travelmap" style="width: 800px; height: 600px"></div>
     </body>
 </html>
