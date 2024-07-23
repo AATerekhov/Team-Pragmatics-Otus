@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Infrastructure.EntityFramework;
+using Infrastructure.Repositories.Implementations.Extentions;
 using Microsoft.EntityFrameworkCore;
 using Services.Repositories.Abstractions;
 using System;
@@ -25,6 +26,12 @@ namespace Infrastructure.Repositories.Implementations
         public async Task<List<Place>> GetForTypeAsync(int placeTypeId, CancellationToken cancellationToken)
         {
             var query = GetAll().Where(l => !l.Deleted && l.PlaceTypeID == placeTypeId);
+            return await query.ToListAsync();
+        }
+
+        public async Task<List<Place>> TrasingByTypeAsync(int placeTypeId, Road road, CancellationToken cancellationToken)
+        {
+            var query = Context.Set<Place>().AsParallel().Where(async l => !l.Deleted && l.PlaceTypeID == placeTypeId && await road.OnTheRoad(l));
             return await query.ToListAsync();
         }
     }
