@@ -3,6 +3,7 @@ using Domain.Entities;
 using Services.Abstractions;
 using Services.Contracts.Place;
 using Services.Contracts.PlaceType;
+using Services.Contracts.Road;
 using Services.Implementations.Exceptions;
 using Services.Repositories.Abstractions;
 using System;
@@ -59,6 +60,12 @@ namespace Services.Implementations
         public async Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId)
         {
             ICollection<Place> entities = await _placeRepository.GetForTypeAsync(placeTypeId, CancellationToken.None);
+            return _mapper.Map<ICollection<Place>, ICollection<PlaceDto>>(entities);
+        }
+
+        public async Task<ICollection<PlaceDto>> TrasingByTypeAsync(int placeTypeId, RoadDto roadDto)
+        {
+            ICollection<Place> entities = await _placeRepository.TrasingByTypeAsync(placeTypeId, _mapper.Map<Road>(roadDto), CancellationToken.None);
             return _mapper.Map<ICollection<Place>, ICollection<PlaceDto>>(entities);
         }
 
