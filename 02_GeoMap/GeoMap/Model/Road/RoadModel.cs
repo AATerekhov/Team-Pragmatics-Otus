@@ -4,5 +4,6 @@
     {
         public RoadPointModel? Start { get; set; }
         public RoadPointModel? Finish { get; set; }
+        public double Offset { get; set; }
     }
 }
