@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\GeometryMap\GeometryMap.csproj" />
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj" />
     <ProjectReference Include="..\Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj" />
     <ProjectReference Include="..\Services.Repositories.Abstractions\Services.Repositories.Abstractions.csproj" />

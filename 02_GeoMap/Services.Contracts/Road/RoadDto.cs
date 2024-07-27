@@ -10,5 +10,6 @@ namespace Services.Contracts.Road
     {
         public RoadPointDto? Start { get; set; }
         public RoadPointDto? Finish { get; set; }
+        public double Offset { get; set; }
     }
 }

@@ -10,5 +10,6 @@ namespace Domain.Entities
     {
         public RoadPoint? Start { get; set; }
         public RoadPoint? Finish { get; set; }
+        public double Offset { get; set; }
     }
 }

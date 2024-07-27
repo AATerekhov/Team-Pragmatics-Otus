@@ -31,8 +31,8 @@ namespace Infrastructure.Repositories.Implementations
 
         public async Task<List<Place>> TrasingByTypeAsync(int placeTypeId, Road road, CancellationToken cancellationToken)
         {
-            var query = Context.Set<Place>().AsParallel().Where(async l => !l.Deleted && l.PlaceTypeID == placeTypeId && await road.OnTheRoad(l));
-            return await query.ToListAsync();
+            var result = Context.Set<Place>().Where(l => !l.Deleted && l.PlaceTypeID == placeTypeId && road.OnTheRoad(l));
+            return await result.ToListAsync();
         }
     }
 }
