@@ -62,17 +62,21 @@ namespace GeometryMap.GeometricModel.Figure
         public Polygon Offset(double offset) 
         {
             var vector = Main.Normalize(offset);
-            var vectorUp = vector.Rotation(90);
-            var vectorBack = vectorUp.Rotation(90);
-            var vectorDown = vectorBack.Rotation(90);
+            var vectorUp = vector.Rotation((double)Math.PI / 2);            
+            var vectorBack = vector * -1;
+            var vectorDown = vectorUp * -1;
             List<Point> points = new List<Point>()
             {
-                Start+vectorBack+vectorUp,
+                Start + vectorBack + vectorUp,
                 Finish + vector + vectorUp,
                 Finish + vector + vectorDown,
                 Start+vectorBack+vectorDown,
             };
             return new Polygon(points);
+        }
+        public override string ToString()
+        {
+            return $"{Start}-{Finish}";
         }
     }
 }

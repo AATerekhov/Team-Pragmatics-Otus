@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,16 @@ namespace GeometryMap.GeometricModel.Figure
         public bool InABCD(Point point)
         {
             return GetABCD().In(point);
+        }
+        public override string ToString()
+        {
+            var result = string.Empty;
+            for (int i = 0; i < Points.Count; i++)
+            {
+                result += Points[i] + "-";
+            }
+            result += Points[0];
+            return result;
         }
     }
 }

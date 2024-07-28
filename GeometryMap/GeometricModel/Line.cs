@@ -54,5 +54,9 @@ namespace GeometryMap.GeometricModel
             point = new Point(x,y);
             return true;
         }
+        public override string ToString()
+        {
+            return $"{A}x+{B}y+{C}=0";
+        }
     }
 }

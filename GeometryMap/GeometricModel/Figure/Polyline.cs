@@ -32,5 +32,14 @@ namespace GeometryMap.GeometricModel.Figure
         {
             return GetABCD().In(point);
         }
+        public override string ToString()
+        {
+            var result = string.Empty;
+            for (int i = 0; i < Points.Count; i++)
+            {
+                result += Points[i] + "-";
+            }
+            return result.TrimEnd('-');
+        }
     }
 }

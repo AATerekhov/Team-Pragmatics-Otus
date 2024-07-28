@@ -28,11 +28,12 @@ namespace GeometryMap.GeometricModel
             var length = this.GetLength();
             return new Vector(value*X / length, value*Y / length);
         }
+        //Поворот вектора против часовой стрелки на угол в радианах.
         public Vector Rotation(double angle)
         {
-            X = X * Math.Cos(angle) - Y * Math.Sin(angle);
-            Y = X * Math.Sin(angle) + Y * Math.Cos(angle);
-            return new Vector(X, Y);
+            var sin = double.Round(Math.Sin(angle), 6);
+            var cos = double.Round(Math.Cos(angle), 6);
+            return new Vector(X * cos - Y * sin, X * sin + Y * cos);
         }
 
         public double GetLength() 
@@ -51,6 +52,10 @@ namespace GeometryMap.GeometricModel
         public static Vector operator *(Vector a, double b)
         {
             return new Vector(a.X*b, a.Y*b);
+        }
+        public override string ToString()
+        {
+            return $"[{X},{Y}]";
         }
     }
 }

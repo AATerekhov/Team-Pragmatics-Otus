@@ -11,6 +11,7 @@ namespace GeoMap.Mapping
         public RoadMappingProfile()
         {
             CreateMap<RoadModel,RoadDto>();
+            CreateMap<RoadPointModel, RoadPointDto>();
         }
     }
 }
