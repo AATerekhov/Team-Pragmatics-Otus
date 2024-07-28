@@ -51,5 +51,10 @@ namespace GeometryMap.GeometricModel.Figure
             if (point.X <= MaxX && point.X >= MinX && point.Y <= MaxY && point.Y >= MinY) return true;
             return false;
         }
+
+        public override string ToString()
+        {
+            return GetMainDiaginal().ToString();
+        }
     }
 }

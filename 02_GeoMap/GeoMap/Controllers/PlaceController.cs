@@ -16,8 +16,9 @@ namespace GeoMap.Controllers
     public class PlaceController(IPlaceService placeService, IMapper mapper, ILogger<UserController> logger) : ControllerBase
     {
 
-        [HttpGet("Tracing/{placeTypeId:int}")]
-        [ProducesResponseType(typeof(IEnumerable<PlaceModel>), 200)]
+        [HttpPost("Tracing/{placeTypeId:int}")]
+        [ProducesResponseType(typeof(IEnumerable<PlaceModel>), 201)]
+        [ProducesResponseType(400)]
         public async Task<IEnumerable<PlaceModel>> TracingRouteByType(int placeTypeId, [FromBody] RoadModel request) 
         {
             return (await placeService.TrasingByTypeAsync(placeTypeId, mapper.Map<RoadDto>(request))).Select(mapper.Map<PlaceModel>);

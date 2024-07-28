@@ -16,5 +16,10 @@ namespace Domain.Entities
         /// Широта
         /// </summary>
         public double Latitude { get; set; }
+
+        public override string ToString()
+        {
+            return $"@{Longitude},{Latitude}";
+        }
     }
 }

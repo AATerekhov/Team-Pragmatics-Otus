@@ -14,7 +14,8 @@ namespace Services.Implementations.Mapping
     {
         public RoadMappingsProfile()
         {
-            CreateMap<Road, RoadDto>();
+            CreateMap< RoadDto, Road> ();
+            CreateMap< RoadPointDto, RoadPoint> ();
         }
     }
 }
