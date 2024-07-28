@@ -38,8 +38,6 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 builder.Services.AddCors(option => option.AddDefaultPolicy(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
-//builder.Services.AddAutoMapper(typeof(IUserService));???
-//builder.Services.AddAutoMapper(typeof(IUserRepository));???
 
 //Mapping
 builder.Services.AddAutoMapper(typeof(UserMappingProfile));
@@ -58,20 +56,6 @@ builder.Services.AddScoped<ITravelPointService, TravelPointService>();
 builder.Services.AddScoped<ITravelPointRepository, TravelPointRepository>();
 
 var app = builder.Build();
-
-//try
-//{
-//    using (var serviceScope = app.Services.CreateScope())
-//    {
-//        var dbContext = serviceScope.ServiceProvider.GetRequiredService<DataContext>();
-//        await dbContext.Database.EnsureCreatedAsync();
-//        //await dbContext.Database.MigrateAsync();
-//    }
-//}
-//catch (Exception e)
-//{
-//    app.Logger.LogCritical(e, "An exception occurred during the service startup");
-//}
 
 // Configure the HTTP request pipeline.
 
