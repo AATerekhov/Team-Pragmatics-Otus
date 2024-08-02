@@ -40,5 +40,11 @@ namespace Infrastructure.Repositories.Implementations
                 .Take(itemsPerPage)
                 .ToListAsync();
         }
+
+        /// <summary>
+        /// Получить все путешествия
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<Travel>> GetAllAsync() => (await Context.Set<Travel>().AsNoTracking().ToListAsync()).AsEnumerable();
     }
 }

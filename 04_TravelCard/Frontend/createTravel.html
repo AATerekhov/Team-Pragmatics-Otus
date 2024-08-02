@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Создание путешествия</title>
+        <script src="api-work.js" lang="JavaScript"></script>
+        <link href="style.css"  rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script> 
+    </head>
+    <body onload="initMap()">
+        <form>
+            <p>
+                <label for="id">Описание</label>
+                <input type="number" id="id" placeholder="4"/>
+            </p>
+            <p>
+                <label for="description">Описание</label>
+                <input type="text" id="description" placeholder="Описание Вашего путешествия"/>
+            </p>
+            <p>
+                <label for="startPoint">Начало путешествия</label>
+                <input type="text" id="startPoint" placeholder="30.316927,59.938716"/>
+            </p>
+            <p>
+                <label for="finishPoint">Конечная точка</label>
+                <input type="text" id="finishPoint" placeholder="30.316927,59.938716"/>
+            </p>
+            <p>
+                <label for="dateStart">Дата начала путешествия</label>
+                <input type="date" id="dateStart" placeholder="01.01.2024"/>
+            </p>
+            <p><input type="button" value="Создать" onclick="travelCreating()"/></p>
+        </form>
+        <div id="travelmap" style="width: 800px; height: 600px"></div>
+    </body>
+</html>
