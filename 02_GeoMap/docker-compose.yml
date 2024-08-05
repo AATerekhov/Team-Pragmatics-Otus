@@ -10,7 +10,6 @@ services:
       - geomap
       - webapi
     networks:
-      - travelnet
       - devnet
   geomap:
     image: ${DOCKER_REGISTRY-}geomap
@@ -44,7 +43,7 @@ services:
     depends_on:
       - travelCard_db
     networks:
-      - travelnet
+      - devnet
   travelCard_db:
     image: postgres
     container_name: travelCard-db
@@ -57,7 +56,7 @@ services:
     ports:
       - '5435:5432'
     networks:
-      - travelnet
+      - devnet
   rabbit:
     image: rabbitmq:3-management
     restart: always
@@ -70,6 +69,8 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - devnet
 volumes:
   rabbitmq_data:
 
