@@ -127,6 +127,42 @@ namespace GatewayTravelMarket.Controllers
             return await CheckResponse(response);
         }
 
+        [HttpGet("travels")]
+        public async Task<IActionResult> GetTravels()
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.GetAsync("/Travel");
+            return await CheckResponse(response);
+        }
+
+        [HttpGet("travel/{id:int}")]
+        public async Task<IActionResult> GetTravel(int id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.GetAsync($"/Travel/{id}");
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("travel")]
+        public async Task<IActionResult> CreateTravel([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.PostAsync($"/Travel", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpPut("travel/{id:int}")]
+        public async Task<IActionResult> UpdateTravel(int id, [FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.PutAsync($"/Travel/{id}", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
         private bool IsApiKeyValid(string apiKey)
         {
             // Check if the API key exists in the valid API keys HashSet
