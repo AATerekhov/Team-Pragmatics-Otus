@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.EntityFramework.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240528112206_Initial_1")]
+    [Migration("20240803212222_Initial_1")]
     partial class Initial_1
     {
         /// <inheritdoc />
@@ -48,8 +48,8 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("double precision");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .HasMaxLength(124)
+                        .HasColumnType("character varying(124)");
 
                     b.HasKey("Id");
 
@@ -70,8 +70,8 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
 
                     b.Property<double>("Latitude")
                         .HasColumnType("double precision");
@@ -80,8 +80,8 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("double precision");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .HasMaxLength(124)
+                        .HasColumnType("character varying(124)");
 
                     b.Property<int>("PlaceTypeID")
                         .HasColumnType("integer");

@@ -19,7 +19,7 @@ namespace Infrastructure.EntityFramework.Migrations
                     LocationID = table.Column<Guid>(type: "uuid", nullable: false),
                     IsCafe = table.Column<bool>(type: "boolean", nullable: false),
                     IsFoodShop = table.Column<bool>(type: "boolean", nullable: false),
-                    Name = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
+                    Name = table.Column<string>(type: "character varying(124)", maxLength: 124, nullable: true),
                     Longitude = table.Column<double>(type: "double precision", nullable: false),
                     Latitude = table.Column<double>(type: "double precision", nullable: false),
                     Deleted = table.Column<bool>(type: "boolean", nullable: false)
@@ -64,9 +64,9 @@ namespace Infrastructure.EntityFramework.Migrations
                 columns: table => new
                 {
                     LocationID = table.Column<Guid>(type: "uuid", nullable: false),
-                    Description = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
+                    Description = table.Column<string>(type: "character varying(512)", maxLength: 512, nullable: true),
                     PlaceTypeID = table.Column<int>(type: "integer", nullable: false),
-                    Name = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: true),
+                    Name = table.Column<string>(type: "character varying(124)", maxLength: 124, nullable: true),
                     Longitude = table.Column<double>(type: "double precision", nullable: false),
                     Latitude = table.Column<double>(type: "double precision", nullable: false),
                     Deleted = table.Column<bool>(type: "boolean", nullable: false)
