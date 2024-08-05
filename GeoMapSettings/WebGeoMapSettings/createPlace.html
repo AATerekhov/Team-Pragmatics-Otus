@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creating Place element</title>
+        <script src = "api-work.js" lang="JavaScript"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+       <from>
+        <p>
+            <!--<label for ="longitude"></label> -->
+            <input type="number" id="longitude" placeholder="Долгота"/>            
+        </p>
+        <p>
+            <!--<label for ="latitude"></label> -->
+            <input type="number" id="description" placeholder="Широта"/>            
+        </p>
+        <!-- КОНТЕЙНЕР ДЛЯ КАРТЫ -->
+        <div id="myMap" style="width: 700px; height: 700px;"></div>
+            
+        <!-- СКРИПТ КАРТЫ -->
+        <script>
+        ymaps.ready(init);
+        function init(){     
+            var myMap = new ymaps.Map ('myMap', {
+                center: [59.938678, 30.314474], //координаты центра
+                zoom: 10 //уровень приближения
+            });
+        }
+        </script>
+        <!--  <P><input type="button" value="Создать" onclick="createPlaceType()"/></P>  -->
+       </from>
+    </body>
+</html>
+
+[59.722337, 30.416752]
+59.936424, 30.302245
+
+30.308849,59.93603 - Медный всадник
+30.336804,59.932721 - Екатерина II
+
+[30.314997, 59.938784 ]
