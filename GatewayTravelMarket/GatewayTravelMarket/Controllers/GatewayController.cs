@@ -150,7 +150,7 @@ namespace GatewayTravelMarket.Controllers
         {
             if (!CheckKey(out IActionResult actionResult)) return actionResult;
             var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
-            var response = await productServiceClient.PostAsync($"/Travel", JsonContent.Create(json));
+            var response = await productServiceClient.PostAsync("/Travel", JsonContent.Create(json));
             return await CheckResponse(response);
         }
 
