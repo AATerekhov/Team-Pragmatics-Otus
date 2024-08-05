@@ -4,6 +4,9 @@ using Services.Repositories.Abstractions;
 using Services.Contracts.Travel;
 using Domain.Entities;
 using Infrastructure.Repositories.Implementations;
+using MassTransit;
+using Newtonsoft.Json;
+using CommonNameSpace;
 
 namespace Services.Implementations
 {
@@ -12,13 +15,16 @@ namespace Services.Implementations
     /// </summary>
     public class TravelService : ITravelService
     {
+        private readonly string _queueName = "event_travel_queue";
         private readonly IMapper _mapper;
         private readonly ITravelRepository _TravelRepository;
+        private readonly IBusControl _busControl;
 
-        public TravelService(IMapper mapper, ITravelRepository TravelRepository)
+        public TravelService(IMapper mapper, ITravelRepository TravelRepository, IBusControl busControl)
         {
             _mapper = mapper;
             _TravelRepository = TravelRepository;
+            _busControl = busControl;
         }
 
         /// <summary>
@@ -32,13 +38,18 @@ namespace Services.Implementations
             TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
-            return createdTravel.Id;
+            //return createdTravel.Id;
 
             //Брокер
-            //await _busControl.Publish(new MessageDto
-            //{
-            //    Content = $"Travel {createdTravel.Id} with desc {createdTravel.TravelDesc} is added"
-            //});
+            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            if (sendEndPoint == null)
+            {
+                throw new Exception($"Не удалось найти очередь {_queueName}");
+            }
+            await sendEndPoint.Send(new MessageDto
+            {
+                Content = $"New Travel. {JsonConvert.SerializeObject(TravelEntity)}"
+            }, CancellationToken.None);
 
             return createdTravel.Id;
         }
@@ -85,6 +96,23 @@ namespace Services.Implementations
             travel.Description = updatingTravelDto.Description;
             _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
+
+            //Брокер
+            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            if (sendEndPoint == null)
+            {
+                throw new Exception($"Не удалось найти очередь {_queueName}");
+            }
+            await sendEndPoint.Send(new MessageDto
+            {
+                Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
+            }, CancellationToken.None);
         }
+
+        /// <summary>
+        /// Получить все путешествия.
+        /// </summary>
+        /// <returns> IEnumerable путешествий. </returns>
+        public async Task<IEnumerable<TravelDto>> GetTravelsAsync() => (await _TravelRepository.GetAllAsync()).Select(_mapper.Map<TravelDto>);
     }
 }
