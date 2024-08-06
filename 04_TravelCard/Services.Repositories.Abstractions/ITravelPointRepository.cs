@@ -10,5 +10,13 @@ namespace Services.Repositories.Abstractions
         /// <param name="itemsPerPage"> Количество элементов на странице. </param>
         /// <returns> Список точек остановок. </returns>
         Task<List<TravelPoint>> GetPagedAsync(int page, int itemsPerPage);
+
+        /// <summary>
+        /// Получить все точки остановки по ID путешествия.
+        /// </summary>
+        /// <param name="travelId"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<List<TravelPoint>> GetAllByTravelIdAsync(int travelId, CancellationToken cancellationToken);
     }
 }
