@@ -13,7 +13,12 @@ namespace Services.Abstractions
         /// <returns> ДТО точки оставки. </returns>
         Task<TravelPointDto> GetByIdAsync(int id);
 
-        //Task<TravelDto?> GetTravelAsync(int id);
+        /// <summary>
+        /// Получить все точки остановки по ID путешествия.
+        /// </summary>
+        /// <param name="travelId"></param>
+        /// <returns></returns>
+        Task<List<TravelPointDto>> GetAllByTravelIdAsync(int travelId);
 
         /// <summary>
         /// Создать Точку остановки.

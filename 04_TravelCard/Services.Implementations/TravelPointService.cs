@@ -66,6 +66,18 @@ namespace Services.Implementations
             return _mapper.Map<TravelPoint, TravelPointDto>(travelpoint);
         }
 
+        /// <summary>
+        /// Получить точку остановки.
+        /// </summary>
+        /// <param name="id"> Идентификатор. </param>
+        /// <returns> ДТО точки остановки. </returns>
+        public async Task<List<TravelPointDto>> GetAllByTravelIdAsync(int travelId)
+        {
+            var travelpoints = await _TravelPointRepository.GetAllByTravelIdAsync(travelId, CancellationToken.None);
+            List<TravelPointDto> mappedList = travelpoints.Select(tp => _mapper.Map<TravelPoint, TravelPointDto>(tp)).ToList();
+            return mappedList;
+        }
+
         //public async Task<TravelPointDto?> GetTravelPointAsync(int id) => _mapper.Map<TravelPointDto>(await _TravelPointRepository.GetTravelPointByIdAsync(id));
 
         /// <summary>

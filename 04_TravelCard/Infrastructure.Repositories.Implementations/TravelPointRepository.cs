@@ -23,6 +23,16 @@ namespace Infrastructure.Repositories.Implementations
             return await query.SingleOrDefaultAsync(c => c.Id == id);
         }
 
+        /// <summary>
+        /// Получить все точки остановки по ID путешествия.
+        /// </summary>
+        /// <param name="travelId"> Id путешествия. </param>
+        /// <returns> масств точек остановки. </returns>
+        public async Task<List<TravelPoint>> GetAllByTravelIdAsync(int travelId, CancellationToken cancellationToken)
+        {
+            return await GetAll().Where(tp => tp.TravelId == travelId).ToListAsync();
+        }
+
         //public Task<TravelPoint?> GetTravelPointByIdAsync(int id) => Context.Set<TravelPoint>().FindAsync(id).AsTask();
 
         /// <summary>
