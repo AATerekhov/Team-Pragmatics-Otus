@@ -94,6 +94,8 @@ namespace Services.Implementations
             }
 
             travel.Description = updatingTravelDto.Description;
+            travel.StartPoint = updatingTravelDto.StartPoint;
+            travel.FinishPoint = updatingTravelDto.FinishPoint;
             _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
 
