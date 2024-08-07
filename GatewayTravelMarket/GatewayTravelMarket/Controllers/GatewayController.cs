@@ -92,11 +92,11 @@ namespace GatewayTravelMarket.Controllers
         }
 
         [HttpPost("place/tracing/{placeTypeId:int}")]
-        public async Task<IActionResult> TracingRoute(int typeid,[FromBody] JsonElement json)
+        public async Task<IActionResult> TracingRoute(int placeTypeId, [FromBody] JsonElement json)
         {
             if (!CheckKey(out IActionResult actionResult)) return actionResult;
             var productServiceClient = _httpClientFactory.CreateClient("GeoMapServiceClient");
-            var response = await productServiceClient.PostAsync($"/api/Place/Tracing/{typeid}", JsonContent.Create(json));
+            var response = await productServiceClient.PostAsync($"/api/Place/Tracing/{placeTypeId}", JsonContent.Create(json));
             return await CheckResponse(response);
         }
 

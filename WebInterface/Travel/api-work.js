@@ -157,7 +157,6 @@ async function initUpdateMap() {
     let scale = new URLSearchParams(window.location.search).get('Scale');
     let placeTypeId = new URLSearchParams(window.location.search).get('typeId');
     let travel = await getTravelByIdAsync(travelId);
-
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
@@ -171,6 +170,11 @@ async function initUpdateMap() {
     let latSP = document.getElementById('latitudeSP');
     let startLat = Number(travel.startPoint.split(',')[1]);
     latSP.value = startLat
+    
+    let start = {
+        longitude: startLng,
+        latitude: startLat};
+
         function onDragMoveHandlerSP(coordinates) { 
             //strpnt.value = coordinates;
             lngSP.value = coordinates[0].toFixed(6);            
@@ -184,6 +188,10 @@ async function initUpdateMap() {
     let latFP = document.getElementById('latitudeFP');
     let finishLat = Number(travel.finishPoint.split(',')[1]);
     latFP.value = finishLat;
+
+    let finish = {
+        longitude: finishLng,
+        latitude: finishLat};
 
         function onDragMoveHandlerEP(coordinates) { 
             //strpnt.value = coordinates;
@@ -236,7 +244,30 @@ async function initUpdateMap() {
         draggable: true,
         onDragMove: onDragMoveHandlerEP
       });
-      map.addChild(draggableFinishPoint);       
+      map.addChild(draggableFinishPoint);      
+      
+      let places = await GetTrasingPlaces(start,finish,placeTypeId);
+      places.forEach(element => {   
+        let insertPoint = [element.longitude,element.latitude];
+        const draggableMarker  = new YMapDefaultMarker({
+         coordinates: insertPoint,
+         //title: `${element.name}`,
+         //subtitle: 'Place',
+         color: '#00CC00',
+         popup: {content: `${element.name}<br> 
+             ${element.description.split(" |",8)[0]}<br> 
+             ${element.description.split(" |",8)[1]}<br> 
+             ${element.description.split(" |",8)[2]}<br> 
+             ${element.description.split(" |",8)[3]}<br> 
+             ${element.description.split(" |",8)[4]}<br> 
+             ${element.description.split(" |",8)[5]}<br> 
+             ${element.description.split(" |",8)[6]}<br> 
+             ${element.description.split(" |",8)[7]}<br> 
+             ${element.longitude}, ${element.latitude}<br>             
+             `, position: 'left'}
+       });
+       map.addChild(draggableMarker ); 
+     });
 }
 
 async function AddButton() {    
@@ -265,4 +296,18 @@ function createButton(context, name , typeId, id) {
      }
     button.disabled = false;
     context.appendChild(button);
+}
+//id - тип мест трассировки
+async function GetTrasingPlaces(start,finish,id) {    
+    let offset = 0.045454;
+    let road = {start,finish,offset};
+    let result = await fetch(`http://localhost:5200/api/place/tracing/${id}`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'},
+        body: JSON.stringify(road)
+    });
+    if(result.ok)
+        return await result.json();
 }
