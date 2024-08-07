@@ -66,7 +66,14 @@ async function loadPlace()
             //subtitle: 'Place',
             color: '#00CC00',
             popup: {content: `${element.name}<br> 
-                ${element.description}<br> 
+                ${element.description.split(" |",8)[0]}<br> 
+                ${element.description.split(" |",8)[1]}<br> 
+                ${element.description.split(" |",8)[2]}<br> 
+                ${element.description.split(" |",8)[3]}<br> 
+                ${element.description.split(" |",8)[4]}<br> 
+                ${element.description.split(" |",8)[5]}<br> 
+                ${element.description.split(" |",8)[6]}<br> 
+                ${element.description.split(" |",8)[7]}<br> 
                 ${element.longitude}, ${element.latitude}<br>
                 <a href=updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}>Редактировать</a>
                 `, position: 'left'}

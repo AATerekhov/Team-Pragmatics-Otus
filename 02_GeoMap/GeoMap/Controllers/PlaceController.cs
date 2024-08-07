@@ -15,7 +15,6 @@ namespace GeoMap.Controllers
     [Route("api/[controller]")]
     public class PlaceController(IPlaceService placeService, IMapper mapper, ILogger<UserController> logger) : ControllerBase
     {
-
         [HttpPost("Tracing/{placeTypeId:int}")]
         [ProducesResponseType(typeof(IEnumerable<PlaceModel>), 201)]
         [ProducesResponseType(400)]
