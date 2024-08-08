@@ -159,7 +159,7 @@ async function initUpdateMap() {
     let travel = await getTravelByIdAsync(travelId);
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer,YMapFeature} = ymaps3;
     
     let TrDescField = document.getElementById('description');
     TrDescField.value = travel.description;
@@ -246,6 +246,16 @@ async function initUpdateMap() {
       });
       map.addChild(draggableFinishPoint);      
       
+     const line = new YMapFeature({
+        geometry: {
+          type: 'LineString',
+          coordinates: [[startLng, startLat],
+                        [finishLng, finishLat]]
+        },
+        style: {stroke: [{color: '#0047FF', width: 4}]}
+      });
+      map.addChild(line);
+
       let places = await GetTrasingPlaces(start,finish,placeTypeId);
       places.forEach(element => {   
         let insertPoint = [element.longitude,element.latitude];
@@ -279,8 +289,7 @@ async function AddButton() {
     });
     if(resultType.ok){
         let placetypes = await resultType.json();
-        placetypes.forEach(element => {
-           
+        placetypes.forEach(element => {           
            createButton(document.body,element.name,element.id,id);           
         });
     } 
