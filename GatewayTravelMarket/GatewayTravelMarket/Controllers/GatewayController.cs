@@ -163,6 +163,51 @@ namespace GatewayTravelMarket.Controllers
             return await CheckResponse(response);
         }
 
+        [HttpDelete("travel/{id:int}")]
+        public async Task<IActionResult> DeleteTravel(int id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.DeleteAsync($"/Travel/{id}");
+            return await CheckResponse(response);
+        }
+
+        [HttpPut("points/{travelId:int}")]
+        public async Task<IActionResult> GetPoints(int travelId)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.GetAsync($"/TravelPoint/{travelId}");
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("point")]
+        public async Task<IActionResult> CreatePoint([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.PostAsync("/TravelPoint", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpPut("point/{id:int}")]
+        public async Task<IActionResult> UpdatePoint(int id, [FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.PutAsync($"/TravelPoint/{id}", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpDelete("point/{id:int}")]
+        public async Task<IActionResult> DeletePoint(int id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.DeleteAsync($"/TravelPoint/{id}");
+            return await CheckResponse(response);
+        }
+
         private bool IsApiKeyValid(string apiKey)
         {
             // Check if the API key exists in the valid API keys HashSet
