@@ -66,21 +66,23 @@ async function loadPlace()
             //subtitle: 'Place',
             color: '#00CC00',
             popup: {content: `${element.name}<br> 
-                ${element.description.split(" |",8)[0]}<br> 
-                ${element.description.split(" |",8)[1]}<br> 
-                ${element.description.split(" |",8)[2]}<br> 
-                ${element.description.split(" |",8)[3]}<br> 
-                ${element.description.split(" |",8)[4]}<br> 
-                ${element.description.split(" |",8)[5]}<br> 
-                ${element.description.split(" |",8)[6]}<br> 
-                ${element.description.split(" |",8)[7]}<br> 
-                ${element.longitude}, ${element.latitude}<br>
+                ${getComment(element.description)}
                 <a href=updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}>Редактировать</a>
                 `, position: 'left'}
           });
           map.addChild(draggableMarker ); 
         });
     }
+    
+    function getComment(descriptions) {
+        let list = descriptions.split(" |");
+        let result = "";
+        list.forEach(element => {
+            result =  `${result}${element}<br>`;
+        });
+        return result;
+    }
+
     console.log(result);
 }
 async function createPlaceType(){

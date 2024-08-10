@@ -84,7 +84,6 @@ async function initUpdateMap() {
     );
     // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer()); 
-
     // Добавьте слой для маркеров
     map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));
 
@@ -129,21 +128,21 @@ async function initUpdateMap() {
           const draggableMarker  = new YMapDefaultMarker({
            coordinates: insertPoint,
            color: '#00CC00',
-           popup: {content: `${element.name}<br> 
-               ${element.description.split(" |",8)[0]}<br> 
-               ${element.description.split(" |",8)[1]}<br> 
-               ${element.description.split(" |",8)[2]}<br> 
-               ${element.description.split(" |",8)[3]}<br> 
-               ${element.description.split(" |",8)[4]}<br> 
-               ${element.description.split(" |",8)[5]}<br> 
-               ${element.description.split(" |",8)[6]}<br> 
-               ${element.description.split(" |",8)[7]}<br> 
-               ${element.longitude}, ${element.latitude}<br>             
+           popup: {content: `${getComment(element.description)}           
                `, position: 'left'}
             });
             map.addChild(draggableMarker ); 
         });
     }    
+
+    function getComment(descriptions) {
+        let list = descriptions.split(" |");
+        let result = "";
+        list.forEach(element => {
+            result =  `${result}${element}<br>`;
+        });
+        return result;
+    }
 
     const bottomControls = new YMapControls({position: 'bottom'});
     map.addChild(bottomControls);
@@ -241,4 +240,47 @@ async function GetPoints() {
     });
     if(result.ok)
         return await result.json();
+}
+async function deleteLastPoint() {
+    let travelId = new URLSearchParams(window.location.search).get('id');
+    let points = await GetPoints();
+    let point = points.pop();
+    let result = await fetch(`http://localhost:5200/api/point/${point.id}`,{
+        method: 'DELETE',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
+    if(result.ok)
+         window.location.href = `updateTravel.html?typeId=0&Scale=8&id=${travelId}`;
+}
+
+function goHome() {
+    window.location.href = `index.html`;
+}
+
+async function travelUpdating() {
+    let travelId = new URLSearchParams(window.location.search).get('id');
+    let description = document.getElementById('description').value;
+    let startPoint = `${document.getElementById('longitudeSP').value},${document.getElementById('latitudeSP').value}`;
+    let finishPoint = `${document.getElementById('longitudeFP').value},${document.getElementById('latitudeFP').value}`;
+    let travel = {description,startPoint,finishPoint};
+    let result = await fetch(`http://localhost:5200/api/travel/${travelId}`,{
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'
+        },
+        body: JSON.stringify(travel)
+    });
+    if(result.ok)
+        window.location.href = `updateTravel.html?typeId=0&Scale=8&id=${travelId}`;
+}
+
+async function travelDelete() {
+    let travelId = new URLSearchParams(window.location.search).get('id');
+    let result = await fetch(`http://localhost:5200/api/travel/${travelId}`,{
+        method: 'DELETE',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
+    if(result.ok)
+        window.location.href = `index.html`;
 }

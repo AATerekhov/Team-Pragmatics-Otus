@@ -33,7 +33,6 @@ async function loadTravels(){
     }
 }
 async function travelCreating(){
-    let id = 0;
     let description = document.getElementById('description').value;
     let lngSP = document.getElementById('longitudeSP').value;
     let latSP = document.getElementById('latitudeSP').value;
@@ -41,7 +40,7 @@ async function travelCreating(){
     let lngFP = document.getElementById('longitudeFP').value;
     let latFP = document.getElementById('latitudeFP').value;
     let finishPoint = lngFP + ',' + latFP;
-    let travel = {id,description, startPoint, finishPoint};
+    let travel = {description, startPoint, finishPoint};
     //alert(JSON.stringify(travel))
     let result = await fetch('http://localhost:5200/api/travel', {
      method: 'POST',
@@ -52,12 +51,9 @@ async function travelCreating(){
      body: JSON.stringify(travel)
     });
     if(result.ok)
-     window.location.href = "index.html";
+        window.location.href = `index.html`;
  }
 
- async function travelUpdating() {
-    
- }
 
  //Yandex Map function
 async function initMap() {    
