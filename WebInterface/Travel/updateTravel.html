@@ -29,7 +29,11 @@
                 <label for="dateStart">Дата начала путешествия</label>
                 <input type="date" id="dateStart" placeholder="01.01.2024"/>
             </p>
-            <p><input type="button" value="Обновить" onclick="travelUpdating()"/></p>
+            <p>
+                <input type="button" value="Обновить" onclick="travelUpdating()"/>  
+                <input type="button" value="Удалить" onclick="travelDelete()"/>               
+                <input type="button" value="Назад" onclick="goHome()"/>
+            </p>
         </form>
             <div id="travelmap" style="text-align: center; width: 85%; height: 600px; margin: 0 auto; "> </div>   
         <form>    
@@ -45,7 +49,10 @@
                 <label for ="latitudeP">, </label> 
                 <input type="text" id="latitudeP" size="10" placeholder="широта" readonly/>
             </p>          
-            <p><input type="button" value="Добавить" onclick="addPoint()"/></p>
+            <p>
+                <input type="button" value="Добавить" onclick="addPoint()"/>
+                <input type="button" value="Удалить" onclick="deleteLastPoint()"/>
+            </p>
         </form>         
     </body>
 </html>
