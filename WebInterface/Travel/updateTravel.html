@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script> 
     </head>
-    <body onload="initUpdateMap(),AddButton()">
+    <body onload="initUpdateMap()">
         <form>
             <p>
                 <label for="description">Описание</label>
@@ -31,6 +31,21 @@
             </p>
             <p><input type="button" value="Обновить" onclick="travelUpdating()"/></p>
         </form>
-            <div id="travelmap" style="text-align: center; width: 85%; height: 500px; margin: 0 auto; "> </div>            
+            <div id="travelmap" style="text-align: center; width: 85%; height: 500px; margin: 0 auto; "> </div>   
+        <form>    
+            <p>
+                <label for ="timeP">Остановка (мин.):</label>
+                <input type="text" id="timeP" size="2" placeholder="5"/> 
+                <label for ="descP">, </label> 
+                <input type="text" id="descP" size="70" placeholder="Описание"/>
+            </p> 
+            <p>
+                <label for ="longitudeP">Точка путешествия:</label>
+                <input type="text" id="longitudeP" size="10" placeholder="долгота" readonly/> 
+                <label for ="latitudeP">, </label> 
+                <input type="text" id="latitudeP" size="10" placeholder="широта" readonly/>
+            </p>          
+            <p><input type="button" value="Добавить" onclick="addPoint()"/></p>
+        </form>         
     </body>
 </html>
