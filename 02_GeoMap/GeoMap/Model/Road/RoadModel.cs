@@ -2,8 +2,7 @@
 {
     public class RoadModel
     {
-        public RoadPointModel? Start { get; set; }
-        public RoadPointModel? Finish { get; set; }
+        public ICollection<RoadPointModel>? RoadPoints { get; set; }
         public double Offset { get; set; }
     }
 }
