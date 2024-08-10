@@ -41,5 +41,7 @@ namespace GeometryMap.GeometricModel.Figure
             }
             return result.TrimEnd('-');
         }
+
+
     }
 }
