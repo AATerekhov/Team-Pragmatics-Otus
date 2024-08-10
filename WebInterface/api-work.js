@@ -179,8 +179,11 @@ async function initMap() {
         draggable: true,
         onDragMove: onDragMoveHandler
       });
-      map.addChild(draggableMarker );    
+      map.addChild(draggableMarker );  
+      
+      
 }
+
 async function searchPointPlace()
 {   
     let coordinates = document.getElementById('LngLat').value;    
