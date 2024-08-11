@@ -60,10 +60,11 @@ namespace Services.Implementations
         /// <param name="id"> Идентификатор. </param>
         public async Task DeleteAsync(int id)
         {
-            var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
-            travel.Deleted = true;
-            _TravelRepository.Update(travel);
-            await _TravelRepository.SaveChangesAsync();
+            //var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
+            //travel.Deleted = true;
+            //_TravelRepository.Update(travel);
+            //await _TravelRepository.SaveChangesAsync();
+            await _TravelRepository.DeleteAsync(id);
         }
 
         /// <summary>
