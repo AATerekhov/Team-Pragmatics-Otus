@@ -47,5 +47,10 @@ namespace Domain.Entities
         [Column("finish_point")]
         public string FinishPoint { get; set; }
 
+        /// <summary>
+        /// дата и время начала путешествия
+        /// </summary>
+        [Column("start_date")]
+        public DateTime? StartDate { get; set; }
     }
 }
