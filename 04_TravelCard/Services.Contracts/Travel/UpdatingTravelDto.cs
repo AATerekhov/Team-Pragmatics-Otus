@@ -1,4 +1,6 @@
-﻿namespace Services.Contracts.Travel
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Services.Contracts.Travel
 {
     /// <summary>
     /// ДТО редактирования путешествия
@@ -19,5 +21,10 @@
         /// Координата конца путешествия
         /// </summary>
         public string FinishPoint { get; set; }
+
+        /// <summary>
+        /// дата и время начала путешествия
+        /// </summary>
+        public DateTime? StartDate { get; set; }
     }
 }
