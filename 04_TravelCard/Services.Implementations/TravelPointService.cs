@@ -48,10 +48,11 @@ namespace Services.Implementations
         /// <param name="id"> Идентификатор. </param>
         public async Task DeleteAsync(int id)
         {
-            var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
-            travelpoint.Deleted = true;
-            _TravelPointRepository.Update(travelpoint);
-            await _TravelPointRepository.SaveChangesAsync();
+            //var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
+            //travelpoint.Deleted = true;
+            //_TravelPointRepository.Update(travelpoint);
+            //await _TravelPointRepository.SaveChangesAsync();
+            await _TravelPointRepository.DeleteAsync(id);
         }
 
         /// <summary>
