@@ -54,6 +54,13 @@ namespace Services.Repositories.Abstractions
         bool Delete(T entity);
 
         /// <summary>
+        /// Удалить сущностmь асинхронно.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task DeleteAsync(TPrimaryKey id);
+
+        /// <summary>
         /// Удалить сущности.
         /// </summary>
         /// <param name="entities"> Коллекция сущностей для удаления. </param>

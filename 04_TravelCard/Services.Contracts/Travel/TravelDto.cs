@@ -32,5 +32,10 @@ namespace Services.Contracts.Travel
         /// Удалено.
         /// </summary>
         public bool Deleted { get; set; }
+
+        /// <summary>
+        /// дата и время начала путешествия
+        /// </summary>
+        public DateTime? StartDate { get; set; }
     }
 }
