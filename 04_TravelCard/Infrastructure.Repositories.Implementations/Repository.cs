@@ -170,6 +170,15 @@ namespace Infrastructure.Repositories.Implementations
             return true;
         }
 
+        public virtual async Task DeleteAsync(TPrimaryKey id)
+        {
+            var entity = await GetAsync(id, CancellationToken.None);
+            if (entity == null)
+                return;
+            Context.Remove(entity);
+            await Context.SaveChangesAsync();
+        }
+
         #endregion
 
         #region SaveChanges
