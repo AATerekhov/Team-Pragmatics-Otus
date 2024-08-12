@@ -31,7 +31,7 @@ namespace Infrastructure.Repositories.Implementations
 
         public async Task<List<Place>> TrasingByTypeAsync(int placeTypeId, Road road, CancellationToken cancellationToken)
         {
-            var borders = road.Borders();
+            var borders = road.Borders().Offset(road.Offset);
             var resultDB = (await Context.Set<Place>()
                 .Where(l => !l.Deleted && l.PlaceTypeID == placeTypeId 
                 && l.Longitude >= borders.MinX
