@@ -28,10 +28,6 @@ async function initUpdateMap() {
     let startLat = Number(travel.startPoint.split(',')[1]);
     latSP.value = startLat;
     
-    let start = {
-        longitude: startLng,
-        latitude: startLat};
-
         function onDragMoveHandlerSP(coordinates) { 
             lngSP.value = coordinates[0].toFixed(6); 
             startLng = coordinates[0].toFixed(6);   
@@ -50,9 +46,6 @@ async function initUpdateMap() {
     let finishLat = Number(travel.finishPoint.split(',')[1]);
     latFP.value = finishLat;
 
-    let finish = {
-        longitude: finishLng,
-        latitude: finishLat};
 
         function onDragMoveHandlerEP(coordinates) { 
             //strpnt.value = coordinates;
@@ -402,4 +395,44 @@ async function travelDelete() {
     });
     if(result.ok)
         window.location.href = `index.html`;
+}
+async function ShowYandex()
+{    
+    let travelId = new URLSearchParams(window.location.search).get('id');
+    let scale = new URLSearchParams(window.location.search).get('Scale');
+    let travel = await getTravelByIdAsync(travelId);
+
+    let startLng = Number(travel.startPoint.split(',')[0]);    
+    let startLat = Number(travel.startPoint.split(',')[1]);
+    let finishLng = Number(travel.finishPoint.split(',')[0]);
+    let finishLat = Number(travel.finishPoint.split(',')[1]);
+    
+    let points = await GetPoints();
+    let pointsEvent = [];
+    points.forEach(element =>{
+        if (element.waitingTimeCountMinutes != 0){
+            pointsEvent.push(element);
+        } 
+    });
+
+    let centerlat = startLat/2 + finishLat/2;
+    let centerlgn = startLng/2 + finishLng/2;
+    let result = `https://yandex.ru/maps/2/saint-petersburg/?ll=${getCoordinat(centerlgn,centerlat)}&mode=routes&rtext=${getCoordinat(startLat,startLng)}`;
+    let gaps = "";
+    let finish = `~${getCoordinat(finishLat,finishLng)}`;
+    let rtm = '&rtm=atm';
+    let rtt = `&rtt=auto`;
+    let ruri = `&ruri=~`;
+
+    pointsEvent.forEach(element=>{
+        let coordinates = element.pointMap.split(',');
+        ruri += `~`;
+        gaps += `~${getCoordinat(coordinates[1],coordinates[0])}`;
+    });
+    let z = `&z=${scale}`;
+    result = result + gaps + finish + rtm + rtt + ruri + z;
+    window.location.href = result;
+    function getCoordinat(lat,lng){
+        return `${lat}%2C${lng}`;
+    }
 }
