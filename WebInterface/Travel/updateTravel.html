@@ -12,40 +12,50 @@
             <p>
                 <label for="description">Описание</label>
                 <input type="text" id="description" placeholder="Описание Вашего путешествия"/>
-            </p>
-            <p>
-                <label for ="longitudeSP">Начало путешествия:   Долгота</label>
-                <input type="text" id="longitudeSP" placeholder="30.314607" readonly/>  
-                <label for ="latitudeSP">Широта</label>
-                <input type="text" id="latitudeSP" placeholder="59.939876" readonly/>
-            </p>
-            <p>
-                <label for="longitudeFP">Конечная точка:    Долгота</label>
-                <input type="text" id="longitudeFP" placeholder="30.394966"/>
-                <label for ="latitudeFP">Широта</label>
-                <input type="text" id="latitudeFP" placeholder="59.948866" readonly/>
-            </p>
-            <p>
+                <label for ="longitudeSP">Начало путешествия:   </label>
+                <input type="text" id="longitudeSP" size="10" placeholder="Долгота" readonly/>  
+                <label for ="latitudeSP">,</label>
+                <input type="text" id="latitudeSP" size="10" placeholder="Широта" readonly/>
+                <label for="longitudeFP">Конечная точка:    </label>
+                <input type="text" id="longitudeFP" size="10" placeholder="Долгота"/>
+                <label for ="latitudeFP">,</label>
+                <input type="text" id="latitudeFP" size="10" placeholder="Широта" readonly/>
                 <label for="dateStart">Дата начала путешествия</label>
-                <input type="date" id="dateStart" placeholder="01.01.2024"/>
+                <input type="date" id="dateStart" placeholder="01.01.2024"/> 
             </p>
-            <p><input type="button" value="Обновить" onclick="travelUpdating()"/></p>
+            <p>
+                <input type="button" value="Обновить" onclick="travelUpdating()"/>  
+                <input type="button" value="Удалить" onclick="travelDelete()"/>               
+                <input type="button" value="Назад" onclick="goHome()"/>
+                <input type="button" value="Yandex" onclick="ShowYandex()"/>
+            </p>
         </form>
-            <div id="travelmap" style="text-align: center; width: 85%; height: 600px; margin: 0 auto; "> </div>   
+            <div id="travelmap" style="text-align: center; width: 85%; height: 700px; margin: 0 auto; "> </div>   
         <form>    
             <p>
                 <label for ="timeP">Остановка (мин.):</label>
                 <input type="text" id="timeP" size="2" placeholder="5"/> 
                 <label for ="descP">, </label> 
                 <input type="text" id="descP" size="70" placeholder="Описание"/>
-            </p> 
-            <p>
                 <label for ="longitudeP">Точка путешествия:</label>
                 <input type="text" id="longitudeP" size="10" placeholder="долгота" readonly/> 
                 <label for ="latitudeP">, </label> 
                 <input type="text" id="latitudeP" size="10" placeholder="широта" readonly/>
             </p>          
-            <p><input type="button" value="Добавить" onclick="addPoint()"/></p>
+            <p>
+                <input type="button" value="Добавить" onclick="addPoint()"/>
+                <input type="button" value="Удалить" onclick="deleteLastPoint(0)"/>
+            </p>
+            <table id="TravelsPoint">
+                <tr>
+                    <th>Time</th>
+                    <th>Descriptions</th>
+                    <th>Point</th>
+                </tr>
+            </table>                    
+            <p>
+                <input type="button" value="Удалить" onclick="deleteLastPoint(1)"/>
+            </p>
         </form>         
     </body>
 </html>
