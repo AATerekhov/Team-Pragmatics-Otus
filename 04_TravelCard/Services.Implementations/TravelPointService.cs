@@ -49,8 +49,12 @@ namespace Services.Implementations
         public async Task DeleteAsync(int id)
         {
             var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
-            travelpoint.Deleted = true;
-            _TravelPointRepository.Update(travelpoint);
+            if (travelpoint != null)
+            {
+                 _TravelPointRepository.Delete(travelpoint.Id);
+            }
+            //travelpoint.Deleted = true;
+            //_TravelPointRepository.Update(travelpoint);
             await _TravelPointRepository.SaveChangesAsync();
         }
 

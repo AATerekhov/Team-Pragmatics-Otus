@@ -35,21 +35,21 @@ namespace Services.Implementations
         public async Task<int> CreateAsync(CreatingTravelDto creatingtravelDto)
         {
             var TravelEntity = _mapper.Map<CreatingTravelDto, Travel>(creatingtravelDto);
-            TravelEntity.Deleted = false;
+            //TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
             //return createdTravel.Id;
 
             //Брокер
-            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
-            if (sendEndPoint == null)
-            {
-                throw new Exception($"Не удалось найти очередь {_queueName}");
-            }
-            await sendEndPoint.Send(new MessageDto
-            {
-                Content = $"New Travel. {JsonConvert.SerializeObject(TravelEntity)}"
-            }, CancellationToken.None);
+            //var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            //if (sendEndPoint == null)
+            //{
+            //    throw new Exception($"Не удалось найти очередь {_queueName}");
+            //}
+            //await sendEndPoint.Send(new MessageDto
+            //{
+            //    Content = $"New Travel. {JsonConvert.SerializeObject(TravelEntity)}"
+            //}, CancellationToken.None);
 
             return createdTravel.Id;
         }
@@ -100,21 +100,22 @@ namespace Services.Implementations
             await _TravelRepository.SaveChangesAsync();
 
             //Брокер
-            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
-            if (sendEndPoint == null)
-            {
-                throw new Exception($"Не удалось найти очередь {_queueName}");
-            }
-            await sendEndPoint.Send(new MessageDto
-            {
-                Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
-            }, CancellationToken.None);
+            //var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            //if (sendEndPoint == null)
+            //{
+            //    throw new Exception($"Не удалось найти очередь {_queueName}");
+            //}
+            //await sendEndPoint.Send(new MessageDto
+            //{
+            //    Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
+            //}, CancellationToken.None);
+
         }
 
         /// <summary>
         /// Получить все путешествия.
         /// </summary>
         /// <returns> IEnumerable путешествий. </returns>
-        public async Task<IEnumerable<TravelDto>> GetTravelsAsync() => (await _TravelRepository.GetAllAsync()).Select(_mapper.Map<TravelDto>);
+        public async Task<IEnumerable<TravelDto>> GetTravelsAsync() => (await _TravelRepository.GetAllActualAsync()).Select(_mapper.Map<TravelDto>);
     }
 }

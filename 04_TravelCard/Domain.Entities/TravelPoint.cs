@@ -19,7 +19,7 @@ namespace Domain.Entities
         /// <summary>
         /// Описание остановки
         /// </summary>
-        [Column("point_desc"), MaxLength(80)]
+        [Column("point_desc"), MaxLength(512)]
         public string PointDesc { get; set; }
 
         /// <summary>

@@ -45,6 +45,10 @@ namespace Infrastructure.Repositories.Implementations
         /// Получить все путешествия
         /// </summary>
         /// <returns></returns>
-        public async Task<IEnumerable<Travel>> GetAllAsync() => (await Context.Set<Travel>().AsNoTracking().ToListAsync()).AsEnumerable();
+        public async Task<IEnumerable<Travel>> GetAllActualAsync() 
+        {
+            var result = await Context.Set<Travel>().Where(t => !t.Deleted).ToListAsync();
+            return await Task.FromResult(result);
+        }
     }
 }

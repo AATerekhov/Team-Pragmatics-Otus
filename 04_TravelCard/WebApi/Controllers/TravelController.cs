@@ -46,16 +46,23 @@ namespace WebApi.Controllers
         //}
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync(CreatingTravelModel travelModel)
+        public async Task<IActionResult> CreateAsync(CreatingTravelModel request)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreatingTravelDto>(travelModel)));
+            var travel = await _service.CreateAsync(_mapper.Map<CreatingTravelDto>(request));
+            if (travel != 0)
+            {
+                return StatusCode(200, $"{travel}");
+            }
+            else return StatusCode(400, "Invalid data!");           
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> EditAsync(int id, UpdatingTravelModel travelModel)
         {
+            if(await _service.GetByIdAsync(id) == null)
+                return NotFound();
             await _service.UpdateAsync(id, _mapper.Map<UpdatingTravelModel, UpdatingTravelDto>(travelModel));
-            return Ok();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

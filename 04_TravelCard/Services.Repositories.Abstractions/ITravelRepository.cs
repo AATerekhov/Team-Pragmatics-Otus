@@ -12,5 +12,6 @@ namespace Services.Repositories.Abstractions
         /// <param name="itemsPerPage"> Количество элементов на странице. </param>
         /// <returns> Список путешествий. </returns>
         Task<List<Travel>> GetPagedAsync(int page, int itemsPerPage);
+        Task<IEnumerable<Travel>> GetAllActualAsync();
     }
 }
