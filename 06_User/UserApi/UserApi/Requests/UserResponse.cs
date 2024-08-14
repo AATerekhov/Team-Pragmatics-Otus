@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UserApi.DataAccess.BusinessLogic.Models
+﻿namespace UserApi.Requests
 {
-    public class CreateUserModel
+    public class UserResponse
     {
+        public Guid Id { get; init; }
         public string? Name { get; init; }
         public string? Password { get; init; }
         public DateTime DateRegistration { get; set; }

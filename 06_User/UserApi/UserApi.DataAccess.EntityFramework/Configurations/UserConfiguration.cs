@@ -13,8 +13,6 @@ namespace UserApi.DataAccess.EntityFramework.Configurations
             builder.Property(x => x.Name).IsRequired().HasMaxLength(128);
             builder.HasIndex(x => x.Name).IsUnique();
             builder.Property(x => x.Password).IsRequired().HasMaxLength(32);
-            builder.Property(x => x.PhoneNumber).HasMaxLength(24);
-            builder.Property(x => x.TelegramLogin).HasMaxLength(128);
             builder.Property(x => x.Email).HasMaxLength(128);
             builder.HasIndex(x => x.Email).IsUnique();
         }

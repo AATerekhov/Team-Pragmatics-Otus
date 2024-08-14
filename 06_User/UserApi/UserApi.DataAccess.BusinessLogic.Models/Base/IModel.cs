@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace UserApi.DataAccess.BusinessLogic.Models.Base
 {
-    internal interface IModel
+    public interface IModel<TId> 
+        where TId : struct
     {
+        public TId Id { get; init; }
     }
 }

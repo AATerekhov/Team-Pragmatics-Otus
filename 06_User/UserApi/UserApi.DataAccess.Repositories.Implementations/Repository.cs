@@ -32,7 +32,6 @@ namespace UserApi.DataAccess.Repositories.Implementations
             context.Remove(entity);
             await context.SaveChangesAsync();
         }
-
         public async Task DeleteAsync(TEntity entity) =>await DeleteAsync(entity.Id);
 
     }

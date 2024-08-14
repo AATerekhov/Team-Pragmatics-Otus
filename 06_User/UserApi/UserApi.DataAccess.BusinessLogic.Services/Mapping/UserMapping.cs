@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UserApi.DataAccess.BusinessLogic.Models;
 using UserApi.DataAccess.Entities;
 
-namespace UserApi.DataAccess.BusinessLogic.Models.Mapping
+namespace UserApi.DataAccess.BusinessLogic.Services.Mapping
 {
     public class UserMapping:  Profile
     {

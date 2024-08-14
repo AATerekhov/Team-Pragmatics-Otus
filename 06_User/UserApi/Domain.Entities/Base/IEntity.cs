@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserApi.DataAccess.Entities.Base
 {
-    public interface IEntity<TId>
+    public interface IEntity<out TId>
+        where TId : struct
     {
         TId Id { get; }
     }

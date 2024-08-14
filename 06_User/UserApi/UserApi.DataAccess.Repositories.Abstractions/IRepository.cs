@@ -2,7 +2,8 @@
 
 namespace UserApi.DataAccess.Repositories.Abstractions
 {
-    public interface IRepository<TEntity, in TId> where TEntity : IEntity<TId> where TId : struct
+    public interface IRepository<TEntity, in TId> where TEntity : IEntity<TId> 
+        where TId : struct
     {
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity?> GetByIdAsync(TId id);
