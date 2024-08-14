@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Entities\UserApi.DataAccess.Entities.csproj" />
+    <ProjectReference Include="..\UserApi.DataAccess.BusinessLogic.Models\UserApi.DataAccess.BusinessLogic.Models.csproj" />
+    <ProjectReference Include="..\UserApi.DataAccess.Repositories.Abstractions\UserApi.DataAccess.Repositories.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
