@@ -42,20 +42,20 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //MassTransit
-builder.Services.AddMassTransit(x => {
-    x.UsingRabbitMq((context, cfg) =>
-    {
-        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
-        cfg.Host(rmqSettings.Host,
-            rmqSettings.VHost,
-            h =>
-            {
-                h.Username(rmqSettings.Login);
-                h.Password(rmqSettings.Password);
-            });
-        //todo Настроить ReceiveEndpoint для TravelPoints
-    });
-});
+//builder.Services.AddMassTransit(x => {
+//    x.UsingRabbitMq((context, cfg) =>
+//    {
+//        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
+//        cfg.Host(rmqSettings.Host,
+//            rmqSettings.VHost,
+//            h =>
+//            {
+//                h.Username(rmqSettings.Login);
+//                h.Password(rmqSettings.Password);
+//            });
+//        //todo Настроить ReceiveEndpoint для TravelPoints
+//    });
+//});
 
 //Policy For Resource Sharing
 builder.Services.AddCors(option => option.AddDefaultPolicy(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
