@@ -24,7 +24,7 @@ namespace Services.Implementations
         {
             _mapper = mapper;
             _TravelRepository = TravelRepository;
-            _busControl = busControl;
+            //_busControl = busControl;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Services.Implementations
             TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
-            //return createdTravel.Id;
+            return createdTravel.Id;
 
             //Брокер
             var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
@@ -101,15 +101,15 @@ namespace Services.Implementations
             await _TravelRepository.SaveChangesAsync();
 
             //Брокер
-            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
-            if (sendEndPoint == null)
-            {
-                throw new Exception($"Не удалось найти очередь {_queueName}");
-            }
-            await sendEndPoint.Send(new MessageDto
-            {
-                Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
-            }, CancellationToken.None);
+            //var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            //if (sendEndPoint == null)
+            //{
+            //    throw new Exception($"Не удалось найти очередь {_queueName}");
+            //}
+            //await sendEndPoint.Send(new MessageDto
+            //{
+            //    Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
+            //}, CancellationToken.None);
         }
 
         /// <summary>
