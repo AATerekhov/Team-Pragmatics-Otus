@@ -20,7 +20,7 @@ namespace Services.Implementations
         private readonly ITravelRepository _TravelRepository;
         private readonly IBusControl _busControl;
 
-        public TravelService(IMapper mapper, ITravelRepository TravelRepository, IBusControl busControl)
+        public TravelService(IMapper mapper, ITravelRepository TravelRepository)
         {
             _mapper = mapper;
             _TravelRepository = TravelRepository;
