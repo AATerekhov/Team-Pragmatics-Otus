@@ -21,3 +21,9 @@ services:
     ports:
       - 52200:8080
       - 52201:8081
+  userapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - 52202:8080

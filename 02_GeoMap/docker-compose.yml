@@ -9,6 +9,7 @@ services:
     depends_on:
       - geomap
       - webapi
+      - userapi
     networks:
       - devnet
   geomap:
@@ -55,6 +56,29 @@ services:
       - 'C:/Share/postgresql/TravelCard:/var/lib/postgresql/data'
     ports:
       - '5435:5432'
+    networks:
+      - devnet
+  userapi:
+    image: ${DOCKER_REGISTRY-}userapi
+    build:
+      context: ..\\06_User\UserApi
+      dockerfile: UserApi/Dockerfile       
+    container_name: user-service    
+    depends_on:
+      - user_db
+    networks:
+      - devnet
+  user_db:
+    image: postgres
+    container_name: user-db
+    restart: always
+    environment:
+      - 'POSTGRES_PASSWORD=user17'
+      - 'POSTGRES_DB=users' 
+    volumes:
+      - 'C:/Share/postgresql/User:/var/lib/postgresql/data'
+    ports:
+      - '5436:5432'
     networks:
       - devnet
   rabbit:

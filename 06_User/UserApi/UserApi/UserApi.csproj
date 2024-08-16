@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UserApi.DataAccess.BusinessLogic.Services\UserApi.DataAccess.BusinessLogic.Services.csproj" />
     <ProjectReference Include="..\UserApi.DataAccess.EntityFramework\UserApi.DataAccess.EntityFramework.csproj" />
+    <ProjectReference Include="..\UserApi.DataAccess.Repositories.Implementations\UserApi.DataAccess.Repositories.Implementations.csproj" />
   </ItemGroup>
 
 </Project>

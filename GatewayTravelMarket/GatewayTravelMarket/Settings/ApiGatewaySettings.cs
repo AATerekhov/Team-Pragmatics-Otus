@@ -7,5 +7,6 @@ namespace GatewayTravelMarket.Settings
         public string ValidApiKeys { get; set; }
         public string GeoMapServiceBaseUrl{ get; set; }
         public string TravelCardServiceBaseUrl { get; set; }
+        public string UserServiceBaseUrl { get; set; }
     }
 }
