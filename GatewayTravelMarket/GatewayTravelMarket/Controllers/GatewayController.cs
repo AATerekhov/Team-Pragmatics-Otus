@@ -208,6 +208,24 @@ namespace GatewayTravelMarket.Controllers
             return await CheckResponse(response);
         }
 
+        [HttpPost("user")]
+        public async Task<IActionResult> CreateUser([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("UserServiceClient");
+            var response = await productServiceClient.PostAsync("/api/User", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("user/Authorization")]
+        public async Task<IActionResult> AuthorizationUser([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("UserServiceClient");
+            var response = await productServiceClient.PostAsync("/api/User/Authorization", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
         private bool IsApiKeyValid(string apiKey)
         {
             // Check if the API key exists in the valid API keys HashSet
