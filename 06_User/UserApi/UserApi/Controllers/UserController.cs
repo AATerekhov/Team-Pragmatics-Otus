@@ -27,6 +27,19 @@ namespace UserApi.Controllers
             return Ok(mapper.Map<UserResponse>(user));
         }
 
+        [HttpPost("Authorization")]
+        [ProducesResponseType(typeof(UserResponse), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> Authorization([FromBody] GetUserRequest request)
+        {
+            var users = (await userService.GetUsersAsync()).Select(mapper.Map<UserResponse>);
+            var user = users.Where(u => u.Name == request.Name && u.Password == request.Password);
+            if (user == null)
+                return NotFound();
+            return Ok(user);
+        }
+
         [HttpPost]
         [ProducesResponseType(typeof(UserResponse), 201)]
         [ProducesResponseType(400)]
