@@ -12,6 +12,7 @@ using WebApi.Helper;
 using System.Globalization;
 using Newtonsoft.Json;
 using WebApi.Settings;
+using Services.Implementations.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,20 +43,30 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //MassTransit
-//builder.Services.AddMassTransit(x => {
-//    x.UsingRabbitMq((context, cfg) =>
-//    {
-//        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
-//        cfg.Host(rmqSettings.Host,
-//            rmqSettings.VHost,
-//            h =>
-//            {
-//                h.Username(rmqSettings.Login);
-//                h.Password(rmqSettings.Password);
-//            });
-//        //todo Настроить ReceiveEndpoint для TravelPoints
-//    });
-//});
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
+        cfg.Host(rmqSettings.Host,
+            rmqSettings.VHost,
+            h =>
+            {
+                h.Username(rmqSettings.Login);
+                h.Password(rmqSettings.Password);
+            });
+        cfg.ReceiveEndpoint($"masstransit_event_queue_1", e =>
+        {
+            e.Consumer<EventConsumer>();
+            e.UseMessageRetry(r =>
+            {
+                r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+            });
+            e.PrefetchCount = 1;
+            e.UseConcurrencyLimit(1);
+        });
+    });
+});
 
 //Policy For Resource Sharing
 builder.Services.AddCors(option => option.AddDefaultPolicy(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));

@@ -1,4 +1,7 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace Services.Contracts.User
 {
     /// <summary>
@@ -9,18 +12,17 @@ namespace Services.Contracts.User
         /// <summary>
         /// Идентификатор.
         /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Логин
-        /// </summary>
-        public string Login { get; set; }
-
-        //public int TravelId { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Удалено.
         /// </summary>
         public bool Deleted { get; set; }
+
+        public string? Name { get; init; }
+
+        public DateTime DateRegistration { get; set; }
+
+        public string? Email { get; set; }
     }
 }
