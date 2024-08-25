@@ -6,15 +6,19 @@
     public class CreatingUserModel
     {
         /// <summary>
-        /// Идентификатор юзера.
+        /// Идентификатор.
         /// </summary>
-        public int Id { get; set; }
-
-        //public int TravelId { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
-        /// Логин
+        /// Удалено.
         /// </summary>
-        public string Login { get; set; }
+        public bool Deleted { get; set; }
+
+        public string? Name { get; init; }
+
+        public DateTime DateRegistration { get; set; }
+
+        public string? Email { get; set; }
     }
 }

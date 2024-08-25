@@ -5,7 +5,7 @@ using Services.Repositories.Abstractions;
 
 namespace Infrastructure.Repositories.Implementations
 {
-    public class UserRepository : Repository<User, int>, IUserRepository
+    public class UserRepository : Repository<User, Guid>, IUserRepository
     {
         public UserRepository(DataContext context) : base(context) 
         {
@@ -17,7 +17,7 @@ namespace Infrastructure.Repositories.Implementations
         /// </summary>
         /// <param name="id"> Id сущности. </param>
         /// <returns> Юзер. </returns>
-        public override async Task<User> GetAsync(int id, CancellationToken cancellationToken)
+        public override async Task<User> GetAsync(Guid id, CancellationToken cancellationToken)
         {
             //return await Context.Set<User>().AsNoTracking().ToListAsync().AsEnumerable();
             var query = Context.Set<User>().AsQueryable();
