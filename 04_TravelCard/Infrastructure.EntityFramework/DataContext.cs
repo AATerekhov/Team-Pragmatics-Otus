@@ -32,7 +32,8 @@ namespace Infrastructure.EntityFramework
             modelBuilder.Entity<Travel>()
                 .HasMany(t => t.TravelPoints)
                 .WithOne(tp => tp.Travel)
-                .HasForeignKey (tp => tp.TravelId);
+                .HasForeignKey (tp => tp.TravelId)
+                .OnDelete(DeleteBehavior.Cascade);
         
             base.OnModelCreating(modelBuilder);
         }

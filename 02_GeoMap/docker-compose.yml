@@ -1,22 +1,108 @@
 version: '3.4'
 
 services:
+  gatewaytravelmarket:
+    image: ${DOCKER_REGISTRY-}gatewaytravelmarket
+    build:
+      context: ..\GatewayTravelMarket
+      dockerfile: GatewayTravelMarket/Dockerfile
+    depends_on:
+      - geomap
+      - webapi
+      - userapi
+    networks:
+      - devnet
   geomap:
     image: ${DOCKER_REGISTRY-}geomap
     build:
       context: .
       dockerfile: GeoMap/Dockerfile
-    ports:
-      - '52199:8080'
-  app-db:
+    container_name: geomap-service
+    depends_on:
+      - geomap_db
+    networks:
+      - devnet
+  geomap_db:
     image: postgres
-    container_name: GeoMapDB
-    restart: unless-stopped
+    container_name: geomap-db
+    restart: always
     environment:
       - 'POSTGRES_PASSWORD=geomap17'
       - 'POSTGRES_DB=geomap' 
     volumes:
       - 'C:/Share/postgresql/GeoMap:/var/lib/postgresql/data'
     ports:
-      - '5432:5432'
+      - '5432:5432' 
+    networks:
+      - devnet
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: ..\04_TravelCard
+      dockerfile: WebApi/Dockerfile
+    container_name: travel-card-service
+    depends_on:
+      - travelCard_db
+    networks:
+      - devnet
+  travelCard_db:
+    image: postgres
+    container_name: travelCard-db
+    restart: always
+    environment:
+      - 'POSTGRES_PASSWORD=travel17'
+      - 'POSTGRES_DB=travelcard' 
+    volumes:
+      - 'C:/Share/postgresql/TravelCard:/var/lib/postgresql/data'
+    ports:
+      - '5435:5432'
+    networks:
+      - devnet
+  userapi:
+    image: ${DOCKER_REGISTRY-}userapi
+    build:
+      context: ..\\06_User\UserApi
+      dockerfile: UserApi/Dockerfile       
+    container_name: user-service    
+    depends_on:
+      - user_db
+    networks:
+      - devnet
+  user_db:
+    image: postgres
+    container_name: user-db
+    restart: always
+    environment:
+      - 'POSTGRES_PASSWORD=user17'
+      - 'POSTGRES_DB=users' 
+    volumes:
+      - 'C:/Share/postgresql/User:/var/lib/postgresql/data'
+    ports:
+      - '5436:5432'
+    networks:
+      - devnet
+  rabbit:
+    image: rabbitmq:3-management
+    restart: always
+    hostname: rabbitmqhost    
+    environment:
+      RABBITMQ_DEFAULT_USER: progmatica
+      RABBITMQ_DEFAULT_PASS: rabbit17
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - devnet
+volumes:
+  rabbitmq_data:
+
+networks:
+  devnet:
+    name: devnet
+    driver: bridge
+  travelnet:
+    name: travelnet
+    driver: bridge
 

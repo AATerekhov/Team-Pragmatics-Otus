@@ -48,10 +48,11 @@ namespace Services.Implementations
         /// <param name="id"> Идентификатор. </param>
         public async Task DeleteAsync(int id)
         {
-            var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
-            travelpoint.Deleted = true;
-            _TravelPointRepository.Update(travelpoint);
-            await _TravelPointRepository.SaveChangesAsync();
+            //var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
+            //travelpoint.Deleted = true;
+            //_TravelPointRepository.Update(travelpoint);
+            //await _TravelPointRepository.SaveChangesAsync();
+            await _TravelPointRepository.DeleteAsync(id);
         }
 
         /// <summary>
@@ -64,6 +65,18 @@ namespace Services.Implementations
             //return _mapper.Map<TravelPointDto>(await _TravelPointRepository.GetAsync(id, CancellationToken.None));
             var travelpoint = await _TravelPointRepository.GetAsync(id, CancellationToken.None);
             return _mapper.Map<TravelPoint, TravelPointDto>(travelpoint);
+        }
+
+        /// <summary>
+        /// Получить точки остановки путешествия.
+        /// </summary>
+        /// <param name="travelId"> Идентификатор путешествия. </param>
+        /// <returns> массив ДТО точек остановки. </returns>
+        public async Task<List<TravelPointDto>> GetAllByTravelIdAsync(int travelId)
+        {
+            var travelpoints = await _TravelPointRepository.GetAllByTravelIdAsync(travelId, CancellationToken.None);
+            List<TravelPointDto> mappedList = travelpoints.Select(tp => _mapper.Map<TravelPoint, TravelPointDto>(tp)).ToList();
+            return mappedList;
         }
 
         //public async Task<TravelPointDto?> GetTravelPointAsync(int id) => _mapper.Map<TravelPointDto>(await _TravelPointRepository.GetTravelPointByIdAsync(id));

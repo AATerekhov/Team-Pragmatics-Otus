@@ -4,6 +4,7 @@ using Services.Abstractions;
 using Services.Implementations;
 using Services.Repositories.Abstractions;
 using GeoMap.Settings;
+using MassTransit;
 
 namespace GeoMap
 {
@@ -20,6 +21,23 @@ namespace GeoMap
                 .InstallServices()
                 .ConfigureContext(defaultConnection.ConnectionString)
                 .InstallRepositories();
+        }
+
+        /// <summary>
+        /// Конфигурирование RMQ.
+        /// </summary>
+        /// <param name="configurator"> Конфигуратор RMQ. </param>
+        /// <param name="configuration"> Конфигурация приложения. </param>
+        public static void ConfigureRmq(IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
+        {
+            var rmqSettings = configuration.Get<ApplicationSettings>().RmqSettings;
+            configurator.Host(rmqSettings.Host,
+                rmqSettings.VHost,
+                h =>
+                {
+                    h.Username(rmqSettings.Login);
+                    h.Password(rmqSettings.Password);
+                });
         }
 
         private static IServiceCollection InstallServices(this IServiceCollection serviceCollection)

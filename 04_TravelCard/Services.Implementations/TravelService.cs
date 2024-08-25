@@ -20,11 +20,11 @@ namespace Services.Implementations
         private readonly ITravelRepository _TravelRepository;
         private readonly IBusControl _busControl;
 
-        public TravelService(IMapper mapper, ITravelRepository TravelRepository, IBusControl busControl)
+        public TravelService(IMapper mapper, ITravelRepository TravelRepository)
         {
             _mapper = mapper;
             _TravelRepository = TravelRepository;
-            _busControl = busControl;
+            //_busControl = busControl;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Services.Implementations
             TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
-            //return createdTravel.Id;
+            return createdTravel.Id;
 
             //Брокер
             var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
@@ -60,10 +60,11 @@ namespace Services.Implementations
         /// <param name="id"> Идентификатор. </param>
         public async Task DeleteAsync(int id)
         {
-            var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
-            travel.Deleted = true;
-            _TravelRepository.Update(travel);
-            await _TravelRepository.SaveChangesAsync();
+            //var travel = await _TravelRepository.GetAsync(id, CancellationToken.None);
+            //travel.Deleted = true;
+            //_TravelRepository.Update(travel);
+            //await _TravelRepository.SaveChangesAsync();
+            await _TravelRepository.DeleteAsync(id);
         }
 
         /// <summary>
@@ -94,19 +95,21 @@ namespace Services.Implementations
             }
 
             travel.Description = updatingTravelDto.Description;
+            travel.StartPoint = updatingTravelDto.StartPoint;
+            travel.FinishPoint = updatingTravelDto.FinishPoint;
             _TravelRepository.Update(travel);
             await _TravelRepository.SaveChangesAsync();
 
             //Брокер
-            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
-            if (sendEndPoint == null)
-            {
-                throw new Exception($"Не удалось найти очередь {_queueName}");
-            }
-            await sendEndPoint.Send(new MessageDto
-            {
-                Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
-            }, CancellationToken.None);
+            //var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
+            //if (sendEndPoint == null)
+            //{
+            //    throw new Exception($"Не удалось найти очередь {_queueName}");
+            //}
+            //await sendEndPoint.Send(new MessageDto
+            //{
+            //    Content = $"Travel is Updated. {JsonConvert.SerializeObject(travel)}"
+            //}, CancellationToken.None);
         }
 
         /// <summary>

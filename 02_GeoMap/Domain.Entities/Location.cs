@@ -18,7 +18,7 @@ namespace Domain.Entities
         /// <summary>
         /// Название локации
         /// </summary>
-        [MaxLength(40)]
+        [MaxLength(124)]
         public string? Name { get; set; }
         /// <summary>
         /// Долгота 

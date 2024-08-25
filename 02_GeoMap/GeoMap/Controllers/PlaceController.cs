@@ -2,10 +2,12 @@
 using Domain.Entities;
 using GeoMap.Model.Place;
 using GeoMap.Model.PlaceType;
+using GeoMap.Model.Road;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstractions;
 using Services.Contracts.Place;
 using Services.Contracts.PlaceType;
+using Services.Contracts.Road;
 
 namespace GeoMap.Controllers
 {
@@ -13,6 +15,14 @@ namespace GeoMap.Controllers
     [Route("api/[controller]")]
     public class PlaceController(IPlaceService placeService, IMapper mapper, ILogger<UserController> logger) : ControllerBase
     {
+        [HttpPost("Tracing/{placeTypeId:int}")]
+        [ProducesResponseType(typeof(IEnumerable<PlaceModel>), 201)]
+        [ProducesResponseType(400)]
+        public async Task<IEnumerable<PlaceModel>> TracingRouteByType(int placeTypeId, [FromBody] RoadModel request) 
+        {
+            return (await placeService.TrasingByTypeAsync(placeTypeId, mapper.Map<RoadDto>(request))).Select(mapper.Map<PlaceModel>);
+        }
+
         [HttpGet("{placeTypeId:int}")]
         [ProducesResponseType(typeof(IEnumerable<PlaceModel>), 200)]
         public async Task<IEnumerable<PlaceModel>> GetPlaceForType(int placeTypeId) => (await placeService.GetPlaceForTypeAsync(placeTypeId)).Select(mapper.Map<PlaceModel>);

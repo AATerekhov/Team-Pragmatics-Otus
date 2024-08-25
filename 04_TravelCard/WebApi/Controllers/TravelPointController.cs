@@ -23,13 +23,23 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet("{id}")]
-        [ProducesResponseType(typeof(TravelPointModel), 200)]
+        //[HttpGet("{id}")]
+        //[ProducesResponseType(typeof(TravelPointModel), 200)]
+        //[ProducesResponseType(400)]
+        //[ProducesResponseType(404)]
+        //public async Task<IActionResult> GetAsync(int id)
+        //{
+        //    return Ok(_mapper.Map<TravelPointDto,TravelPointModel>(await _service.GetByIdAsync(id)));
+        //}
+
+        [HttpGet("{travelId}")]
+        [ProducesResponseType(typeof(List<TravelPointModel>), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<IActionResult> GetAllByTravelIdAsync(int travelId)
         {
-            return Ok(_mapper.Map<TravelPointDto,TravelPointModel>(await _service.GetByIdAsync(id)));
+            var travelPointsDto = await _service.GetAllByTravelIdAsync(travelId);
+            return Ok(travelPointsDto.Select(tp => _mapper.Map<TravelPointDto, TravelPointModel>(tp)).ToList());
         }
 
         [HttpPost]

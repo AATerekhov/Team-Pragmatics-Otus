@@ -17,7 +17,7 @@ namespace Domain.Entities
         /// <summary>
         /// Описание места.
         /// </summary>
-        [MaxLength(40)]
+        [MaxLength(512)]
         public string? Description { get; set; }
         /// <summary>
         /// Внешний ключ типа места.

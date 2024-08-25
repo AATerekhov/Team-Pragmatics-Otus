@@ -26,5 +26,10 @@ namespace Services.Contracts.Travel
         /// Координата конца путешествия
         /// </summary>
         public string FinishPoint { get; set; }
+
+        /// <summary>
+        /// дата и время начала путешествия
+        /// </summary>
+        public DateTime? StartDate { get; set; }
     }
 }

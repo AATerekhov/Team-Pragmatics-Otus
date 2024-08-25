@@ -46,6 +46,10 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("text")
                         .HasColumnName("finish_point");
 
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("start_date");
+
                     b.Property<string>("StartPoint")
                         .IsRequired()
                         .HasColumnType("text")

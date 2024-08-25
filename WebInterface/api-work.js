@@ -1,5 +1,8 @@
 async function loadPlaceType(){
-    let result =await fetch("http://localhost:52199/api/PlaceType");
+    let result =await fetch("http://localhost:5200/api/placetypes",{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     let table = document.getElementById('placeTypes');
     if(result.ok){
         let placetypes = await result.json();
@@ -48,35 +51,14 @@ async function loadPlace()
     map.addChild(new YMapDefaultFeaturesLayer({zIndex: 1800}));      
 
     let idPlaceType = new URLSearchParams(window.location.search).get('id');
-    let result =await fetch(`http://localhost:52199/api/Place/${idPlaceType}`);
+    let result =await fetch(`http://localhost:5200/api/places/${idPlaceType}`,{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     //let table = document.getElementById('places');
     if(result.ok){
         let places = await result.json();
-        places.forEach(element => {
-           //let placetypeString = document.createElement('tr');
-           //let idField = document.createElement('td');
-           //idField.innerText = element.id;
-           //let nameField = document.createElement('td');
-           //nameField.innerText = element.name;
-           //let descriptionField = document.createElement('td');
-           //descriptionField.innerText = element.description;
-           //let longitudeField = document.createElement('td');
-           //longitudeField.innerText = element.longitude;
-           //let latitudeField = document.createElement('td');
-           //latitudeField.innerText = element.latitude;           
-           //let link = document.createElement('a');
-           //link.innerText = "Редактировать";
-           //link.href = `updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}`;
-           //let editField = document.createElement('td');
-           //editField.appendChild(link);
-           //placetypeString.appendChild(idField);
-           //placetypeString.appendChild(nameField);
-           //placetypeString.appendChild(descriptionField);
-           //placetypeString.appendChild(longitudeField);
-           //placetypeString.appendChild(latitudeField);
-           //placetypeString.appendChild(editField);
-           //table.appendChild(placetypeString);
-
+        places.forEach(element => {   
            let insertPoint = [element.longitude,element.latitude];
            const draggableMarker  = new YMapDefaultMarker({
             coordinates: insertPoint,
@@ -84,30 +66,44 @@ async function loadPlace()
             //subtitle: 'Place',
             color: '#00CC00',
             popup: {content: `${element.name}<br> 
-                ${element.description}<br> 
-                ${element.longitude}, ${element.latitude}<br>
+                ${getComment(element.description)}
                 <a href=updatePlace.html?LngLat=${element.longitude},${element.latitude}&Scale=17&id=${element.id}&type=${element.placeTypeId}>Редактировать</a>
                 `, position: 'left'}
           });
           map.addChild(draggableMarker ); 
         });
     }
+    
+    function getComment(descriptions) {
+        let list = descriptions.split(" |");
+        let result = "";
+        list.forEach(element => {
+            result =  `${result}${element}<br>`;
+        });
+        return result;
+    }
+
     console.log(result);
 }
 async function createPlaceType(){
     let name = document.getElementById('name').value;
     let description = document.getElementById('description').value;
     let placeType = {name, description};
-    let result = await fetch('http://localhost:52199/api/PlaceType',{
+    let result = await fetch('http://localhost:5200/api/placetype',{
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'},
         body: JSON.stringify(placeType)
     });
     if(result.ok)
         window.location.href = "index.html";
 }
 async function getPlaceTypeByIdAsync(id){
-    let rezult = await fetch(`http://localhost:52199/api/PlaceType/${id}`)
+    let rezult = await fetch(`http://localhost:5200/api/placetype/${id}`,{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
     if(rezult.ok)
         return await rezult.json();
 }
@@ -123,9 +119,12 @@ async function updatePlaceType(){
     let id = new URLSearchParams(window.location.search).get('id');
     let description = document.getElementById('description').value;
     let placeType = {description};
-    let result = await fetch(`http://localhost:52199/api/PlaceType/${id}`,{
+    let result = await fetch(`http://localhost:5200/api/placetype/${id}`,{
         method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'
+        },
         body: JSON.stringify(placeType)
     });
     if(result.ok)
@@ -182,8 +181,11 @@ async function initMap() {
         draggable: true,
         onDragMove: onDragMoveHandler
       });
-      map.addChild(draggableMarker );    
+      map.addChild(draggableMarker );  
+      
+      
 }
+
 async function searchPointPlace()
 {   
     let coordinates = document.getElementById('LngLat').value;    
@@ -204,9 +206,11 @@ async function createPlace()
     let longitude = Number(document.getElementById('longitude').value);
     let latitude = Number(document.getElementById('latitude').value);
     let place = {placeTypeId, name, description,longitude, latitude};
-    let result = await fetch('http://localhost:52199/api/Place',{
+    let result = await fetch('http://localhost:5200/api/place',{
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'},
         body: JSON.stringify(place)
     });
     if(result.ok)

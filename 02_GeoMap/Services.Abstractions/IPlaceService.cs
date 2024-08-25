@@ -1,5 +1,6 @@
 ﻿using Services.Contracts.Place;
 using Services.Contracts.PlaceType;
+using Services.Contracts.Road;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,7 @@ namespace Services.Abstractions
         /// <param name="placeTypeDto">Тип мест посещения.</param>
         /// <returns>Коллекция мест посещения.</returns>
         Task<ICollection<PlaceDto>> GetPlaceForTypeAsync(int placeTypeId);
+        Task<ICollection<PlaceDto>> TrasingByTypeAsync(int placeTypeId, RoadDto roadDto);
 
     }
 }
