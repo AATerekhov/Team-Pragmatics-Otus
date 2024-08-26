@@ -1,4 +1,7 @@
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using UserApi;
 using UserApi.DataAccess.BusinessLogic.Services;
 using UserApi.DataAccess.BusinessLogic.Services.Base;
 using UserApi.DataAccess.Entities;
@@ -16,12 +19,15 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        optionBuilder => optionBuilder.MigrationsAssembly("UserApi.DataAccess.EntityFramework"));
-    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+
+builder.Services.AddServices(builder.Configuration);
+builder.Services.AddMassTransit(x => {
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        Registrar.ConfigureRmq(cfg, builder.Configuration);
+    });
 });
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddAutoMapper(typeof(IUserService));

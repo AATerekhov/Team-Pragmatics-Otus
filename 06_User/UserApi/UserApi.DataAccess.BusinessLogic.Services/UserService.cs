@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using CommonNamespace;
+using MassTransit;
+using System.Net.Http.Json;
 using UserApi.DataAccess.BusinessLogic.Models;
 using UserApi.DataAccess.BusinessLogic.Services.Base;
 using UserApi.DataAccess.BusinessLogic.Services.Exceptions;
@@ -7,10 +10,20 @@ using UserApi.DataAccess.Repositories.Abstractions;
 
 namespace UserApi.DataAccess.BusinessLogic.Services
 {
-    public class UserService(IUserRepository usersRepository, IMapper mapper) : IUserService
+    public class UserService(IUserRepository usersRepository, IMapper mapper, IBusControl _busControl) : IUserService
     {
         public async Task<IEnumerable<UserModel>> GetUsersAsync() => (await usersRepository.GetAllAsync()).Select(mapper.Map<UserModel>);
-        public async Task<UserModel?> GetUserAsync(Guid id) => mapper.Map<UserModel>(await usersRepository.GetByIdAsync(id));
+        public async Task<UserModel?> GetUserAsync(Guid id)
+        {
+            var userResult = mapper.Map<UserModel>(await usersRepository.GetByIdAsync(id));
+
+            await _busControl.Publish(new MessageCreateUserDto
+            {
+                Content = JsonContent.Create(userResult).ToString(),
+            });
+
+            return userResult;
+        }
         public async   Task<UserModel> CreateUserAsync(CreateUserModel user)
         {
             var userEntity = mapper.Map<User>(user);
