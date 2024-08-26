@@ -83,6 +83,7 @@ services:
       - devnet
   rabbit:
     image: rabbitmq:3-management
+    container_name: rabbit-api
     restart: always
     hostname: rabbitmqhost    
     environment:
