@@ -3,13 +3,13 @@ using MassTransit;
 
 namespace Services.Implementations.Consumers
 {
-    public class EventConsumer : IConsumer<MessageDto>
+    public class EventConsumer : IConsumer<MessageCreateUserDto>
     {
-        public async Task Consume(ConsumeContext<MessageDto> context)
+        public async Task Consume(ConsumeContext<MessageCreateUserDto> context)
         {
             //throw new ArgumentException("some error");
             await Task.Delay(TimeSpan.FromSeconds(1));
-            Console.WriteLine("Value: {0}", context.Message.Content);
+            Console.WriteLine("Consume value: {0}", context.Message.Content);
         }
     }
 }
