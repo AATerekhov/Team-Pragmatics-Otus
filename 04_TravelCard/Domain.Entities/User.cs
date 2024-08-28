@@ -11,7 +11,7 @@ namespace Domain.Entities
         /// <summary>
         /// Идентификатор.
         /// </summary>
-        [Key, Column("user_ID")]
+        [Column("user_ID")]
         public Guid Id { get; set; }
         
         [Column("travel_ID")]
