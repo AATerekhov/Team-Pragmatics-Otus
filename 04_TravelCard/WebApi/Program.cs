@@ -20,16 +20,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//builder.Services.AddControllers().AddNewtonsoftJson(options =>
-//{
-//    var dateConverter = new Newtonsoft.Json.Converters.IsoDateTimeConverter
-//    {
-//        DateTimeFormat = "HH:mm"
-//    };
-//    options.SerializerSettings.Converters.Add(dateConverter);
-//    //options.SerializerSettings.Culture = new CultureInfo("en-IE");
-//    //options.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-//}); ;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -43,6 +33,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //MassTransit
+builder.Services.AddHostedService<MasstransitService>();
 builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
