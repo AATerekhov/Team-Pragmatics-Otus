@@ -5,6 +5,7 @@ using Services.Implementations;
 using Services.Repositories.Abstractions;
 using GeoMap.Settings;
 using MassTransit;
+using Services.Implementations.Comsumers;
 
 namespace GeoMap
 {
@@ -38,6 +39,25 @@ namespace GeoMap
                     h.Username(rmqSettings.Login);
                     h.Password(rmqSettings.Password);
                 });
+        }
+
+        /// <summary>
+        /// регистрация эндпоинтов
+        /// </summary>
+        /// <param name="configurator"></param>
+        public static void RegisterEndPoints(IRabbitMqBusFactoryConfigurator configurator)
+        {
+            configurator.ReceiveEndpoint($"masstransit_event_create_user", e =>
+            {
+                e.Consumer<EventConsumer>();
+                e.UseMessageRetry(r =>
+                {
+                    r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+                });
+                e.PrefetchCount = 1;
+                e.UseConcurrencyLimit(1);
+            });
+
         }
 
         private static IServiceCollection InstallServices(this IServiceCollection serviceCollection)

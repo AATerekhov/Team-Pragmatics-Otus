@@ -16,18 +16,19 @@ namespace UserApi.DataAccess.BusinessLogic.Services
         public async Task<UserModel?> GetUserAsync(Guid id)
         {
             var userResult = mapper.Map<UserModel>(await usersRepository.GetByIdAsync(id));
-
-            await _busControl.Publish(new MessageCreateUserDto
-            {
-                Content = JsonContent.Create(userResult).ToString(),
-            });
-
             return userResult;
         }
         public async   Task<UserModel> CreateUserAsync(CreateUserModel user)
         {
             var userEntity = mapper.Map<User>(user);
-            return mapper.Map<UserModel>(await usersRepository.AddAsync(userEntity));
+            var userResult = await usersRepository.AddAsync(userEntity);
+
+            await _busControl.Publish(new MessageCreateUserDto
+            {
+                Content = Newtonsoft.Json.JsonConvert.SerializeObject(userResult),
+            });
+
+            return mapper.Map<UserModel>(userResult);
         }
         public async Task UpdateUserAsync(UserModel user)
         {
