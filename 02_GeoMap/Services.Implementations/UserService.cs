@@ -3,6 +3,8 @@ using AutoMapper;
 using Services.Repositories.Abstractions;
 using Services.Contracts.User;
 using Domain.Entities;
+using Microsoft.Extensions.Hosting;
+using MassTransit;
 
 namespace Services.Implementations
 {
