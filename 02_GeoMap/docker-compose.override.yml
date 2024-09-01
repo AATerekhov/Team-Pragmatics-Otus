@@ -17,10 +17,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
     ports:
       - 52200:8080
-      - 52201:8081
   userapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
