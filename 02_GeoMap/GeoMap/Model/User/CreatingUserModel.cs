@@ -2,13 +2,8 @@
 {
     public class CreatingUserModel
     {
-        /// <summary>
-        /// Имя учетной записи.
-        /// </summary>
-        public string? Logo { get; set; }
-        /// <summary>
-        /// Адресс электронной почты.
-        /// </summary>
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
         public string? Email { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using Services.Implementations;
 using Services.Repositories.Abstractions;
 using GeoMap.Settings;
 using MassTransit;
-using Services.Implementations.Comsumers;
+using GeoMap.Consumer;
 
 namespace GeoMap
 {
@@ -49,7 +49,7 @@ namespace GeoMap
         {
             configurator.ReceiveEndpoint($"masstransit_event_create_user", e =>
             {
-                e.Consumer<EventConsumer>();
+                e.Consumer<EventUserConsumer>();
                 e.UseMessageRetry(r =>
                 {
                     r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));

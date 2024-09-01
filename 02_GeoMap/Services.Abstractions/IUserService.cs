@@ -1,4 +1,5 @@
-﻿using Services.Contracts.User;
+﻿using Services.Contracts.Place;
+using Services.Contracts.User;
 
 namespace Services.Abstractions
 {
@@ -12,7 +13,14 @@ namespace Services.Abstractions
         /// </summary>
         /// <param name="creatingUserDto"> ДТО пользователя. </param>
         /// <returns> Идентификатор. </returns>
-        void Create(CreatingUserDto creatingUserDto);
+        Task CreateAsync(CreatingUserDto creatingUserDto);
+
+        /// <summary>
+        /// Получить тип мест посещения.
+        /// </summary>
+        /// <param name="id"> Идентификатор. </param>
+        /// <returns> ДТО места посещения. </returns>
+        Task<UserDto> GetByIdAsync(Guid id);
 
     }
 }
