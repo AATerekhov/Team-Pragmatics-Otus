@@ -9,6 +9,12 @@ namespace Services.Abstractions
     public interface IUserService
     {
         /// <summary>
+        /// Получить всех юзеров
+        /// </summary>
+        /// <returns></returns>
+        Task<IEnumerable<UserDto>> GetUsersAsync();
+
+        /// <summary>
         /// Получить юзера. 
         /// </summary>
         /// <param name="id"> Идентификатор. </param>

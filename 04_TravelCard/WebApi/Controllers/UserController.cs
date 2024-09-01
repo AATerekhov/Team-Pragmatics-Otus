@@ -23,6 +23,10 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<UserModel>), 200)]
+        public async Task<IEnumerable<UserModel>> GetAll() => (await _service.GetUsersAsync()).Select(_mapper.Map<UserModel>);
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(Guid id)
         {

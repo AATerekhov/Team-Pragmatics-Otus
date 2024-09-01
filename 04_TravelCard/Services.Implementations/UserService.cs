@@ -68,6 +68,13 @@ namespace Services.Implementations
             return _mapper.Map<User, UserDto>(user);
         }
 
+
+        /// <summary>
+        /// Получить все путешествия.
+        /// </summary>
+        /// <returns> IEnumerable путешествий. </returns>
+        public async Task<IEnumerable<UserDto>> GetUsersAsync() => (await _UserRepository.GetAllAsync()).Select(_mapper.Map<UserDto>);
+
         //public async Task<UserDto?> GetUserAsync(int id) => _mapper.Map<UserDto>(await _UserRepository.GetUserByIdAsync(id));
 
         /// <summary>
