@@ -5,6 +5,7 @@ using Services.Contracts.User;
 using Domain.Entities;
 using Microsoft.Extensions.Hosting;
 using MassTransit;
+using Services.Contracts.Place;
 
 namespace Services.Implementations
 {
@@ -18,12 +19,18 @@ namespace Services.Implementations
             _userRepository = userRepository;
         }
 
-        public void Create(CreatingUserDto creatingUserDto)
+        public async Task CreateAsync(CreatingUserDto creatingUserDto)
         {
             var user = _mapper.Map<CreatingUserDto, User>(creatingUserDto);
-            
-            var createdUser = _userRepository.AddAsync(user);
-            _userRepository.SaveChanges();
+            user.Logo = user.Name;
+            await _userRepository.AddAsync(user);
+            await _userRepository.SaveChangesAsync();
+        }
+
+        public async Task<UserDto> GetByIdAsync(Guid id)
+        {
+            var user = await _userRepository.GetAsync(id, CancellationToken.None);
+            return _mapper.Map<User, UserDto>(user);
         }
     }
 }

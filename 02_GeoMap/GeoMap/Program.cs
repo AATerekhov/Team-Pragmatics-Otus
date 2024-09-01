@@ -1,5 +1,6 @@
 
 using AutoMapper;
+using GeoMap.Consumer;
 using GeoMap.Mapping;
 using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations;
@@ -7,7 +8,6 @@ using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using Services.Implementations;
-using Services.Implementations.Comsumers;
 using Services.Repositories.Abstractions;
 
 namespace GeoMap
@@ -19,7 +19,7 @@ namespace GeoMap
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddMassTransit(x => {
-                x.AddConsumer<EventConsumer>();
+                x.AddConsumer<EventUserConsumer>();
                 x.UsingRabbitMq((context, cfg) =>
                 {
                     Registrar.ConfigureRmq(cfg, builder.Configuration);

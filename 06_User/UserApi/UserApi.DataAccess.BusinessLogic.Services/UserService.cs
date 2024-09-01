@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CommonNamespace;
 using MassTransit;
+using Newtonsoft.Json;
 using System.Net.Http.Json;
 using UserApi.DataAccess.BusinessLogic.Models;
 using UserApi.DataAccess.BusinessLogic.Services.Base;
@@ -25,7 +26,7 @@ namespace UserApi.DataAccess.BusinessLogic.Services
 
             await _busControl.Publish(new MessageCreateUserDto
             {
-                Content = Newtonsoft.Json.JsonConvert.SerializeObject(userResult),
+                Content = JsonConvert.SerializeObject(userResult),
             });
 
             return mapper.Map<UserModel>(userResult);
