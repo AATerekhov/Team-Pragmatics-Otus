@@ -46,7 +46,7 @@ builder.Services.AddMassTransit(x =>
                 h.Username(rmqSettings.Login);
                 h.Password(rmqSettings.Password);
             });
-        cfg.ReceiveEndpoint($"masstransit_event_user_queue", e =>
+        cfg.ReceiveEndpoint($"masstransit_event_create_user", e =>
         {
             e.Consumer<EventConsumer>();
             e.UseMessageRetry(r =>
