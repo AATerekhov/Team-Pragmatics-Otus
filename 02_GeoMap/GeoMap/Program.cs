@@ -18,19 +18,7 @@ namespace GeoMap
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddMassTransit(x => {
-                x.AddConsumer<EventUserConsumer>();
-                x.UsingRabbitMq((context, cfg) =>
-                {
-                    Registrar.ConfigureRmq(cfg, builder.Configuration);
-                    Registrar.RegisterEndPoints(cfg);
-                });
-            });
 
-            builder.Services.AddHostedService<MasstransitService>();
-
-            //Добавили настройки Mapping.
-            //InstallAutomapper(builder.Services);
             builder.Services.AddServices(builder.Configuration);
             
             builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
@@ -42,6 +30,16 @@ namespace GeoMap
 
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddAutoMapper(typeof(FuellingService));
+
+            builder.Services.AddMassTransit(configurator => 
+            {
+                configurator.AddConsumer<EventUserConsumer>();
+                configurator.UsingRabbitMq((context, configurator) =>
+                {
+                    configurator.ConfigureRmq(builder.Configuration);
+                    configurator.ConfigureEndpoints(context);
+                });
+            });
 
             var app = builder.Build();
 

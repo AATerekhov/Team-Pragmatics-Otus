@@ -1,26 +1,27 @@
-﻿using CommonNamespace;
-using GeoMap.HttpClients;
+﻿using AutoMapper;
+using CommonNamespace;
+using Domain.Entities;
 using GeoMap.Model.User;
 using MassTransit;
 using Newtonsoft.Json;
+using Services.Abstractions;
+using Services.Contracts.User;
 
 namespace GeoMap.Consumer
 {
-    public class EventUserConsumer : IConsumer<MessageCreateUserDto>
+    public class EventUserConsumer(IUserService service, IMapper mapper) : IConsumer<MessageCreateUserDto>
     {
-        public Task Consume(ConsumeContext<MessageCreateUserDto> context)
+        public async Task Consume(ConsumeContext<MessageCreateUserDto> context)
         {
-            CreatingUserModel? userCreate = JsonConvert.DeserializeObject<CreatingUserModel>(context.Message.Content);
-            var _client = new SimpleHttpClient("http://geomap-service:8080");
-            if (userCreate != null)
+            
+            CreatingUserModel? userCreate = JsonConvert.DeserializeObject<CreatingUserModel>(context.Message.Content!);
+
+            var createUserTask = await service.GetByIdAsync(userCreate!.Id) switch
             {
-                var user = _client.GetAsync<UserModel>($"/api/User/{userCreate.Id}").Result;
-                if(user.Name == null)
-                {
-                    Task.WaitAll(_client.PostAsyncNotResult<CreatingUserModel>("/api/User", userCreate));
-                }               
-            }
-            return Task.CompletedTask;
+                null => service.CreateAsync(mapper.Map<CreatingUserDto>(userCreate)),
+                _ => Task.CompletedTask
+            };
+
         }
     }
 }
