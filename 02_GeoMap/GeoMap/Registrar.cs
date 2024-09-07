@@ -29,7 +29,7 @@ namespace GeoMap
         /// </summary>
         /// <param name="configurator"> Конфигуратор RMQ. </param>
         /// <param name="configuration"> Конфигурация приложения. </param>
-        public static void ConfigureRmq(IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
+        public static void ConfigureRmq(this IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
         {
             var rmqSettings = configuration.Get<ApplicationSettings>().RmqSettings;
             configurator.Host(rmqSettings.Host,
@@ -39,26 +39,7 @@ namespace GeoMap
                     h.Username(rmqSettings.Login);
                     h.Password(rmqSettings.Password);
                 });
-        }
-
-        /// <summary>
-        /// регистрация эндпоинтов
-        /// </summary>
-        /// <param name="configurator"></param>
-        public static void RegisterEndPoints(IRabbitMqBusFactoryConfigurator configurator)
-        {
-            configurator.ReceiveEndpoint($"masstransit_event_create_user", e =>
-            {
-                e.Consumer<EventUserConsumer>();
-                e.UseMessageRetry(r =>
-                {
-                    r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
-                });
-                e.PrefetchCount = 1;
-                e.UseConcurrencyLimit(1);
-            });
-
-        }
+        }   
 
         private static IServiceCollection InstallServices(this IServiceCollection serviceCollection)
         {
