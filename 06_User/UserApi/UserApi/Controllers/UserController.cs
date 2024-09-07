@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using UserApi.DataAccess.BusinessLogic.Models;
 using UserApi.DataAccess.BusinessLogic.Services.Base;
+using UserApi.DataAccess.Entities;
 using UserApi.Rensposes;
 using UserApi.Requests;
 
@@ -28,16 +30,16 @@ namespace UserApi.Controllers
         }
 
         [HttpPost("Authorization")]
-        [ProducesResponseType(typeof(UserResponse), 200)]
+        [ProducesResponseType(typeof(UserResponse), 201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> Authorization([FromBody] GetUserRequest request)
         {
             var users = (await userService.GetUsersAsync()).Select(mapper.Map<UserResponse>);
-            var user = users.Where(u => u.Name == request.Name && u.Password == request.Password);
-            if (user == null)
-                return NotFound();
-            return Ok(user);
+            var user = users.Where(u => u.Name == request.Name && u.Password == request.Password).FirstOrDefault();
+            if (user != null)
+            return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
+            else return BadRequest();
         }
 
         [HttpPost]
@@ -45,8 +47,14 @@ namespace UserApi.Controllers
         [ProducesResponseType(400)]
         public async Task<IActionResult> Create([FromBody] CreateUserRequest request)
         {
-            var user = await userService.CreateUserAsync(mapper.Map<CreateUserModel>(request));
-            return CreatedAtAction(nameof(Get), new { id = user.Id }, mapper.Map<UserResponse>(user));
+            var users = (await userService.GetUsersAsync()).Select(mapper.Map<UserResponse>);
+            var retryUser = users.Where(u=>u.Name == request.Name).FirstOrDefault();
+            if (retryUser != null) return BadRequest();
+            else
+            {
+                var user = await userService.CreateUserAsync(mapper.Map<CreateUserModel>(request));
+                return CreatedAtAction(nameof(Get), new { id = user.Id }, mapper.Map<UserResponse>(user));
+            }            
         }
 
         [HttpPut("{id:guid}")]

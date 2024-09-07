@@ -1,3 +1,8 @@
+h1, h3 {
+      font-family: 'Poiret One', cursive;
+      text-align: center;
+      color: #4C596C;
+}
 table {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
