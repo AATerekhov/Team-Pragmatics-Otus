@@ -4,6 +4,13 @@ async function loadTravels(){
         headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
     });
 
+    let userName = new URLSearchParams(window.location.search).get('user');
+    let userId = new URLSearchParams(window.location.search).get('userid');
+    if(userId !== null)
+        {
+            var logo = document.getElementById('LogoPage');
+            logo.innerHTML  = `Путешествия (${userName})`;
+        }
 	let Traveltable = document.getElementById('Travels');
     console.log(Traveltable);
     if(result.ok){

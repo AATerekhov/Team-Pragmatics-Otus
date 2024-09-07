@@ -6,20 +6,22 @@
         <link href="../style.css" rel="stylesheet"/>
     </head>
     <body>
-        <h1 >Здравствуйте</h1>
+        <h1 >Здравствуйте,готовы отправиться в Путешествие?</h1>
         <p>
-            <a href="createUser.html">Зарегестрироваться</a>
             <a href="../index.html">Настройка</a>
             <a href="../Travel/index.html">Путешествия</a>
         </p>
-        <p>            
-            <label for ="loginValue">Имя пользователя: </label>
+        <p  style="text-align: center">            
+            <label for ="loginValue">Логин.   :</label>
             <input type="text" id="loginValue" size="30"/> 
         </p>
-        <p>            
+        <p  style="text-align: center">            
             <label for ="passwordValue">Пароль: </label>
-            <input type="text" id="passwordValue" size="30"/> 
+            <input type="password" id="passwordValue" size="30"/> 
         </p>        
-        <p><input type="button" value="Войти" onclick="CheckUser()"/></p>
+        <p  style="text-align: center">
+            <input type="button" value="Войти" onclick="CheckUser()"/>
+            <input type="button" value="Зарегестрироваться" onclick="RegisterUser()"/>
+        </p>
     </body>
 </html>
