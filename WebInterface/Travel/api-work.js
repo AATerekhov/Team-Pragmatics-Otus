@@ -51,12 +51,14 @@ async function loadTravels(){
             let link = document.createElement('a');
             if(userId !== null){
                 link.innerText = "Редактировать";
+                link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
             }
             else{
                 link.innerText = "Посмотреть";
+                link.href = `viewTravel.html?typeId=0&Scale=8&id=${travel.id}`;
             }
             
-            link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
+            
             let editField = document.createElement('td');
             editField.appendChild(link);
             TravelRow.appendChild(travelId);
