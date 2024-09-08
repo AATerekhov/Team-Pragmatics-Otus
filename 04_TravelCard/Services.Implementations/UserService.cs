@@ -75,8 +75,6 @@ namespace Services.Implementations
         /// <returns> IEnumerable путешествий. </returns>
         public async Task<IEnumerable<UserDto>> GetUsersAsync() => (await _UserRepository.GetAllAsync()).Select(_mapper.Map<UserDto>);
 
-        //public async Task<UserDto?> GetUserAsync(int id) => _mapper.Map<UserDto>(await _UserRepository.GetUserByIdAsync(id));
-
         /// <summary>
         /// Изменить юзера.
         /// </summary>

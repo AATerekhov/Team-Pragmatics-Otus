@@ -3,16 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using Services.Implementations;
 using Services.Repositories.Abstractions;
-using Domain.Entities;
 using Infrastructure.Repositories.Implementations;
 using MassTransit;
 using WebApi.Mapping;
 using Services.Implementations.Mapping;
 using WebApi.Helper;
-using System.Globalization;
-using Newtonsoft.Json;
 using WebApi.Settings;
-using Services.Implementations.Consumers;
+using WebApi.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,29 +30,20 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //MassTransit
-builder.Services.AddHostedService<MasstransitService>();
-builder.Services.AddMassTransit(x =>
+builder.Services.AddMassTransit(configurator =>
 {
-    x.UsingRabbitMq((context, cfg) =>
+    configurator.AddConsumer<EventUserConsumer>();
+    configurator.UsingRabbitMq((context, configurator) =>
     {
-        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
-        cfg.Host(rmqSettings.Host,
-            rmqSettings.VHost,
-            h =>
-            {
-                h.Username(rmqSettings.Login);
-                h.Password(rmqSettings.Password);
-            });
-        cfg.ReceiveEndpoint($"masstransit_event_create_user", e =>
-        {
-            e.Consumer<EventConsumer>();
-            e.UseMessageRetry(r =>
-            {
-                r.Incremental(3, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
-            });
-            e.PrefetchCount = 1;
-            e.UseConcurrencyLimit(1);
-        });
+        var rmqSettings = builder.Configuration.Get<ApplicationSettings>()!.RmqSettings;
+        configurator.Host(rmqSettings.Host,
+                    rmqSettings.VHost,
+                    h =>
+                    {
+                        h.Username(rmqSettings.Login);
+                        h.Password(rmqSettings.Password);
+                    });
+        configurator.ConfigureEndpoints(context);
     });
 });
 
