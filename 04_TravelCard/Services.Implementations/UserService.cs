@@ -27,7 +27,7 @@ namespace Services.Implementations
         /// </summary>
         /// <param name="CreatingUserDto"> ДТО юзера. </param>
         /// <returns> Идентификатор. </returns>
-        public async Task<int> CreateAsync(CreatingUserDto creatingUserDto)
+        public async Task<Guid> CreateAsync(CreatingUserDto creatingUserDto)
         {
             var UserEntity = _mapper.Map<CreatingUserDto, User>(creatingUserDto);
             UserEntity.Deleted = false;
@@ -48,7 +48,7 @@ namespace Services.Implementations
         /// Удалить юзера.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(Guid id)
         {
             var user = await _UserRepository.GetAsync(id, CancellationToken.None);
             user.Deleted = true;
@@ -61,21 +61,26 @@ namespace Services.Implementations
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
         /// <returns> ДТО юзера. </returns>
-        public async Task<UserDto> GetByIdAsync(int id)
+        public async Task<UserDto> GetByIdAsync(Guid id)
         {
             //return _mapper.Map<UserDto>(await _UserRepository.GetAsync(id, CancellationToken.None));
             var user = await _UserRepository.GetAsync(id, CancellationToken.None);
             return _mapper.Map<User, UserDto>(user);
         }
 
-        //public async Task<UserDto?> GetUserAsync(int id) => _mapper.Map<UserDto>(await _UserRepository.GetUserByIdAsync(id));
+
+        /// <summary>
+        /// Получить все путешествия.
+        /// </summary>
+        /// <returns> IEnumerable путешествий. </returns>
+        public async Task<IEnumerable<UserDto>> GetUsersAsync() => (await _UserRepository.GetAllAsync()).Select(_mapper.Map<UserDto>);
 
         /// <summary>
         /// Изменить юзера.
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
         /// <param name="updatingUserDto"> ДТО юзера. </param>
-        public async Task UpdateAsync(int id, UpdatingUserDto updatingUserDto)
+        public async Task UpdateAsync(Guid id, UpdatingUserDto updatingUserDto)
         {
             var user = await _UserRepository.GetAsync(id, CancellationToken.None);
             if (user == null)
@@ -83,7 +88,7 @@ namespace Services.Implementations
                 throw new Exception($"Юзер с id = {id} не найден");
             }
 
-            user.Login = updatingUserDto.Login;
+            user.Email = updatingUserDto.Email;
             _UserRepository.Update(user);
             await _UserRepository.SaveChangesAsync();
         }

@@ -6,8 +6,14 @@
     public class UpdatingUserDto
     {
         /// <summary>
-        /// Логин
+        /// Удалено.
         /// </summary>
-        public string Login { get; set; }
+        public bool Deleted { get; set; }
+
+        public string? Name { get; init; }
+
+        public DateTime DateRegistration { get; set; }
+
+        public string? Email { get; set; }
     }
 }

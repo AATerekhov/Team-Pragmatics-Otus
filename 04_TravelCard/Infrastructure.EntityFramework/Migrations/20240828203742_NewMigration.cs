@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -6,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.EntityFramework.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedDateTime : Migration
+    public partial class NewMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +21,8 @@ namespace Infrastructure.EntityFramework.Migrations
                     description = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     deleted = table.Column<bool>(type: "boolean", nullable: false),
                     start_point = table.Column<string>(type: "text", nullable: false),
-                    finish_point = table.Column<string>(type: "text", nullable: false)
+                    finish_point = table.Column<string>(type: "text", nullable: false),
+                    start_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -31,11 +33,12 @@ namespace Infrastructure.EntityFramework.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    user_ID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    user_ID = table.Column<Guid>(type: "uuid", nullable: false),
                     travel_ID = table.Column<int>(type: "integer", nullable: true),
-                    login = table.Column<string>(type: "text", nullable: false),
-                    deleted = table.Column<bool>(type: "boolean", nullable: false)
+                    deleted = table.Column<bool>(type: "boolean", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    DateRegistration = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,7 +73,7 @@ namespace Infrastructure.EntityFramework.Migrations
                 columns: table => new
                 {
                     TravelsId = table.Column<int>(type: "integer", nullable: false),
-                    UsersId = table.Column<int>(type: "integer", nullable: false)
+                    UsersId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {

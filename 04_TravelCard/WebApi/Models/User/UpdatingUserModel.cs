@@ -6,8 +6,19 @@
     public class UpdatingUserModel
     {
         /// <summary>
-        /// Логин
+        /// Идентификатор.
         /// </summary>
-        public string Login { get; set; }
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// Удалено.
+        /// </summary>
+        public bool Deleted { get; set; }
+
+        public string? Name { get; init; }
+
+        public DateTime DateRegistration { get; set; }
+
+        public string? Email { get; set; }
     }
 }

@@ -3,15 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Services.Abstractions;
 using Services.Implementations;
 using Services.Repositories.Abstractions;
-using Domain.Entities;
 using Infrastructure.Repositories.Implementations;
 using MassTransit;
 using WebApi.Mapping;
 using Services.Implementations.Mapping;
 using WebApi.Helper;
-using System.Globalization;
-using Newtonsoft.Json;
 using WebApi.Settings;
+using WebApi.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,16 +17,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//builder.Services.AddControllers().AddNewtonsoftJson(options =>
-//{
-//    var dateConverter = new Newtonsoft.Json.Converters.IsoDateTimeConverter
-//    {
-//        DateTimeFormat = "HH:mm"
-//    };
-//    options.SerializerSettings.Converters.Add(dateConverter);
-//    //options.SerializerSettings.Culture = new CultureInfo("en-IE");
-//    //options.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-//}); ;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -42,20 +30,22 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //MassTransit
-//builder.Services.AddMassTransit(x => {
-//    x.UsingRabbitMq((context, cfg) =>
-//    {
-//        var rmqSettings = builder.Configuration.Get<ApplicationSettings>().RmqSettings;
-//        cfg.Host(rmqSettings.Host,
-//            rmqSettings.VHost,
-//            h =>
-//            {
-//                h.Username(rmqSettings.Login);
-//                h.Password(rmqSettings.Password);
-//            });
-//        //todo Настроить ReceiveEndpoint для TravelPoints
-//    });
-//});
+builder.Services.AddMassTransit(configurator =>
+{
+    configurator.AddConsumer<EventUserConsumer>();
+    configurator.UsingRabbitMq((context, configurator) =>
+    {
+        var rmqSettings = builder.Configuration.Get<ApplicationSettings>()!.RmqSettings;
+        configurator.Host(rmqSettings.Host,
+                    rmqSettings.VHost,
+                    h =>
+                    {
+                        h.Username(rmqSettings.Login);
+                        h.Password(rmqSettings.Password);
+                    });
+        configurator.ConfigureEndpoints(context);
+    });
+});
 
 //Policy For Resource Sharing
 builder.Services.AddCors(option => option.AddDefaultPolicy(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
