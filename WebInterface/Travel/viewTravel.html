@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Карточка путешествия</title>
+        <script src="api-updatetravel.js" lang="JavaScript"></script>
+        <link href="style.css"  rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=ff7a97c4-e114-4a08-a211-95f44b756498&lang=ru_RU"></script> 
+    </head>
+    <body onload="initUpdateMap(true)">
+        <form>
+            <p>
+                <label for="description">Описание</label>
+                <input type="text" id="description" placeholder="Описание Вашего путешествия" readonly/>
+                <label for ="longitudeSP">Начало путешествия:   </label>
+                <input type="text" id="longitudeSP" size="10" placeholder="Долгота" readonly/>  
+                <label for ="latitudeSP">,</label>
+                <input type="text" id="latitudeSP" size="10" placeholder="Широта" readonly/>
+                <label for="longitudeFP">Конечная точка:    </label>
+                <input type="text" id="longitudeFP" size="10" placeholder="Долгота" readonly/>
+                <label for ="latitudeFP">,</label>
+                <input type="text" id="latitudeFP" size="10" placeholder="Широта" readonly/>
+                <label for="dateStart">Дата начала путешествия</label>
+                <input type="date" id="dateStart" placeholder="01.01.2024" readonly/> 
+            </p>
+            <p>             
+                <input type="button" value="Назад" onclick="goHome()"/>
+                <input type="button" value="Yandex" onclick="ShowYandex()"/>
+            </p>
+        </form>
+            <div id="travelmap" style="text-align: center; width: 85%; height: 700px; margin: 0 auto; "> </div>   
+        <form>    
+            <table id="TravelsPoint">
+                <tr>
+                    <th>Time</th>
+                    <th>Descriptions</th>
+                    <th>Point</th>
+                </tr>
+            </table>                    
+            <p>
+        </form>         
+    </body>
+</html>

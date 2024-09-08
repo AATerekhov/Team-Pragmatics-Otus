@@ -8,7 +8,7 @@ async function getTravelByIdAsync(id){
         return await result.json();
 }
 //Добавление Yкарты c EventPoint и предложение точек по типам.
-async function initUpdateMap() {       
+async function initUpdateMap(view) {       
 
     let travelId = new URLSearchParams(window.location.search).get('id');
     let scale = new URLSearchParams(window.location.search).get('Scale');
@@ -158,9 +158,18 @@ async function initUpdateMap() {
     const {YMapHint, YMapHintContext} = await ymaps3.import('@yandex/ymaps3-hint@0.0.1');
     // Import the package to add a default marker
     const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
-    // Create default markers and add them to the map
-    const draggableStartPoint  = CreateDragMarker( [startLng, startLat],`Начало путешествия`,onDragMoveHandlerSP);  
-    const draggableFinishPoint = CreateDragMarker( [finishLng, finishLat],`Конечная точка`,onDragMoveHandlerEP);
+    // Create default markers and add them to the map 
+    let draggableStartPoint;
+    let draggableFinishPoint;
+    if(view === undefined){
+        draggableStartPoint  = CreateDragMarker( [startLng, startLat],`Начало путешествия`,true,onDragMoveHandlerSP);  
+        draggableFinishPoint = CreateDragMarker( [finishLng, finishLat],`Конечная точка`,true,onDragMoveHandlerEP);
+    }
+    else {
+        draggableStartPoint  = CreateDragMarker( [startLng, startLat],`Начало путешествия`, false);  
+        draggableFinishPoint = CreateDragMarker( [finishLng, finishLat],`Конечная точка`, false);
+    }
+    
     const line = CreateLine(mapPoints);
     map.addChild(draggableStartPoint); 
     map.addChild(draggableFinishPoint);    
@@ -229,8 +238,11 @@ async function initUpdateMap() {
           });
           buttoms.push(button);
     });
-    buttoms.forEach(element => 
-        bottomControls.addChild(element));    
+    if(view === undefined){
+        buttoms.forEach(element => 
+            bottomControls.addChild(element));    
+    }
+
 
     //Добавление точек в таблицу.
     let Traveltable = document.getElementById('TravelsPoint');
@@ -261,14 +273,14 @@ async function initUpdateMap() {
             style: {stroke: [{color: '#0047FF', width: 4}]}
           });
      }
-     function CreateDragMarker( point, title ,onDragMoveHandler)
+     function CreateDragMarker( point, title ,move ,onDragMoveHandler)
      {
        return new YMapDefaultMarker({
            coordinates: point,
            title: title,
            subtitle: 'Перетащите метку',
            color: '#0047FF',
-           draggable: true,
+           draggable: move,
            onDragMove: onDragMoveHandler
          });
      }  

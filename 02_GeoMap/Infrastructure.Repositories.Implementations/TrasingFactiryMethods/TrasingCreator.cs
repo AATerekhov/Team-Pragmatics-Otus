@@ -16,6 +16,7 @@ namespace Infrastructure.Repositories.Implementations.TrasingFactiryMethods
             var trasing = Trasing(road, typePlace);
 
             var borders = trasing.GetBoard();
+
             var resultDB = (await dbContext.Set<Place>()
                .Where(l => !l.Deleted && l.PlaceTypeID == trasing.PlaceTipeId
                && l.Longitude >= borders.MinX
