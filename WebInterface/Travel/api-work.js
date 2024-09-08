@@ -9,8 +9,31 @@ async function loadTravels(){
     if(userId !== null)
         {
             var logo = document.getElementById('LogoPage');
-            logo.innerHTML  = `Путешествия (${userName})`;
+            logo.innerHTML  = `Путешествия (${userName})`;    
+            
+            //Генерация меню на вход
+            let nemus = document.getElementsByTagName('p');
+            let nemu = nemus[0];
+            let linkCreate = document.createElement('a');
+            linkCreate.innerText = "Создать путешествие"; 
+            linkCreate.href = `createTravel.html`;
+            nemu.appendChild(linkCreate);
+            let linkSettings = document.createElement('a');
+            linkSettings.innerText = "Настройка"; 
+            linkSettings.href = `../index.html`;
+            nemu.appendChild(linkSettings);
         }
+        else
+        {
+            //Генерация меню на вход
+            let nemus = document.getElementsByTagName('p');
+            let nemu = nemus[0];
+            let linkEnter = document.createElement('a');
+            linkEnter.innerText = "Вход"; 
+            linkEnter.href = `../Login/login.html`;
+            nemu.appendChild(linkEnter);
+        }
+
 	let Traveltable = document.getElementById('Travels');
     console.log(Traveltable);
     if(result.ok){
@@ -26,7 +49,13 @@ async function loadTravels(){
             let TrFinishField = document.createElement('td');
             TrFinishField.innerText = travel.finishPoint;
             let link = document.createElement('a');
-            link.innerText = "Редактировать";
+            if(userId !== null){
+                link.innerText = "Редактировать";
+            }
+            else{
+                link.innerText = "Посмотреть";
+            }
+            
             link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
             let editField = document.createElement('td');
             editField.appendChild(link);
