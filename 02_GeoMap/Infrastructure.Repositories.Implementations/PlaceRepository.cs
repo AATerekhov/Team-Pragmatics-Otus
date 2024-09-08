@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations.Extentions;
+using Infrastructure.Repositories.Implementations.TrasingFactiryMethods;
 using Microsoft.EntityFrameworkCore;
 using Services.Repositories.Abstractions;
 using System;
@@ -13,7 +14,11 @@ namespace Infrastructure.Repositories.Implementations
 {
     public class PlaceRepository:Repository<Place,Guid>,IPlaceRepository
     {
-        public PlaceRepository(DatabaseContext databaseContext):base(databaseContext) { }
+        private TrasingCreator _trasingCreator;
+        public PlaceRepository(DatabaseContext databaseContext, TrasingCreator trasingCreator) :base(databaseContext) 
+        {
+            _trasingCreator = trasingCreator;
+        }
 
         public override async Task<Place> GetAsync(Guid id, CancellationToken cancellationToken)
         {
@@ -31,16 +36,7 @@ namespace Infrastructure.Repositories.Implementations
 
         public async Task<List<Place>> TrasingByTypeAsync(int placeTypeId, Road road, CancellationToken cancellationToken)
         {
-            var borders = road.Borders().Offset(road.Offset);
-            var resultDB = (await Context.Set<Place>()
-                .Where(l => !l.Deleted && l.PlaceTypeID == placeTypeId 
-                && l.Longitude >= borders.MinX
-                && l.Longitude <= borders.MaxX 
-                && l.Latitude >= borders.MinY
-                && l.Latitude <= borders.MaxY)
-                .ToListAsync());
-            var result = resultDB.AsParallel().Where(l => road.OnTheRoad(l)).ToList();
-            return await Task.FromResult(result);
+            return await _trasingCreator.GetPlace(road,placeTypeId,Context);
         }
     }
 }

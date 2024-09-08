@@ -6,6 +6,7 @@ using Services.Repositories.Abstractions;
 using GeoMap.Settings;
 using MassTransit;
 using GeoMap.Consumer;
+using Infrastructure.Repositories.Implementations.TrasingFactiryMethods;
 
 namespace GeoMap
 {
@@ -57,7 +58,8 @@ namespace GeoMap
                 .AddScoped<IUserRepository, UserRepository>()
                 .AddScoped<IPlaceTypeRepository, PlaceTypeRepository>()
                 .AddScoped<IPlaceRepository, PlaceRepository>()
-                .AddScoped<IFuellingRepository, FuellingRepository>();
+                .AddScoped<IFuellingRepository, FuellingRepository>()
+                .AddScoped<TrasingCreator, HighwayCreator>();
             return serviceCollection;
         }
     }
