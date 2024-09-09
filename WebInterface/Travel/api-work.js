@@ -78,7 +78,8 @@ async function travelCreating(){
     let lngFP = document.getElementById('longitudeFP').value;
     let latFP = document.getElementById('latitudeFP').value;
     let finishPoint = lngFP + ',' + latFP;
-    let startDate = document.getElementById('dateStart').value;
+    let stringDate = document.getElementById('dateStart').value;
+    var startDate = new Date(stringDate)
     let isPrivate = false;
     let userID = new URLSearchParams(window.location.search).get('userid');
     let userName = new URLSearchParams(window.location.search).get('user');
