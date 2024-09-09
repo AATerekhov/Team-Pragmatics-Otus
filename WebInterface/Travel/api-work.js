@@ -15,8 +15,8 @@ async function loadTravels(){
             let nemus = document.getElementsByTagName('p');
             let nemu = nemus[0];
             let linkCreate = document.createElement('a');
-            linkCreate.innerText = "Создать путешествие"; 
-            linkCreate.href = `createTravel.html`;
+            linkCreate.innerText = "Создать путешествие";
+            linkCreate.href = `createTravel.html?userid=${userId}&user=${userName}`;
             nemu.appendChild(linkCreate);
             let linkSettings = document.createElement('a');
             linkSettings.innerText = "Настройка"; 
@@ -78,7 +78,14 @@ async function travelCreating(){
     let lngFP = document.getElementById('longitudeFP').value;
     let latFP = document.getElementById('latitudeFP').value;
     let finishPoint = lngFP + ',' + latFP;
-    let travel = {description, startPoint, finishPoint};
+    let startDate = document.getElementById('dateStart').value;
+    let isPrivate = false;
+    let userID = new URLSearchParams(window.location.search).get('userid');
+    let userName = new URLSearchParams(window.location.search).get('user');
+    let travel = {description, startPoint, finishPoint, startDate, isPrivate, userID};
+    
+    
+
     //alert(JSON.stringify(travel))
     let result = await fetch('http://localhost:5200/api/travel', {
      method: 'POST',
@@ -89,7 +96,7 @@ async function travelCreating(){
      body: JSON.stringify(travel)
     });
     if(result.ok)
-        window.location.href = `index.html`;
+        window.location.href = `index.html?userid=${userID}&user=${userName}`;
  }
 
 

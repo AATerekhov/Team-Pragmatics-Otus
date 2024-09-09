@@ -28,7 +28,7 @@ namespace Services.Abstractions
         /// </summary>
         /// <param name="CreatingTravelDto"> ДТО создания путешествия. </param>
         /// <returns> Идентификатор. </returns>
-        Task<int> CreateAsync(CreatingTravelDto creatingTravelDto);
+        Task<TravelDto> CreateAsync(CreatingTravelDto creatingTravelDto);
 
         /// <summary>
         /// Изменить путешествие.
