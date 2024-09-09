@@ -8,8 +8,6 @@ namespace Infrastructure.EntityFramework
     public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
     //public class DataContext : DbContext
     {
-        //public DbSet<Manager> Managers { get; set; }
-
         public DbSet<Travel> Travels { get; set; }
 
         public DbSet<TravelPoint> TravelPoints { get; set; }
@@ -25,7 +23,7 @@ namespace Infrastructure.EntityFramework
         {
             // Связь 1 к n (Путешествие - компаньоны)
             modelBuilder.Entity<Travel>()
-                .HasMany(t => t.Users)
+                .HasOne(t => t.User)
                 .WithMany(u => u.Travels);
             
             // Связь 1 к n (Путешествие - остановки)
