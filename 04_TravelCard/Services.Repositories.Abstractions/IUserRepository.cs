@@ -3,7 +3,7 @@ using Domain.Entities;
 
 namespace Services.Repositories.Abstractions
 {
-    public interface IUserRepository : IRepository<User, int>
+    public interface IUserRepository : IRepository<User, Guid>
     {
         /// <summary>
         /// Получить список юзеров.

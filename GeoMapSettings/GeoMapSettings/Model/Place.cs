@@ -16,9 +16,6 @@ namespace GeoMapSettings.Model
         public double Latitude { get; set; }
         public string? Description { get; set; }
         public int PlaceTypeID { get; set; }
-        public override string ToString()
-        {
-            return "[" + Name + " | " + Description + "]";
-        }
+        public override string ToString() => Name != null ? Name : "_";       
     }
 }

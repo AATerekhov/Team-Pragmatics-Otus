@@ -5,6 +5,8 @@ using Services.Implementations;
 using Services.Repositories.Abstractions;
 using GeoMap.Settings;
 using MassTransit;
+using GeoMap.Consumer;
+using Infrastructure.Repositories.Implementations.TrasingFactiryMethods;
 
 namespace GeoMap
 {
@@ -28,7 +30,7 @@ namespace GeoMap
         /// </summary>
         /// <param name="configurator"> Конфигуратор RMQ. </param>
         /// <param name="configuration"> Конфигурация приложения. </param>
-        public static void ConfigureRmq(IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
+        public static void ConfigureRmq(this IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
         {
             var rmqSettings = configuration.Get<ApplicationSettings>().RmqSettings;
             configurator.Host(rmqSettings.Host,
@@ -38,7 +40,7 @@ namespace GeoMap
                     h.Username(rmqSettings.Login);
                     h.Password(rmqSettings.Password);
                 });
-        }
+        }   
 
         private static IServiceCollection InstallServices(this IServiceCollection serviceCollection)
         {
@@ -56,7 +58,8 @@ namespace GeoMap
                 .AddScoped<IUserRepository, UserRepository>()
                 .AddScoped<IPlaceTypeRepository, PlaceTypeRepository>()
                 .AddScoped<IPlaceRepository, PlaceRepository>()
-                .AddScoped<IFuellingRepository, FuellingRepository>();
+                .AddScoped<IFuellingRepository, FuellingRepository>()
+                .AddScoped<TrasingCreator, HighwayCreator>();
             return serviceCollection;
         }
     }

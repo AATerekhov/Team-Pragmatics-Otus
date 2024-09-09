@@ -135,6 +135,14 @@ namespace GatewayTravelMarket.Controllers
             var response = await productServiceClient.GetAsync("/Travel");
             return await CheckResponse(response);
         }
+        [HttpGet("travels/user/{id:Guid}")]
+        public async Task<IActionResult> GetUserTravels(Guid id)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
+            var response = await productServiceClient.GetAsync($"/Travel/User/{id}");
+            return await CheckResponse(response);
+        }
 
         [HttpGet("travel/{id:int}")]
         public async Task<IActionResult> GetTravel(int id)
@@ -205,6 +213,24 @@ namespace GatewayTravelMarket.Controllers
             if (!CheckKey(out IActionResult actionResult)) return actionResult;
             var productServiceClient = _httpClientFactory.CreateClient("TravelServiceClient");
             var response = await productServiceClient.DeleteAsync($"/TravelPoint/{id}");
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("user")]
+        public async Task<IActionResult> CreateUser([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("UserServiceClient");
+            var response = await productServiceClient.PostAsync("/api/User", JsonContent.Create(json));
+            return await CheckResponse(response);
+        }
+
+        [HttpPost("user/Authorization")]
+        public async Task<IActionResult> AuthorizationUser([FromBody] JsonElement json)
+        {
+            if (!CheckKey(out IActionResult actionResult)) return actionResult;
+            var productServiceClient = _httpClientFactory.CreateClient("UserServiceClient");
+            var response = await productServiceClient.PostAsync("/api/User/Authorization", JsonContent.Create(json));
             return await CheckResponse(response);
         }
 

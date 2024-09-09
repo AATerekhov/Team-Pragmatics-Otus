@@ -46,6 +46,15 @@ namespace GeometryMap.GeometricModel.Figure
             if (point.X > MaxX) MaxX = point.X;
             if (point.Y > MaxY) MaxY = point.Y;
         }
+
+        public ABCD Offset(double offset)
+        {
+            var minX = this.MinX - offset;
+            var minY = this.MinY - offset;
+            var maxX = this.MaxX + offset;
+            var maxY = this.MaxY + offset;
+            return new ABCD(minX: minX, minY: minY, maxX: maxX, maxY: maxY);
+        }
         public bool In(Point point)
         {
             if (point.X <= MaxX && point.X >= MinX && point.Y <= MaxY && point.Y >= MinY) return true;

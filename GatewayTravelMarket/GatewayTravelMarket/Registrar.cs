@@ -11,10 +11,12 @@ namespace GatewayTravelMarket
             services.AddSingleton(apiGatewayConnection);
             services.AddHttpClient("GeoMapServiceClient", c => c.BaseAddress = new Uri(apiGatewayConnection.GeoMapServiceBaseUrl));
             services.AddHttpClient("TravelServiceClient", c => c.BaseAddress = new Uri(apiGatewayConnection.TravelCardServiceBaseUrl));
+            services.AddHttpClient("UserServiceClient", c => c.BaseAddress = new Uri(apiGatewayConnection.UserServiceBaseUrl));
             services.Configure<ApiGatewaySettings>(options =>
             {
                 options.TravelCardServiceBaseUrl = apiGatewayConnection.TravelCardServiceBaseUrl;
                 options.GeoMapServiceBaseUrl = apiGatewayConnection.GeoMapServiceBaseUrl;
+                options.UserServiceBaseUrl = apiGatewayConnection.UserServiceBaseUrl;
                 options.ValidApiKeys = apiGatewayConnection.ValidApiKeys;
             });
             return services;

@@ -8,13 +8,8 @@ namespace Services.Contracts.User
 {
     public class CreatingUserDto
     {
-        /// <summary>
-        /// Имя учетной записи.
-        /// </summary>
-        public string? Logo { get; set; }
-        /// <summary>
-        /// Адресс электронной почты.
-        /// </summary>
+        public Guid Id { get; init; }
+        public string? Name { get; init; }
         public string? Email { get; set; }
     }
 }

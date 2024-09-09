@@ -1,5 +1,6 @@
 
 using AutoMapper;
+using GeoMap.Consumer;
 using GeoMap.Mapping;
 using Infrastructure.EntityFramework;
 using Infrastructure.Repositories.Implementations;
@@ -17,15 +18,9 @@ namespace GeoMap
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //Добавили настройки Mapping.
-            //InstallAutomapper(builder.Services);
+
             builder.Services.AddServices(builder.Configuration);
-            builder.Services.AddMassTransit(x => {
-                x.UsingRabbitMq((context, cfg) =>
-                {
-                    Registrar.ConfigureRmq(cfg, builder.Configuration);
-                });
-            });
+            
             builder.Services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             // Add services to the container.
             builder.Services.AddControllers();
@@ -35,6 +30,16 @@ namespace GeoMap
 
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddAutoMapper(typeof(FuellingService));
+
+            builder.Services.AddMassTransit(configurator => 
+            {
+                configurator.AddConsumer<EventUserConsumer>();
+                configurator.UsingRabbitMq((context, configurator) =>
+                {
+                    configurator.ConfigureRmq(builder.Configuration);
+                    configurator.ConfigureEndpoints(context);
+                });
+            });
 
             var app = builder.Build();
 
@@ -57,29 +62,6 @@ namespace GeoMap
             }
 
             app.Run();
-        }
-
-        //Добавление настроек Mapping к HostService.
-        private static IServiceCollection InstallAutomapper(IServiceCollection services)
-        {
-            services.AddSingleton<IMapper>(new Mapper(GetMapperConfiguration()));                 
-            return services;
-        }
-        private static MapperConfiguration GetMapperConfiguration()
-        {
-            var configuration = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<UserMappingsProfile>();
-                cfg.AddProfile<PlaceTypeMappingsProfile>();
-                cfg.AddProfile<PlaceMappingsProfile>();
-                cfg.AddProfile<FuellingMappingsProfile>();
-                cfg.AddProfile<Services.Implementations.Mapping.UserMappingsProfile>();
-                cfg.AddProfile<Services.Implementations.Mapping.PlaceTypeMappingsProfile>();
-                cfg.AddProfile<Services.Implementations.Mapping.PlaceMappingsProfile>();
-                cfg.AddProfile<Services.Implementations.Mapping.FuellingMappingsProfile>();
-            });
-            configuration.AssertConfigurationIsValid();
-            return configuration;
         }
     }
 }

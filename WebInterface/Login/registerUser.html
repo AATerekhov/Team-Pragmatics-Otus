@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Starting GeoMap settings</title>
+        <script src = "api-login.js" lang="JavaScript"></script>
+        <link href="../style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1 >Регистрация путешествинника.</h1>
+        <p  style="text-align: center">            
+            <label for ="loginValue">Логин:</label>
+            <input type="text" id="loginValue" size="30"/> 
+        </p>
+        <p  style="text-align: center">            
+            <label for ="passwordValue">Пароль:</label>
+            <input type="password" id="passwordValue" size="30"/> 
+        </p>  
+        <p  style="text-align: center">            
+            <label for ="loginValue">Почта:</label>
+            <input type="text" id="emailValue" size="30"/> 
+        </p>      
+        <p  style="text-align: center">
+            <input type="button" value="Подтвердить" onclick="CreateUser()"/>
+            <input type="button" value="Вернуться" onclick="ToEnter()"/>
+        </p>
+    </body>
+</html>

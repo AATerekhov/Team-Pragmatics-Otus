@@ -23,8 +23,12 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<UserModel>), 200)]
+        public async Task<IEnumerable<UserModel>> GetAll() => (await _service.GetUsersAsync()).Select(_mapper.Map<UserModel>);
+
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<IActionResult> GetAsync(Guid id)
         {
             return Ok(_mapper.Map<UserDto, UserModel>(await _service.GetByIdAsync(id)));
         }
@@ -48,14 +52,14 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditAsync(int id, UpdatingUserModel userModel)
+        public async Task<IActionResult> EditAsync(Guid id, UpdatingUserModel userModel)
         {
             await _service.UpdateAsync(id, _mapper.Map<UpdatingUserModel, UpdatingUserDto>(userModel));
             return Ok();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> DeleteAsync(Guid id)
         {
             await _service.DeleteAsync(id);
             return Ok();

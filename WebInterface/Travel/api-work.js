@@ -4,6 +4,36 @@ async function loadTravels(){
         headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
     });
 
+    let userName = new URLSearchParams(window.location.search).get('user');
+    let userId = new URLSearchParams(window.location.search).get('userid');
+    if(userId !== null)
+        {
+            var logo = document.getElementById('LogoPage');
+            logo.innerHTML  = `Путешествия (${userName})`;    
+            
+            //Генерация меню на вход
+            let nemus = document.getElementsByTagName('p');
+            let nemu = nemus[0];
+            let linkCreate = document.createElement('a');
+            linkCreate.innerText = "Создать путешествие"; 
+            linkCreate.href = `createTravel.html`;
+            nemu.appendChild(linkCreate);
+            let linkSettings = document.createElement('a');
+            linkSettings.innerText = "Настройка"; 
+            linkSettings.href = `../index.html`;
+            nemu.appendChild(linkSettings);
+        }
+        else
+        {
+            //Генерация меню на вход
+            let nemus = document.getElementsByTagName('p');
+            let nemu = nemus[0];
+            let linkEnter = document.createElement('a');
+            linkEnter.innerText = "Вход"; 
+            linkEnter.href = `../Login/login.html`;
+            nemu.appendChild(linkEnter);
+        }
+
 	let Traveltable = document.getElementById('Travels');
     console.log(Traveltable);
     if(result.ok){
@@ -19,8 +49,16 @@ async function loadTravels(){
             let TrFinishField = document.createElement('td');
             TrFinishField.innerText = travel.finishPoint;
             let link = document.createElement('a');
-            link.innerText = "Редактировать";
-            link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
+            if(userId !== null){
+                link.innerText = "Редактировать";
+                link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
+            }
+            else{
+                link.innerText = "Посмотреть";
+                link.href = `viewTravel.html?typeId=0&Scale=8&id=${travel.id}`;
+            }
+            
+            
             let editField = document.createElement('td');
             editField.appendChild(link);
             TravelRow.appendChild(travelId);
@@ -33,7 +71,6 @@ async function loadTravels(){
     }
 }
 async function travelCreating(){
-    let id = 0;
     let description = document.getElementById('description').value;
     let lngSP = document.getElementById('longitudeSP').value;
     let latSP = document.getElementById('latitudeSP').value;
@@ -41,7 +78,7 @@ async function travelCreating(){
     let lngFP = document.getElementById('longitudeFP').value;
     let latFP = document.getElementById('latitudeFP').value;
     let finishPoint = lngFP + ',' + latFP;
-    let travel = {id,description, startPoint, finishPoint};
+    let travel = {description, startPoint, finishPoint};
     //alert(JSON.stringify(travel))
     let result = await fetch('http://localhost:5200/api/travel', {
      method: 'POST',
@@ -52,12 +89,9 @@ async function travelCreating(){
      body: JSON.stringify(travel)
     });
     if(result.ok)
-     window.location.href = "index.html";
+        window.location.href = `index.html`;
  }
 
- async function travelUpdating() {
-    
- }
 
  //Yandex Map function
 async function initMap() {    
