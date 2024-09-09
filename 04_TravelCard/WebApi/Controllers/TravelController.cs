@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Services.Abstractions;
 using Services.Implementations.Mapping;
 using Services.Contracts.Travel;
+using MassTransit.Futures.Contracts;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Services.Contracts.User;
 
 namespace WebApi.Controllers
 {
@@ -28,7 +31,7 @@ namespace WebApi.Controllers
         public async Task<IEnumerable<TravelModel>> GetAll() => (await _service.GetTravelsAsync()).Select(_mapper.Map<TravelModel>);
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<IActionResult> Get(int id)
         {
             return Ok(_mapper.Map<TravelDto,TravelModel>(await _service.GetByIdAsync(id)));
         }
@@ -46,9 +49,12 @@ namespace WebApi.Controllers
         //}
 
         [HttpPost]
+        [ProducesResponseType(typeof(TravelModel), 201)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> CreateAsync(CreatingTravelModel travelModel)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreatingTravelDto>(travelModel)));
+            var travel = await _service.CreateAsync(_mapper.Map<CreatingTravelDto>(travelModel));
+            return CreatedAtAction(nameof(Get), new { id = travel.Id }, _mapper.Map<TravelModel>(travel));
         }
 
         [HttpPut("{id}")]

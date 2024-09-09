@@ -32,26 +32,15 @@ namespace Services.Implementations
         /// </summary>
         /// <param name="CreatingTravelDto"> ДТО путешествия. </param>
         /// <returns> Идентификатор. </returns>
-        public async Task<int> CreateAsync(CreatingTravelDto creatingtravelDto)
+        public async Task<TravelDto> CreateAsync(CreatingTravelDto creatingtravelDto)
         {
             var TravelEntity = _mapper.Map<CreatingTravelDto, Travel>(creatingtravelDto);
-            TravelEntity.Deleted = false;
             var createdTravel = await _TravelRepository.AddAsync(TravelEntity);
             await _TravelRepository.SaveChangesAsync();
-            return createdTravel.Id;
+            return _mapper.Map<TravelDto>(createdTravel);
 
             //Брокер
-            var sendEndPoint = await _busControl.GetSendEndpoint(new Uri($"queue:{_queueName}"));
-            if (sendEndPoint == null)
-            {
-                throw new Exception($"Не удалось найти очередь {_queueName}");
-            }
-            await sendEndPoint.Send(new MessageDto
-            {
-                Content = $"New Travel. {JsonConvert.SerializeObject(TravelEntity)}"
-            }, CancellationToken.None);
-
-            return createdTravel.Id;
+            //return createdTravel.Id;
         }
 
         /// <summary>
