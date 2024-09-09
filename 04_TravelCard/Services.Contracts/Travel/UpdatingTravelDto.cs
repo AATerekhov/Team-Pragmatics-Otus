@@ -26,5 +26,10 @@ namespace Services.Contracts.Travel
         /// дата и время начала путешествия
         /// </summary>
         public DateTime? StartDate { get; set; }
+
+        /// <summary>
+        /// Приватное путешествие
+        /// </summary>
+        public bool IsPrivate { get; set; }
     }
 }

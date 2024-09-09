@@ -11,18 +11,19 @@ namespace Domain.Entities
         /// <summary>
         /// Описание путешествия
         /// </summary>
-        [Column("description"), MaxLength(100)]
+        [Column("description"), MaxLength(200)]
         public string Description { get; set; }
 
         /// <summary>
         /// Менеджер путешествия
         /// </summary>
-        //public string ManagerID { get; set; }
+        [Column("user_ID")]
+        public Guid UserID { get; set; }
 
         /// <summary>
         /// Список компаньонов
         /// </summary>
-        public ICollection<User>? Users { get; set; }
+        public User? User { get; set; }
 
         /// <summary>
         /// Список остановок
@@ -52,5 +53,11 @@ namespace Domain.Entities
         /// </summary>
         [Column("start_date")]
         public DateTime? StartDate { get; set; }
+
+        /// <summary>
+        /// Приватное путешествие
+        /// </summary>
+        [Column("is_private")]
+        public bool IsPrivate { get; set; }
     }
 }

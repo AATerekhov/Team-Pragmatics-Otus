@@ -13,13 +13,13 @@ namespace Domain.Entities
         /// <summary>
         /// Точка остановки
         /// </summary>
-        [Column("point_map"), MaxLength(90)]
+        [Column("point_map")]
         public string PointMap { get; set; }
 
         /// <summary>
         /// Описание остановки
         /// </summary>
-        [Column("point_desc"), MaxLength(80)]
+        [Column("point_desc")]
         public string PointDesc { get; set; }
 
         /// <summary>
