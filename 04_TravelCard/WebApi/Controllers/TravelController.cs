@@ -15,19 +15,31 @@ namespace WebApi.Controllers
     {
 
         private readonly ITravelService _service;
+        private readonly IUserService _serviceUser;
         private readonly IMapper _mapper;
         private readonly ILogger<UserController> _logger;
 
-        public TravelController(ITravelService service, ILogger<UserController> logger, IMapper mapper)
+        public TravelController(ITravelService service, IUserService userService, ILogger<UserController> logger, IMapper mapper)
         {
             _service = service;
+            _serviceUser = userService;
             _mapper = mapper;
             _logger = logger;
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<TravelModel>), 200)]
-        public async Task<IEnumerable<TravelModel>> GetAll() => (await _service.GetTravelsAsync()).Where(t => !t.IsPrivate).Select(_mapper.Map<TravelModel>);
+        public async Task<IEnumerable<TravelModel>> GetAll() 
+        {
+            var modelTravels = (await _service.GetTravelsAsync()).Where(t => !t.IsPrivate).Select(_mapper.Map<TravelModel>);
+            var result = new List<TravelModel>();
+            modelTravels.ToList().ForEach(async t => {
+                var user = await _serviceUser.GetByIdAsync(t.UserID);
+                t.UserName = user.Name!;
+                result.Add(t);
+            });
+            return result;
+        } 
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
@@ -39,12 +51,22 @@ namespace WebApi.Controllers
         [ProducesResponseType(typeof(IEnumerable<TravelModel>), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> GetOwnTravels(Guid userId)
+        public async Task<IEnumerable<TravelModel>> GetOwnTravels(Guid userId)
         {
             var ownTravels = await _service.GetByUserIdAsync(userId);
-            if (ownTravels == null)
-                return NotFound();
-            return Ok(ownTravels.Select(_mapper.Map<TravelModel>));
+            var result = new List<TravelModel>();
+            if (ownTravels != null)
+            {
+                var modelTravels = ownTravels.Select(_mapper.Map<TravelModel>);
+                
+                modelTravels.ToList().ForEach(async t =>
+                {
+                    var user = await _serviceUser.GetByIdAsync(t.UserID);
+                    t.UserName = user.Name!;
+                    result.Add(t);
+                });
+            }
+            return result;
         }
 
         [HttpPost]
