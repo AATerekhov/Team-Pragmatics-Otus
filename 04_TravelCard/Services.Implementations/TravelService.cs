@@ -68,6 +68,18 @@ namespace Services.Implementations
             return _mapper.Map<Travel, TravelDto>(travel);
         }
 
+        /// <summary>
+        /// Получить путешествия по Guid User'a. 
+        /// </summary>
+        /// <param name="userId"> Идентификатор юзера. </param>
+        /// <returns> коллекцию ДТО путешествий. </returns>
+        public async Task<IEnumerable<TravelDto>> GetByUserIdAsync(Guid userId)
+        {
+            //return _mapper.Map<TravelDto>(await _TravelRepository.GetAsync(id, CancellationToken.None));
+            var travelsColl = (await _TravelRepository.GetAllAsync()).Where(t => t.UserID == userId).OrderBy(t => t.StartDate).Select(_mapper.Map<TravelDto>);
+            return travelsColl;
+        }
+
         //public async Task<TravelDto?> GetTravelAsync(int id) => _mapper.Map<TravelDto>(await _TravelRepository.GetTravelByIdAsync(id));
 
         /// <summary>
