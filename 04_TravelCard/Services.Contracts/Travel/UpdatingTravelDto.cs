@@ -26,5 +26,6 @@ namespace Services.Contracts.Travel
         /// дата и время начала путешествия
         /// </summary>
         public DateTime? StartDate { get; set; }
+
     }
 }

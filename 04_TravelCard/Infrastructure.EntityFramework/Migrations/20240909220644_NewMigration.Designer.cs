@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.EntityFramework.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240828203742_NewMigration")]
+    [Migration("20240909220644_NewMigration")]
     partial class NewMigration
     {
         /// <inheritdoc />
@@ -40,14 +40,18 @@ namespace Infrastructure.EntityFramework.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
                         .HasColumnName("description");
 
                     b.Property<string>("FinishPoint")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("finish_point");
+
+                    b.Property<bool>("IsPrivate")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_private");
 
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("timestamp with time zone")
@@ -58,7 +62,13 @@ namespace Infrastructure.EntityFramework.Migrations
                         .HasColumnType("text")
                         .HasColumnName("start_point");
 
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_ID");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Travels");
                 });
@@ -78,14 +88,12 @@ namespace Infrastructure.EntityFramework.Migrations
 
                     b.Property<string>("PointDesc")
                         .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("character varying(80)")
+                        .HasColumnType("text")
                         .HasColumnName("point_desc");
 
                     b.Property<string>("PointMap")
                         .IsRequired()
-                        .HasMaxLength(90)
-                        .HasColumnType("character varying(90)")
+                        .HasColumnType("text")
                         .HasColumnName("point_map");
 
                     b.Property<int>("TravelId")
@@ -132,19 +140,15 @@ namespace Infrastructure.EntityFramework.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("TravelUser", b =>
+            modelBuilder.Entity("Domain.Entities.Travel", b =>
                 {
-                    b.Property<int>("TravelsId")
-                        .HasColumnType("integer");
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany("Travels")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<Guid>("UsersId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("TravelsId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("TravelUser");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.TravelPoint", b =>
@@ -158,24 +162,14 @@ namespace Infrastructure.EntityFramework.Migrations
                     b.Navigation("Travel");
                 });
 
-            modelBuilder.Entity("TravelUser", b =>
-                {
-                    b.HasOne("Domain.Entities.Travel", null)
-                        .WithMany()
-                        .HasForeignKey("TravelsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Domain.Entities.Travel", b =>
                 {
                     b.Navigation("TravelPoints");
+                });
+
+            modelBuilder.Entity("Domain.Entities.User", b =>
+                {
+                    b.Navigation("Travels");
                 });
 #pragma warning restore 612, 618
         }

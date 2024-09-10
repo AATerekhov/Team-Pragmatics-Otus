@@ -45,7 +45,13 @@ async function initUpdateMap(view) {
     let latFP = document.getElementById('latitudeFP');
     let finishLat = Number(travel.finishPoint.split(',')[1]);
     latFP.value = finishLat;
-
+    let dateStartField = document.getElementById('dateStart');
+    let dateWithTime = travel.startDate;
+    if(dateWithTime != undefined){
+        var travelDate = new Date(dateWithTime);
+        dateStartValue = travelDate.toISOString().substring(0,10);
+        dateStartField.value = dateStartValue;
+    }
 
         function onDragMoveHandlerEP(coordinates) { 
             //strpnt.value = coordinates;
@@ -386,7 +392,9 @@ async function travelUpdating() {
     let description = document.getElementById('description').value;
     let startPoint = `${document.getElementById('longitudeSP').value},${document.getElementById('latitudeSP').value}`;
     let finishPoint = `${document.getElementById('longitudeFP').value},${document.getElementById('latitudeFP').value}`;
-    let travel = {description,startPoint,finishPoint};
+    let stringDate = document.getElementById('dateStart').value;
+    var startDate = new Date(stringDate);
+    let travel = {description,startPoint,finishPoint, startDate};
     let result = await fetch(`http://localhost:5200/api/travel/${travelId}`,{
         method: 'PUT',
         headers: {

@@ -24,5 +24,6 @@
         /// дата и время начала путешествия
         /// </summary>
         public DateTime? StartDate { get; set; }
+
     }
 }
