@@ -1,13 +1,12 @@
-async function loadTravels(){
-    let result =await fetch("http://localhost:5200/api/travels",{
-        method: 'GET',
-        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
-    });
-
+async function loadTravels(){    
     let userName = new URLSearchParams(window.location.search).get('user');
     let userId = new URLSearchParams(window.location.search).get('userid');
+    let responceUrl = '';
+
+    
     if(userId !== null)
         {
+            responceUrl = `http://localhost:5200/api/travels/${userId}`;
             var logo = document.getElementById('LogoPage');
             logo.innerHTML  = `Путешествия (${userName})`;    
             
@@ -22,9 +21,15 @@ async function loadTravels(){
             linkSettings.innerText = "Настройка"; 
             linkSettings.href = `../index.html`;
             nemu.appendChild(linkSettings);
+            let linkEnter = document.createElement('a');
+            linkEnter.innerText = "Выход"; 
+            linkEnter.href = `../Login/login.html`;
+            linkEnter.margin = 5;
+            nemu.appendChild(linkEnter);
         }
         else
         {
+            responceUrl = "http://localhost:5200/api/travels";
             //Генерация меню на вход
             let nemus = document.getElementsByTagName('p');
             let nemu = nemus[0];
@@ -33,6 +38,11 @@ async function loadTravels(){
             linkEnter.href = `../Login/login.html`;
             nemu.appendChild(linkEnter);
         }
+
+    let result =await fetch(responceUrl,{
+        method: 'GET',
+        headers: {'TM-API-Key': 'F504ED6B-68AA-456C-B839-C1559ACED2EF'}
+    });
 
 	let Traveltable = document.getElementById('Travels');
     console.log(Traveltable);
@@ -44,6 +54,14 @@ async function loadTravels(){
             travelId.innerText = travel.id;
             let TrDescField = document.createElement('td');
             TrDescField.innerText = travel.description;
+            let TrDateField = document.createElement('td');
+            TrDateField.innerText = new Date(travel.startDate).toLocaleDateString('ru', {
+			                                                                              year: 'numeric',
+			                                                                              month: 'long',
+			                                                                              day: 'numeric'
+			                                                                            });            
+            let TrOwnerField = document.createElement('td');
+            TrOwnerField.innerText = travel.userName;
             let TrStartField = document.createElement('td');
             TrStartField.innerText = travel.startPoint;
             let TrFinishField = document.createElement('td');
@@ -63,6 +81,8 @@ async function loadTravels(){
             editField.appendChild(link);
             TravelRow.appendChild(travelId);
             TravelRow.appendChild(TrDescField);
+            TravelRow.appendChild(TrDateField);
+            TravelRow.appendChild(TrOwnerField);
             TravelRow.appendChild(TrStartField);
             TravelRow.appendChild(TrFinishField);
             TravelRow.appendChild(editField);
@@ -184,4 +204,6 @@ async function initMap() {
       });
       map.addChild(draggableFinishPoint); 
 }
+
+
 

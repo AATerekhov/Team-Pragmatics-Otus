@@ -42,6 +42,7 @@ namespace Services.Contracts.Travel
         /// Приватное путешествие
         /// </summary>
         public bool IsPrivate { get; set; }
+        public string UserName { get; set; }
 
         /// <summary>
         /// Менеджер путешествия
