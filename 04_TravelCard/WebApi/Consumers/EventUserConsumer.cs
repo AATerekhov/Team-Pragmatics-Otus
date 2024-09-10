@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CommonNameSpace;
+using CommonNamespace;
 using MassTransit;
 using Newtonsoft.Json;
 using Services.Abstractions;

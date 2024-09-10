@@ -32,7 +32,7 @@ namespace GeoMap
         /// <param name="configuration"> Конфигурация приложения. </param>
         public static void ConfigureRmq(this IRabbitMqBusFactoryConfigurator configurator, IConfiguration configuration)
         {
-            var rmqSettings = configuration.Get<ApplicationSettings>().RmqSettings;
+            var rmqSettings = configuration.Get<ApplicationSettings>()!.RmqSettings;
             configurator.Host(rmqSettings.Host,
                 rmqSettings.VHost,
                 h =>

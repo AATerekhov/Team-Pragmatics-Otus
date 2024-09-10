@@ -1,4 +1,4 @@
-﻿namespace CommonNameSpace
+﻿namespace CommonNamespace
 {
     public class MessageDto
     {

@@ -6,7 +6,7 @@ using Domain.Entities;
 using Infrastructure.Repositories.Implementations;
 using MassTransit;
 using Newtonsoft.Json;
-using CommonNameSpace;
+using CommonNamespace;
 
 namespace Services.Implementations
 {
