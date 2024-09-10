@@ -51,7 +51,7 @@ async function loadTravels(){
             let link = document.createElement('a');
             if(userId !== null){
                 link.innerText = "Редактировать";
-                link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}`;
+                link.href = `updateTravel.html?typeId=0&Scale=8&id=${travel.id}&userid=${userId}&user=${userName}`;
             }
             else{
                 link.innerText = "Посмотреть";
