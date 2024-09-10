@@ -1,5 +1,5 @@
 ﻿
-namespace CommonNameSpace
+namespace CommonNamespace
 {
     public class MessageCreateUserDto
     {
