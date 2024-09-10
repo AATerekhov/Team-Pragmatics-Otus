@@ -79,15 +79,15 @@ async function travelCreating(){
     let latFP = document.getElementById('latitudeFP').value;
     let finishPoint = lngFP + ',' + latFP;
     let stringDate = document.getElementById('dateStart').value;
-    var startDate = new Date(stringDate)
-    let isPrivate = false;
+    var startDate = new Date(stringDate);
+    let isPrivate = document.getElementById('isPrivate').checked;
     let userID = new URLSearchParams(window.location.search).get('userid');
     let userName = new URLSearchParams(window.location.search).get('user');
     let travel = {description, startPoint, finishPoint, startDate, isPrivate, userID};
     
     
 
-    //alert(JSON.stringify(travel))
+    alert(JSON.stringify(travel))
     let result = await fetch('http://localhost:5200/api/travel', {
      method: 'POST',
      headers: {
