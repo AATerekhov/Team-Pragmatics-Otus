@@ -6,7 +6,6 @@ using Services.Implementations.Mapping;
 using Services.Contracts.Travel;
 using MassTransit.Futures.Contracts;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Services.Contracts.User;
 
 namespace WebApi.Controllers
 {
@@ -28,7 +27,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<TravelModel>), 200)]
-        public async Task<IEnumerable<TravelModel>> GetAll() => (await _service.GetTravelsAsync()).Select(_mapper.Map<TravelModel>);
+        public async Task<IEnumerable<TravelModel>> GetAll() => (await _service.GetTravelsAsync()).Where(t => !t.IsPrivate).Select(_mapper.Map<TravelModel>);
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
@@ -36,17 +35,17 @@ namespace WebApi.Controllers
             return Ok(_mapper.Map<TravelDto,TravelModel>(await _service.GetByIdAsync(id)));
         }
 
-        //[HttpGet("{id:guid}")]
-        //[ProducesResponseType(typeof(UserModel), 200)]
-        //[ProducesResponseType(400)]
-        //[ProducesResponseType(404)]
-        //public async Task<IActionResult> Get(int id)
-        //{
-        //    var user = await _service.GetByIdAsync(id);
-        //    if (user == null)
-        //        return NotFound();
-        //    return Ok(_mapper.Map<UserModel>(user));
-        //}
+        [HttpGet("{userId:guid}")]
+        [ProducesResponseType(typeof(IEnumerable<TravelModel>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> GetOwnTravels(Guid userId)
+        {
+            var ownTravels = await _service.GetByUserIdAsync(userId);
+            if (ownTravels == null)
+                return NotFound();
+            return Ok(ownTravels.Select(_mapper.Map<TravelModel>));
+        }
 
         [HttpPost]
         [ProducesResponseType(typeof(TravelModel), 201)]

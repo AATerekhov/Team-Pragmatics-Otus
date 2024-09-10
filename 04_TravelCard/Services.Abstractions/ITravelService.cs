@@ -21,6 +21,13 @@ namespace Services.Abstractions
         /// <returns> ДТО путешествия. </returns>
         Task<TravelDto> GetByIdAsync(int id);
 
+        /// <summary>
+        /// Получить путешествия по Guid User'a. 
+        /// </summary>
+        /// <param name="userId"> Идентификатор юзера. </param>
+        /// <returns> коллекцию ДТО путешествий. </returns>
+        Task<IEnumerable<TravelDto>> GetByUserIdAsync(Guid userId);
+
         //Task<TravelDto?> GetTravelAsync(int id);
 
         /// <summary>
