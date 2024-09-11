@@ -32,15 +32,17 @@ namespace WebApi.Controllers
         public async Task<IEnumerable<TravelModel>> GetAll() 
         {
             var modelTravels = (await _service.GetTravelsAsync()).Where(t => !t.IsPrivate).Select(_mapper.Map<TravelModel>);
+            List<TravelModel> result = new List<TravelModel>();
             if (modelTravels != null)
             {
                 foreach (var travel in modelTravels)
                 {
                     var user = await _serviceUser.GetByIdAsync(travel.UserID);
                     travel.UserName = user.Name!;
+                    result.Add(travel);
                 }
             }
-            return modelTravels!;
+            return result;
         } 
 
         [HttpGet("{id}")]
@@ -57,15 +59,17 @@ namespace WebApi.Controllers
         {
             var ownTravels = await _service.GetByUserIdAsync(userId);
             var modelTravels = ownTravels.Select(_mapper.Map<TravelModel>);
+            List<TravelModel> result = new List<TravelModel>();
             if (modelTravels != null)
             {
                 foreach (var travel in modelTravels)
                 {
                     var user = await _serviceUser.GetByIdAsync(travel.UserID);
                     travel.UserName = user.Name!;
+                    result.Add(travel);
                 }
             }
-            return modelTravels!;
+            return result!;
         }
 
         [HttpPost]

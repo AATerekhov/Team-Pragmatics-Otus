@@ -31,15 +31,15 @@ namespace GeoMap
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddAutoMapper(typeof(FuellingService));
 
-            builder.Services.AddMassTransit(configurator => 
-            {
-                configurator.AddConsumer<EventUserConsumer>();
-                configurator.UsingRabbitMq((context, configurator) =>
-                {
-                    configurator.ConfigureRmq(builder.Configuration);
-                    configurator.ConfigureEndpoints(context);
-                });
-            });
+            //builder.Services.AddMassTransit(configurator => 
+            //{
+            //    configurator.AddConsumer<EventUserConsumer>();
+            //    configurator.UsingRabbitMq((context, configurator) =>
+            //    {
+            //        configurator.ConfigureRmq(builder.Configuration);
+            //        configurator.ConfigureEndpoints(context);
+            //    });
+            //});
 
             var app = builder.Build();
 
