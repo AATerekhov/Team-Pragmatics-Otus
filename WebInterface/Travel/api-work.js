@@ -107,7 +107,7 @@ async function travelCreating(){
     
     
 
-    alert(JSON.stringify(travel))
+    //alert(JSON.stringify(travel))
     let result = await fetch('http://localhost:5200/api/travel', {
      method: 'POST',
      headers: {
