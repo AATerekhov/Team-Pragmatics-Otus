@@ -32,13 +32,15 @@ namespace WebApi.Controllers
         public async Task<IEnumerable<TravelModel>> GetAll() 
         {
             var modelTravels = (await _service.GetTravelsAsync()).Where(t => !t.IsPrivate).Select(_mapper.Map<TravelModel>);
-            var result = new List<TravelModel>();
-            modelTravels.ToList().ForEach(async t => {
-                var user = await _serviceUser.GetByIdAsync(t.UserID);
-                t.UserName = user.Name!;
-                result.Add(t);
-            });
-            return result;
+            if (modelTravels != null)
+            {
+                foreach (var travel in modelTravels)
+                {
+                    var user = await _serviceUser.GetByIdAsync(travel.UserID);
+                    travel.UserName = user.Name!;
+                }
+            }
+            return modelTravels!;
         } 
 
         [HttpGet("{id}")]
@@ -54,19 +56,16 @@ namespace WebApi.Controllers
         public async Task<IEnumerable<TravelModel>> GetOwnTravels(Guid userId)
         {
             var ownTravels = await _service.GetByUserIdAsync(userId);
-            var result = new List<TravelModel>();
-            if (ownTravels != null)
+            var modelTravels = ownTravels.Select(_mapper.Map<TravelModel>);
+            if (modelTravels != null)
             {
-                var modelTravels = ownTravels.Select(_mapper.Map<TravelModel>);
-                
-                modelTravels.ToList().ForEach(async t =>
+                foreach (var travel in modelTravels)
                 {
-                    var user = await _serviceUser.GetByIdAsync(t.UserID);
-                    t.UserName = user.Name!;
-                    result.Add(t);
-                });
+                    var user = await _serviceUser.GetByIdAsync(travel.UserID);
+                    travel.UserName = user.Name!;
+                }
             }
-            return result;
+            return modelTravels!;
         }
 
         [HttpPost]
